@@ -9,3 +9,5 @@
 /.idea
 .project
 .classpath
+build
+/.gradle
