@@ -1,8 +1,7 @@
 package easy.mergeIntervals;
 
 import org.junit.Test;
-
-import java.util.stream.Collectors;
+import utils.GeneralUtils;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,6 +10,6 @@ public class SummaryRangesTest {
 
     @Test
     public void test() {
-        assertEquals(s.summaryRanges(new int[]{0,1,2,4,5,7}).stream().collect(Collectors.joining(",")), "0->2,4->5,7" );
+        assertEquals(GeneralUtils.convertToCommaSeperatedString(s.summaryRanges(new int[]{0, 1, 2, 4, 5, 7})), "0->2,4->5,7");
     }
 }
