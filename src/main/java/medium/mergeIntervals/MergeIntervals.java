@@ -4,6 +4,12 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.LinkedList;
 
+/**
+ * Time Complexity o(nlogn + n ~ nlogn) - Sorting is nlogn and n is the interval
+ * Space Complexity - Sorting takes logn space and linkedList which worse case if there is no merged interval is n
+ * So its either logn or n
+ */
+
 public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
