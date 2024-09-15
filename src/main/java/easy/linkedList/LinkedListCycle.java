@@ -2,6 +2,11 @@ package easy.linkedList;
 
 import utils.ListNode;
 
+/**
+ * Time Complexity o(n)
+ * Space complexity o(1)
+ */
+
 public class LinkedListCycle {
 
     public boolean hasCycle(ListNode head) {

@@ -8,8 +8,8 @@ public class ValidPalindrome4Test {
 
     @Test
     public void testValidPalindrome() {
-       assert validPalindrome4.makePalindrome("abcdba") == true;
-       assert validPalindrome4.makePalindrome("aa") == true;
-       assert validPalindrome4.makePalindrome("abcdef") == false;
+       assert validPalindrome4.makePalindrome("abcdba");
+       assert validPalindrome4.makePalindrome("aa");
+       assert !validPalindrome4.makePalindrome("abcdef");
     }
 }

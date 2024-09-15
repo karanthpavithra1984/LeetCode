@@ -2,15 +2,19 @@ package medium.linkedList;
 
 import utils.ListNode;
 
+/**
+ * Time Complexity o(n) - if right is the end of the linked list
+ * Space Complexity o(1) since sentinel is a new node which refers to head object
+ */
+
 public class ReverseLinkedListII {
     public ListNode reverseBetween(ListNode head, int left, int right) {
         if(head == null || left == right){
             return head;
         }
 
-        ListNode newList = new ListNode(0);
-        newList.next = head;
-        ListNode dummyList = newList;
+        ListNode sentinel = new ListNode(0, head);
+        ListNode dummyList = sentinel;
         for(int i = 0; i < left -1 ; i++){
             dummyList = dummyList.next;
         }
@@ -23,6 +27,6 @@ public class ReverseLinkedListII {
             tmp.next = dummyList.next;
             dummyList.next = tmp;
         }
-        return newList.next;
+        return sentinel.next;
     }
 }

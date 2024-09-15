@@ -17,6 +17,6 @@ public class LinkedListCycleTest {
         listNode.next.next.next = new ListNode(-4);
         listNode.next.next.next.next = loop;
 
-        assert linkedListCycle.hasCycle(listNode) == true;
+        assert linkedListCycle.hasCycle(listNode);
     }
 }

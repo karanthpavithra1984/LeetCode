@@ -1,7 +1,5 @@
-package medium;
+package medium.linkedList;
 
-import easy.linkedList.ReverseLinkedList;
-import medium.linkedList.ReverseLinkedListII;
 import org.junit.Test;
 import utils.ListNode;
 

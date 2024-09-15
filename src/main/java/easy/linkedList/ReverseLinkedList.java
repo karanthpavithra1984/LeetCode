@@ -2,6 +2,10 @@ package easy.linkedList;
 
 import utils.ListNode;
 
+/**
+ * Time Complexity - o(n)
+ * Space Complexity o(1) - All the references are pointed to head
+ */
 public class ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
         ListNode reversed = null;
