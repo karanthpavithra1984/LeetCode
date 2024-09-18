@@ -24,15 +24,15 @@ public class RotateList {
             length++;
         }
 
+        //Calculate effective rotations
+        int numOfRotations = k%length;
+
+        if(numOfRotations == 0) return head;
+
         //Circular here - end of temp is connected to head
         temp.next = head;
 
-        int numOfRotations = k%length;
-        //Calculate effective rotations
-        if(numOfRotations == 0) return head;
-        numOfRotations = length - numOfRotations;
-
-       while (numOfRotations > 0) {
+       while (numOfRotations > -1) {
            temp = temp.next;
            numOfRotations--;
        }
