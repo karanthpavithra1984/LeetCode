@@ -39,5 +39,15 @@ public class RotateListTest {
         assert rotateListNew.next.next.val == 1;
         assert rotateListNew.next.next.next == null;
 
+        listNode = new ListNode(1);
+        listNode.next = new ListNode(2);
+
+        rotateListNew = rotateList.rotateRight(listNode, 1);
+
+        assert rotateListNew != null;
+        assert rotateListNew.val == 2;
+        assert rotateListNew.next.val == 1;
+        assert rotateListNew.next.next == null;
+
     }
 }

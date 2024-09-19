@@ -31,8 +31,8 @@ public class RotateList {
 
         //Circular here - end of temp is connected to head
         temp.next = head;
-
-       while (numOfRotations > -1) {
+        numOfRotations = length -  numOfRotations;
+       while (numOfRotations > 0) {
            temp = temp.next;
            numOfRotations--;
        }

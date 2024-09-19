@@ -23,4 +23,5 @@ public class GeneralUtils {
 
         return stringBuilder.substring(0, stringBuilder.length() - 1);
     }
+
 }
