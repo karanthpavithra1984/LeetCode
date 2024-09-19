@@ -2,16 +2,21 @@ package medium.linkedList;
 
 import utils.ListNode;
 
-import java.util.List;
-
 public class SwapTwoPairs {
 
+    /**
+     * Time Complexity - o(n)
+     * Space Complexity - o(1)
+     * @param head
+     * @return
+     */
+
     public ListNode swapPairs(ListNode head) {
-        ListNode sentinel =new ListNode(0, head);
+        ListNode sentinel = new ListNode(0, head);
 
         ListNode tmp = sentinel;
 
-        while(head != null && head.next != null){
+        while (head != null && head.next != null) {
             ListNode firstNode = head;
             ListNode secondNode = head.next;
 
@@ -19,7 +24,7 @@ public class SwapTwoPairs {
             firstNode.next = secondNode.next;
             secondNode.next = firstNode;
 
-            tmp =firstNode;
+            tmp = firstNode;
             head = firstNode.next;
         }
 
