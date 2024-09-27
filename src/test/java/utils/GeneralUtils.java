@@ -24,4 +24,34 @@ public class GeneralUtils {
         return stringBuilder.substring(0, stringBuilder.length() - 1);
     }
 
+    public static ListNode getListNode(int[] values){
+        ListNode listNode = new ListNode(-1);
+        ListNode tempNode = listNode;
+
+        for(int value: values){
+            tempNode.next = new ListNode(value);
+            tempNode = tempNode.next;
+        }
+
+        return listNode.next;
+    }
+
+    public static boolean validateList(ListNode listNode, int[] values){
+        if(listNode == null && values.length != 0){
+            return false;
+        }
+
+        for(int value: values){
+            if(listNode.val != value){
+                return false;
+            }
+            listNode = listNode.next;
+        }
+
+        if(listNode != null)
+            return false;
+
+        return true;
+    }
+
 }
