@@ -2,6 +2,7 @@ package easy.LinkedList;
 
 import easy.linkedList.ReverseLinkedList;
 import org.junit.Test;
+import utils.GeneralUtils;
 import utils.ListNode;
 
 public class ReverseLinkedListTest {
@@ -20,5 +21,9 @@ public class ReverseLinkedListTest {
         assert reverseList.next.next.val == 3;
         assert reverseList.next.next.next.val == 2;
         assert reverseList.next.next.next.next.val == 1;
+
+
+        GeneralUtils.validateListNode(reverseLinkedList.reverseList(GeneralUtils.getListNode(new int[]{7,3,4,8})) ,  new int[]{8,4,3,7});
+
     }
 }
