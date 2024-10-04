@@ -36,6 +36,15 @@ public class GeneralUtils {
         return listNode.next;
     }
 
+    public static void validateListNode(ListNode listNode, int[] values){
+        for(int value: values){
+            assert listNode.val == value;
+            listNode = listNode.next;
+        }
+
+        assert listNode == null;
+    }
+
     public static boolean validateList(ListNode listNode, int[] values){
         if(listNode == null && values.length != 0){
             return false;
