@@ -1,14 +1,19 @@
 package utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class GeneralUtils {
 
-    public static Object convertToCommaSeperatedString(List list) {
-        return list.stream().collect(Collectors.joining(","));
+    public static <T> Object convertToCommaSeperatedString(List<T> list) {
+        return list.stream().map(x -> getValue(x)).collect(Collectors.joining(","));
     }
 
     public static Object convertToCommaSeperatedString(Stream stream) {
@@ -45,6 +50,31 @@ public class GeneralUtils {
         assert listNode == null;
     }
 
+    public static <T> void compareListOfList(List<List<T>> values,  List<List<T>> expectedValues ){
+        assert values.size() == expectedValues.size();
+        AtomicInteger index = new AtomicInteger();
+        List<String> valuesString = new ArrayList<>();
+
+
+        values.stream().forEach(x -> valuesString.add(x.stream().map(y -> getValue(y))
+                .collect(Collectors.joining(","))));
+
+        assertTrue(valuesString
+                .stream().allMatch(x -> x.equals(getListString(expectedValues.get(index.getAndIncrement())))));
+    }
+
+    private static <T> String getValue(T y) {
+        return y instanceof  Integer ? String.valueOf((int)y): (String)y;
+    }
+
+
+
+    private static <T> String getListString(List<T> values){
+        return values.stream()
+                .map(y -> y instanceof  Integer ? String.valueOf((int)y): (String)y)
+                .collect(Collectors.joining(","));
+    }
+
     public static boolean validateList(ListNode listNode, int[] values){
         if(listNode == null && values.length != 0){
             return false;
@@ -62,5 +92,19 @@ public class GeneralUtils {
 
         return true;
     }
+
+    public static void validateTreeNode(TreeNode treeNode, String values){
+        StringBuilder stringBuilder = new StringBuilder();
+        evaluateTreeNode(stringBuilder,treeNode);
+        assertEquals(stringBuilder.substring(0, stringBuilder.length() - 1), values);
+    }
+
+    private static void evaluateTreeNode(StringBuilder stringBuilder, TreeNode treeNode){
+        if(treeNode == null) return;
+        stringBuilder.append(treeNode.val + ",");
+        evaluateTreeNode(stringBuilder,treeNode.left);
+        evaluateTreeNode(stringBuilder, treeNode.right);
+    }
+
 
 }
