@@ -16,14 +16,21 @@ public class GeneralUtils {
         return list.stream().map(x -> getValue(x)).collect(Collectors.joining(","));
     }
 
-    public static Object convertToCommaSeperatedString(Stream stream) {
+    public static Object convertToArrowSeperatedString(Stream stream) {
         return stream.map(x -> x.toString()).collect(Collectors.joining("->"));
+    }
+
+    public static void compareValues(int[] expected, int[] actual){
+        assert expected.length == actual.length;
+        for(int i= 0 ; i<expected.length; i++){
+            assert expected[i] == actual[i];
+        }
     }
 
     public static Object convertToCommaSeperatedString(int[][] multiInt) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int[] singleInt : multiInt) {
-            stringBuilder.append(convertToCommaSeperatedString(Arrays.stream(singleInt).boxed()) + ",");
+            stringBuilder.append(convertToArrowSeperatedString(Arrays.stream(singleInt).boxed()) + ",");
         }
 
         return stringBuilder.substring(0, stringBuilder.length() - 1);
