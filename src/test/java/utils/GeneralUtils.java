@@ -27,6 +27,13 @@ public class GeneralUtils {
         }
     }
 
+    public static void compareValues(long[] expected, long[] actual){
+        assert expected.length == actual.length;
+        for(int i= 0 ; i<expected.length; i++){
+            assert expected[i] == actual[i];
+        }
+    }
+
     public static Object convertToCommaSeperatedString(int[][] multiInt) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int[] singleInt : multiInt) {
