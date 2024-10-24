@@ -1,6 +1,6 @@
-package easy.Array;
+package medium.prefixSum;
 
-import medium.Array.SumOfDistances;
+import medium.prefixsum.SumOfDistances;
 import org.junit.Test;
 import utils.GeneralUtils;
 

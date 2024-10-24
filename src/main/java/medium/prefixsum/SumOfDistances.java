@@ -1,4 +1,4 @@
-package medium.Array;
+package medium.prefixsum;
 
 import java.util.ArrayList;
 import java.util.HashMap;
