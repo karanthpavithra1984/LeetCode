@@ -4,6 +4,9 @@ public class NumberOfPoints {
 
     /**
      *
+     * Time Complexity - o(n + k) - where n is the length of updates, k is the length
+     * Space Complexity o(k) - array of length k
+     *
      * @param length
      * @param updates
      * @return int[]
