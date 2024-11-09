@@ -11,7 +11,6 @@ public class SimplifyPath {
     public String simplifyPath(String path) {
         String[] splitPaths = path.split("/");
         Stack<String> directories = new Stack<>();
-        String newPath = "/";
         for(String splitPath: splitPaths){
             if(splitPath.equals("..")){
                 if(!directories.isEmpty()) directories.pop();
@@ -20,10 +19,12 @@ public class SimplifyPath {
             }
         }
 
+        StringBuilder builder = new StringBuilder();
+
         for(String directory: directories){
-            newPath += directory + "/";
+            builder.append("/").append(directory);
         }
 
-        return newPath == "/" ? newPath : newPath.substring(0, newPath.length()-1);
+        return builder.length() > 0  ? builder.toString() : "/";
     }
 }
