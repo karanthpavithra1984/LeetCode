@@ -1,0 +1,63 @@
+package medium.unionfind;
+
+/**
+ * Time Complexity - O(V+(E∗α(V)))
+ * Space complexity o(V)
+ * Where V s the number of vertices and
+ * E is the number of edges in the graph.
+ * α() is used for amortized complexity.
+ */
+
+public class CountComponents {
+    int[] parent ;
+    int [] rank;
+    public int countComponents(int n, int[][] edges) {
+        parent = new int[n];
+        rank = new int[n];
+        for(int i=0;i < n;i++){
+            parent[i] = i;
+            rank[i] = 1;
+        }
+
+        int result = n;
+
+        for(int[] edge : edges){
+            if(unionAndFind(edge[0],edge[1])){
+                result--;
+            }
+        }
+
+        return result;
+
+    }
+
+    private int findParent(int n){
+        int par = parent[n];
+        //Finding the parent by finding the root node, where it is parent of itself
+        while(par != parent[par]){
+            parent[par] = parent[parent[par]];
+            par = parent[par];
+        }
+
+        return par;
+    }
+
+    private boolean unionAndFind(int edge1, int edge2){
+        int par1 = findParent(edge1);
+        int par2 = findParent(edge2);
+
+        if(par1 == par2){
+            return false; // Union wasnt possible;
+        }
+
+        if(rank[par1] > rank[par2]){
+            parent[par2] = par1;
+            rank[par1] += rank[par2];
+        }else{
+            parent[par1] = par2;
+            rank[par2] += rank[par1];
+        }
+
+        return true;
+    }
+}
