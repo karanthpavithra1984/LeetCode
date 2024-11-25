@@ -1,8 +1,8 @@
-package medium.unionfind;
+package utils;
 
 public class UnionFind {
     int[] parent ;
-    int [] rank;
+    int[] rank;
 
     public UnionFind(int n){
         parent = new int[n];
@@ -41,5 +41,9 @@ public class UnionFind {
         }
 
         return true;
+    }
+
+    public int[] getParent(){
+        return parent;
     }
 }

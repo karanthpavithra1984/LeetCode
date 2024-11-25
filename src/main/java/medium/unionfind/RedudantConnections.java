@@ -1,7 +1,10 @@
 package medium.unionfind;
 
+import utils.UnionFind;
+
 /**
- * Time Complexity - O(V+(E∗α(V)))
+ * Refer to Count Components
+ * Time Complexity - O(V+E) - V is vertices or nodes, E is edges
  * Space complexity o(V)
  * Where V s the number of vertices and
  * E is the number of edges in the graph.

@@ -1,5 +1,7 @@
 package medium.unionfind;
 
+import utils.UnionFind;
+
 import java.util.*;
 
 /**

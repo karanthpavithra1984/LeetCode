@@ -1,5 +1,6 @@
-package medium.Stack;
+package hard.stack;
 
+import medium.Stack.BasicCalcluatorii;
 import org.junit.Test;
 
 public class BasicCalculatoriiTest {
