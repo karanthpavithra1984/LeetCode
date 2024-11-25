@@ -17,7 +17,7 @@ public class UnionFind {
         int par = parent[n];
         //Finding the parent by finding the root node, where it is parent of itself
         while(par != parent[par]){
-            parent[par] = parent[parent[par]];
+            parent[par] = parent[parent[par]]; //Path Compression
             par = parent[par];
         }
 
@@ -43,7 +43,7 @@ public class UnionFind {
         return true;
     }
 
-    public int[] getParent(){
-        return parent;
+    public int getRank(int edge){
+        return rank[edge];
     }
 }
