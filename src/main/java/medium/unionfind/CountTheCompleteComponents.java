@@ -2,6 +2,13 @@ package medium.unionfind;
 
 import utils.UnionFind;
 
+/**
+ * with differentv subsequent loops , its going to be o(n+e) - n is node and e is edge
+ * again findparent is a(t) which is constant
+ *
+ *
+ * Space Is o(n)
+ */
 public class CountTheCompleteComponents {
     public int countCompleteComponents(int n, int[][] edges) {
         UnionFind uf = new UnionFind(n);
@@ -16,17 +23,21 @@ public class CountTheCompleteComponents {
         }
 
         for(int i=0;i<n;++i){
-            if(nodes[i]==0) ++count;
+            //when a node is connected to itself , then count++.
+            if(nodes[i]==0) count++;
         }
 
         for(int edge[]: edges){
-            int ult = uf.findParent(edge[0]);
+            //could be anything as both will have same parent
+            int ult = uf.findParent(edge[1]);
+            //get the edges
             connection[ult]++;
         }
 
         for(int i=0;i<n;++i){
+            //Edges should be equal to m*(m-1)/2 - where m is vertices.
             if(connection[i]>0 && connection[i]==uf.getRank(i)*(uf.getRank(i)-1)/2)
-                ++count;
+                count++;
         }
 
         return count;

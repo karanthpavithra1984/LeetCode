@@ -1,6 +1,7 @@
 package medium.linkedList;
 
 import org.junit.Test;
+import utils.GeneralUtils;
 import utils.ListNode;
 
 public class ReverseLinkedListTest {
@@ -9,12 +10,7 @@ public class ReverseLinkedListTest {
 
     @Test
     public void testReverseLinkedList(){
-        ListNode listNode1 = new ListNode(1);
-        listNode1.next = new ListNode(2);
-        listNode1.next.next = new ListNode(3);
-        listNode1.next.next.next = new ListNode(4);
-        listNode1.next.next.next.next = new ListNode(5);
-
-        reverseLinkedList.reverseBetween(listNode1, 2, 4);
+        ListNode listNode1 = GeneralUtils.getListNode(new int[]{1,2,3,4,5,6,7,8,9});
+        reverseLinkedList.reverseBetween(listNode1, 2, 8);
     }
 }
