@@ -2,6 +2,11 @@ package easy.BinarySearch;
 
 import utils.TreeNode;
 
+/**
+ * Worst case o(n), provided the value is on an unbalanced tree
+ * Space complexity o(n) , since we are using recursion
+ */
+
 public class SearchBST {
     public TreeNode searchBST(TreeNode root, int val) {
         if(root == null) return null;
