@@ -1,6 +1,5 @@
-package easy.BinarySearch;
+package easy.BinaryTree;
 
-import com.sun.source.tree.Tree;
 import org.junit.Test;
 import utils.TreeNode;
 

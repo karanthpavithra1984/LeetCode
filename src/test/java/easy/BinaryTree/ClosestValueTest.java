@@ -1,4 +1,4 @@
-package easy.BinarySearch;
+package easy.BinaryTree;
 
 import org.junit.Test;
 import utils.TreeNode;

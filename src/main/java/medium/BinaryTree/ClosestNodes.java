@@ -1,4 +1,4 @@
-package medium.BinarySearch;
+package medium.BinaryTree;
 
 import utils.TreeNode;
 
