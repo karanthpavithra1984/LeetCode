@@ -58,4 +58,14 @@ public class BinaryTreeUtils {
         treeNode.right.right.right  = new TreeNode(1);
         return treeNode;
     }
+
+    public static TreeNode getInvalidTreeNode(){
+        TreeNode treeNode = new TreeNode(5);
+        treeNode.left = new TreeNode(4);
+        treeNode.right = new TreeNode(3);
+
+        treeNode.left.left = new TreeNode(11);
+        treeNode.left.right = new TreeNode(7);
+        return treeNode;
+    }
 }
