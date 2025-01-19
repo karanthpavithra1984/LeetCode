@@ -16,6 +16,5 @@ public class MaximumDepth {
         int leftHeight = maxDepth(root.left);
         int rightHeight = maxDepth(root.right);
         return java.lang.Math.max(leftHeight, rightHeight) + 1;
-
     }
 }

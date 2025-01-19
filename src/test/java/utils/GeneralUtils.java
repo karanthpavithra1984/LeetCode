@@ -86,7 +86,14 @@ public class GeneralUtils {
     }
 
     private static <T> String getValue(T y) {
-        return y instanceof  Integer ? String.valueOf((int)y): (String)y;
+        switch (y){
+            case Integer i: return ""+i;
+            case Long i: return ""+i;
+            case Double i: return ""+i;
+            case String i: return ""+i;
+            default:
+                throw new IllegalStateException("Unexpected value: " + y);
+        }
     }
 
 
