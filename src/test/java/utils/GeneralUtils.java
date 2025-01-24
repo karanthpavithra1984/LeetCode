@@ -26,6 +26,12 @@ public class GeneralUtils {
             assert expected[i] == actual[i];
         }
     }
+    public static void compareValues(char[] expected, char[] actual){
+        assert expected.length == actual.length;
+        for(int i= 0 ; i<expected.length; i++){
+            assert expected[i] == actual[i];
+        }
+    }
 
     public static void compareValues(long[] expected, long[] actual){
         assert expected.length == actual.length;
