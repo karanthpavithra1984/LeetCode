@@ -11,6 +11,14 @@ public class MedianFinder {
         maxHeap = new PriorityQueue<>();
     }
 
+    /**
+     * Inserting/Deleting from a priorityQueue takes around o(logn) - We have around 7
+     * Peeking takes o(1) so o(logn)
+     *
+     * Space Complexity is o(n)
+     * @param num
+     */
+
     public void addNum(int num) {
         minHeap.add(Double.valueOf(num));
 

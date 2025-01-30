@@ -14,5 +14,10 @@ public class MedianFinderTest {
         assert mf.findMedian() == 2.5;
         mf.addNum(4);
         assert mf.findMedian() == 3.0;
+
+        mf = new MedianFinder();
+        mf.addNum(1);
+        mf.addNum(-1);
+        mf.addNum(2);
     }
 }
