@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
-    Time Complexity o(2^n)
-    If you imagine it as a tree one with the decision and other not,
+    Time Complexity o(N* 2^n)
+    1) If you imagine it as a tree one with the decision and other not,
     then we will have 8 leaf nodes for 3 hence , 2^n
+    2) Then you need create a subset and add them to the list -
+    So it would o(n)
  *
  */
 public class SubSets {

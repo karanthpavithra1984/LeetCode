@@ -2,6 +2,13 @@ package medium.BinaryTree;
 
 import utils.TreeNode;
 
+
+/**
+ * Time Complexity - o(n)
+ * Space - o(1) - we have used references
+ *
+ */
+
 public class LowestCommonAncestorIII {
     public TreeNode lowestCommonAncestor(TreeNode p, TreeNode q) {
         TreeNode nodeA = p;
