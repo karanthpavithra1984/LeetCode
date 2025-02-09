@@ -1,6 +1,8 @@
 package medium.Stack;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Stack;
 
 /**
  * Time Complexity total o(3n) is o(n)

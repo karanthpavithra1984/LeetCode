@@ -2,8 +2,6 @@ package medium.bfs;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-
 public class MinMutationTest {
     MinMutation m = new MinMutation();
 

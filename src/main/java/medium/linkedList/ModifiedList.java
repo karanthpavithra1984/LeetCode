@@ -2,7 +2,8 @@ package medium.linkedList;
 
 import utils.ListNode;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Use Set instead of List to reduce the time.

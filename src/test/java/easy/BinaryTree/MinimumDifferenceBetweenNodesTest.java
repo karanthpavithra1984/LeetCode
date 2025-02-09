@@ -3,8 +3,6 @@ package easy.BinaryTree;
 import org.junit.Test;
 import utils.BinaryTreeUtils;
 
-import java.util.Arrays;
-
 public class MinimumDifferenceBetweenNodesTest {
     MinimumDifferenceBetweenNodes minimumDifferenceBetweenNodes = new MinimumDifferenceBetweenNodes();
 

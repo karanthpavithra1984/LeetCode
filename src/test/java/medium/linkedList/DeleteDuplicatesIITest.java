@@ -1,11 +1,8 @@
 package medium.linkedList;
 
 
-import org.junit.Ignore;
 import org.junit.Test;
 import utils.ListNode;
-
-import java.util.List;
 
 public class DeleteDuplicatesIITest {
     DeleteDuplicatesII deleteDuplicatesII = new DeleteDuplicatesII();

@@ -4,8 +4,6 @@ import medium.prefixsum.SumOfDistances;
 import org.junit.Test;
 import utils.GeneralUtils;
 
-import static org.junit.Assert.assertEquals;
-
 public class SumOfDistancesTest {
     SumOfDistances sumOfDistances = new SumOfDistances();
 

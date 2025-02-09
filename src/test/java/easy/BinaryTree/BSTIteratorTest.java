@@ -1,6 +1,5 @@
 package easy.BinaryTree;
 
-import com.sun.source.tree.BinaryTree;
 import medium.BinaryTree.BSTIterator;
 import org.junit.Test;
 import utils.BinaryTreeUtils;

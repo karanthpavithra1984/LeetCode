@@ -4,8 +4,6 @@ import easy.linkedList.GetDecimalValue;
 import org.junit.Test;
 import utils.ListNode;
 
-import java.util.LinkedList;
-
 public class GetDecimalValueTest {
     GetDecimalValue getDecimalValue = new GetDecimalValue();
 

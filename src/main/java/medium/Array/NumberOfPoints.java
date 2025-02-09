@@ -1,7 +1,5 @@
 package medium.Array;
 
-import java.util.Arrays;
-
 /**
  * Time Complexity o(n*m)
  * Space Complexity o(n)

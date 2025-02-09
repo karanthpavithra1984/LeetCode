@@ -1,6 +1,8 @@
 package medium.twopointers;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Time Complexity o(nlogn)

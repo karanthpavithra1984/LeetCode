@@ -1,6 +1,5 @@
 package medium.Array;
 
-import easy.Array.SingleNumberI;
 import org.junit.Test;
 
 public class SingleNumberIITest {
