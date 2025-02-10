@@ -11,10 +11,11 @@ public class CombinationsTest {
 
     @Test
     public void test() {
+
+        assertEquals(GeneralUtils.convertToArrowSeperatedString(new Combinations().combine(4,4).stream()),"[1, 2, 3, 4]");
         //new CombinationsLeetCode().combine(7,2);
         new Combinations().combine(7,2);
         //new CombinationsNonOptimized().combine(7,2);
-
         assertEquals(GeneralUtils.
                 convertToArrowSeperatedString(
                         new CombinationsNonOptimized().combine(4, 2).stream()), "[1, 2]->[1, 3]->[1, 4]->[2, 3]->[2, 4]->[3, 4]");
