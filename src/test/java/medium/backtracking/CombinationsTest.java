@@ -11,6 +11,10 @@ public class CombinationsTest {
 
     @Test
     public void test() {
+        //new CombinationsLeetCode().combine(7,2);
+        new Combinations().combine(7,2);
+        //new CombinationsNonOptimized().combine(7,2);
+
         assertEquals(GeneralUtils.
                 convertToArrowSeperatedString(
                         new CombinationsNonOptimized().combine(4, 2).stream()), "[1, 2]->[1, 3]->[1, 4]->[2, 3]->[2, 4]->[3, 4]");
@@ -26,7 +30,7 @@ public class CombinationsTest {
 
         assertEquals(GeneralUtils.
                         convertToArrowSeperatedString(
-                                combinations.combine(5, 2).stream()),
+                                new Combinations().combine(5, 2).stream()),
                 "[1, 2]->[1, 3]->[1, 4]->[1, 5]->[2, 3]->[2, 4]->[2, 5]->[3, 4]->[3, 5]->[4, 5]");
     }
 }

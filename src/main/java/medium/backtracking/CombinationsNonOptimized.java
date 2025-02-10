@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CombinationsNonOptimized {
+    private int counter;
     public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> combination = new ArrayList<>();
         backtrack(n, 1, k, res, combination);
+        System.out.println("CombinationsNonOptimized" + counter);
         return res;
     }
 
@@ -20,6 +22,8 @@ public class CombinationsNonOptimized {
         if (index > n) {
             return;
         }
+
+        counter++;
         combination.add(index);
         backtrack(n, index + 1, k, res, combination);
         combination.remove(combination.size() - 1);
