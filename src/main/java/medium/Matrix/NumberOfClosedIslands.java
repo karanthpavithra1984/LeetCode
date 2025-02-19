@@ -51,8 +51,11 @@ public class NumberOfClosedIslands {
                         continue;
                     }
 
-                    queue.add(new int[]{newRow, newCol});
-                    visited[newRow][newCol] = true;
+                    if(grid[newRow][newCol] == 0){
+                        queue.add(new int[]{newRow, newCol});
+                        visited[newRow][newCol] = true;
+                    }
+
                 }
             }
         return isBoundary;
