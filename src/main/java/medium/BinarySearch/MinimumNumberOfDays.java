@@ -2,19 +2,25 @@ package medium.BinarySearch;
 
 import java.util.stream.IntStream;
 
+/**
+ * Time Complexity n*logd - d is maximum number of days
+ */
+
 public class MinimumNumberOfDays {
     public int minDays(int[] bloomDay, int m, int k) {
         int start = 0;//array index starts at 0
         //Get the max day or the last day the flower is going to boom
         int end = IntStream.of(bloomDay).max().getAsInt();
-        int numberOfBoquets = 0;
+        int numberOfBoquets =0 ;
+        int minDays = -1;
 
         //Get a middle day and see if we can pick adjacent flowers of k and can make m bouqets from it
 
-        while (start <= end) {
+        while (start <= end) { //This has to be less than equal because its possible that we will have to wait until the last day
             int mid = start + (end - start) / 2;
 
             int count = 0; //count adjancet flowers
+            numberOfBoquets = 0;
             for (int i = 0; i < bloomDay.length; i++) {
                 if (bloomDay[i] <= mid) { //Flowers have bloomed
                     count++;
@@ -24,19 +30,19 @@ public class MinimumNumberOfDays {
 
                 if (count == k) {
                     numberOfBoquets++;
-                    break;
+                    count=0;
                 }
             }
 
-            if (numberOfBoquets >= k) {
+            if (numberOfBoquets >= m) {
                 //Enough flowers have bloomed, we can hopefully get boquets sooner
-                end = mid - 1;
+                minDays = mid;
+                end = mid-1; //remember to this if there is equal , because its inclusive
             } else {
                 //Havent gotten enough flowers yet, we need to wait for more days
                 start = mid + 1;
             }
         }
-        return end;
-
+        return  minDays;
     }
 }
