@@ -3,10 +3,13 @@ package easy.String;
 public class VerifyingAnAlienDict {
     public boolean isAlienSorted(String[] words, String order) {
         int[] characters = new int[26];
+        //O(length of the ordeR)
         for(int i=0;i < order.length();i++){
             characters[order.charAt(i)-'a'] = i;
         }
 
+        //Worstcase
+        //Total number of words * number of characters in the word.
         for(int i = 0; i < words.length - 1; i++){
             //Lets start with first word and then continue from there
             for(int j = 0; j < words[i].length(); j++){
