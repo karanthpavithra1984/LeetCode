@@ -1,6 +1,5 @@
-package hard;
+package hard.BinaryTree;
 
-import hard.BinaryTree.MaxPathSum;
 import org.junit.Test;
 import utils.TreeNode;
 
