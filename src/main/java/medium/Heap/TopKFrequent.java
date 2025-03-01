@@ -12,11 +12,14 @@ public class TopKFrequent {
             wordFrequencyMap.put(word, wordFrequencyMap.getOrDefault(word, 0) + 1);
         }
 
-        //We need to push this in a descending order of the words and its count
+        //The priority queue is ascending in nature
+        // So we need to sort ascending and then if the numbers are equal , sort them by
+        //Non lexiographical
+
         PriorityQueue<String> wordPriorityQueue = new PriorityQueue<>(
                 (o1, o2) -> {
                     if(wordFrequencyMap.get(o1) == wordFrequencyMap.get(o2)){
-                        return o2.compareTo(o1);
+                        return o1.compareTo(o2);
                     }else{
                         return wordFrequencyMap.get(o1) - wordFrequencyMap.get(o2);
                     }
@@ -24,9 +27,6 @@ public class TopKFrequent {
 
         for(String wordKey: wordFrequencyMap.keySet()){
             wordPriorityQueue.offer(wordKey);
-            if(wordPriorityQueue.size() > k){
-                wordPriorityQueue.poll();
-            }
         }
 
         List<String> result = new ArrayList<>();
