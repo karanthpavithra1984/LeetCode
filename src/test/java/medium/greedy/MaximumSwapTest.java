@@ -10,4 +10,11 @@ public class MaximumSwapTest {
        assert  maximumSwap.maximumSwap(2736) == 7236;
        assert  maximumSwap.maximumSwap(9973) == 9973;
     }
+
+    @Test
+    public void maximumSwap2() {
+        MaximumSwapII maximumSwap = new MaximumSwapII();
+
+        assert maximumSwap.maximumSwap(10) == 10;
+    }
 }
