@@ -7,8 +7,8 @@ import java.util.Set;
 
 public class ThirdMaximumNumber {
     /**
-     * Time Complexity o(nlogk)
-     * Space complexity o(k)
+     * Time Complexity o(nlogk) K is always 3 , so we can ignore it
+     * Space complexity o(n)
      * @param nums
      * @return
      */
