@@ -7,41 +7,49 @@ public class MyAtoi {
      * @param s
      * @return
      */
-    public int myAtoi(String s) {int result = 0;
+    public int myAtoi(String s) {
         int sign = 1;
-
+        int result = 0;
         int index = 0;
-        int len = s.length();
-        //first take care of white spaces
+        int length = s.length();
+
+        //Remove the trailing space
         while (index < s.length() && s.charAt(index) == ' ') {
             index++;
         }
 
-        if (index < len) {
-            if (s.charAt(index) == '-') {
-                sign = -1;
-                index++;
-            } else if (s.charAt(index) == '+') {
-                sign = 1;
-                index++;
-            }
+
+        if(index >= length) {
+            return result;
         }
 
-        while (index < len) {
-            if (!Character.isDigit(s.charAt(index)))
-                break;
+        if(s.charAt(index) == '-') {
+            sign = -1;
+            index++;
+        }else if(s.charAt(index) == '+') {
+            sign = 1;
+            index++;
+        }
 
-           int digit = (s.charAt(index) - '0');
+        while(index < length){
+            if(!Character.isDigit(s.charAt(index))){
+                return result;
+            }
+
+            int digit = s.charAt(index) - '0';
 
             if (result > (Integer.MAX_VALUE - digit) / 10) {
                 return sign == -1 ? Integer.MIN_VALUE : Integer.MAX_VALUE;
             }
 
-            index++;
-
             result = result * 10 + digit;
+
+            index++;
         }
 
+
         return sign * result;
+
+
     }
 }

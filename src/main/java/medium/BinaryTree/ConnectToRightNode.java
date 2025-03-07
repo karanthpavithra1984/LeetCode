@@ -9,24 +9,27 @@ import utils.TreeNode;
 
 public class ConnectToRightNode {
     public TreeNode connect(TreeNode root) {
-        if(root == null) return null;
+      if(root == null) return null;
 
-        TreeNode traverseHead = root; //Keep a hold of the root
+      TreeNode traverseNode = root;
 
-        //This is a perfect Binary Tree, so there will be left and right at each level
-        while(traverseHead.left != null) {
-            //We need to hold the node
-            TreeNode node = traverseHead;
-            while(node != null){
-                node.left.next = node.right;
-                if(node.next != null){
-                    node.right.next = node.next.left;
-                }
-                node = node.next;
-            }
-            traverseHead = traverseHead.left;
-        }
+      //Since there is going to be a left node
+      while(traverseNode.left != null){
+          TreeNode node = traverseNode;
 
-        return root;
+          while(node != null){
+              node.left.next = node.right;
+              if(node.next != null){
+                  node.right.next = node.next.left;
+              }
+
+              node = node.next;
+          }
+
+          traverseNode = traverseNode.left;
+      }
+
+
+      return root;
     }
 }

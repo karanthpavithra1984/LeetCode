@@ -1,5 +1,7 @@
+
 package medium.BinarySearch;
 
+import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /**
@@ -36,10 +38,12 @@ public class MinimumNumberOfDays {
 
             if (numberOfBoquets >= m) {
                 //Enough flowers have bloomed, we can hopefully get boquets sooner
+                //You need minimum hence better to keep track of it.
                 minDays = mid;
                 end = mid-1; //remember to this if there is equal , because its inclusive
             } else {
                 //Havent gotten enough flowers yet, we need to wait for more days
+                //Hence move towards the right
                 start = mid + 1;
             }
         }
