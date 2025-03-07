@@ -29,10 +29,12 @@ public class DiagonalTraverseIIBFS {
             int curCol = values[1];
             ans.add(nums.get(curRow).get(curCol));
 
+            //Add beginning of the rows
             if(curCol == 0  && curRow + 1 < nums.size()){
                 queue.add(new int[]{curRow + 1, curCol});
             }
 
+            //Add Columns
             if(curCol+1 < nums.get(curRow).size()){
                 queue.add(new int[]{curRow, curCol + 1});
             }

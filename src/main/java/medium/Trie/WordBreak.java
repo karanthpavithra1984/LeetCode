@@ -55,15 +55,17 @@ public class WordBreak {
 
         return dp[s.length() - 1];
     }
-}
 
+    private class TrieNode {
+        boolean isWord;
+        Map<Character, TrieNode> children;
 
-class TrieNode {
-    boolean isWord;
-    Map<Character, TrieNode> children;
-
-    TrieNode() {
-        this.children = new HashMap<>();
+        TrieNode() {
+            this.children = new HashMap<>();
+        }
     }
 }
+
+
+
 
