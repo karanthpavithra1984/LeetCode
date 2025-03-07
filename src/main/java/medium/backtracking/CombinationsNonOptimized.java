@@ -9,7 +9,6 @@ public class CombinationsNonOptimized {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> combination = new ArrayList<>();
         backtrack(n, 1, k, res, combination);
-        System.out.println("CombinationsNonOptimized" + counter);
         return res;
     }
 

@@ -13,7 +13,6 @@ public class CombinationsLeetCode {
         this.k = k;
         List<List<Integer>> ans = new ArrayList<>();
         backtrack(new ArrayList<>(), 1, ans);
-        System.out.println("CombinationLeetCode" + counter);
         return ans;
     }
 
@@ -31,11 +30,7 @@ public class CombinationsLeetCode {
         int remain = n - firstNum + 1;
         int available = remain - need;
 
-        System.out.println("firstNum " + firstNum + ",need " + need + ", remain " + remain + ", available " + available);
-
-        System.out.println("firstNum + available" + (firstNum + available));
         for (int num = firstNum; num <= firstNum + available; num++) {
-            System.out.println("index" + num);
             curr.add(num);
             backtrack(curr, num + 1, ans);
             curr.remove(curr.size() - 1);
