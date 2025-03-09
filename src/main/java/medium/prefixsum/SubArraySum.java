@@ -5,22 +5,21 @@ import java.util.Map;
 
 public class SubArraySum {
     public int subarraySum(int[] nums, int k) {
-        Map<Integer, Integer> prefixSumMap = new HashMap<>();
-        prefixSumMap.put(0, 1);
-        int totalSub = 0;
+        Map<Integer, Integer> prefixCountMap = new HashMap<>();
+        prefixCountMap.put(0,1);
 
         int sum = 0;
+        int totalCount = 0;
         for(int num: nums){
-            sum+= num;
-            int prefix = sum - k;
-            //So for the array 1,2,3 = if the sub array sum is 5 is what we are looking for ,
-            //Prefix sum array is 1,3,6 - so 6-1 i.e index 2 - 0 - is 5, so the subarray is 2.
-            if(prefixSumMap.containsKey(prefix)){
-                totalSub += prefixSumMap.get(prefix);
+            sum += num;
+            int prefixSum = sum-k;
+            if(prefixCountMap.containsKey(prefixSum)){
+                totalCount += prefixCountMap.get(prefixSum);
             }
-            prefixSumMap.put(sum, prefixSumMap.getOrDefault(sum, 0) + 1);
+
+            prefixCountMap.put(sum, prefixCountMap.getOrDefault(sum, 0) + 1);
         }
 
-        return totalSub;
+        return totalCount;
     }
 }
