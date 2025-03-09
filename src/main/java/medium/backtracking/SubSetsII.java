@@ -15,14 +15,14 @@ import java.util.*;
 public class SubSetsII {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         Arrays.sort(nums); //Sort them so that it becomes easier to navigate through them
-        Set<List<Integer>> res = new HashSet<>();
+        List<List<Integer>> res = new ArrayList<>();
         List<Integer> combination = new ArrayList<>();
 
         dfs(nums, 0, res, combination);
         return new ArrayList<>(res);
     }
 
-    private void dfs(int[] nums, int index, Set<List<Integer>> res, List<Integer> combination) {
+    private void dfs(int[] nums, int index, List<List<Integer>> res, List<Integer> combination) {
         if(index == nums.length){
             res.add(new ArrayList<>(combination));
             return;
@@ -31,6 +31,9 @@ public class SubSetsII {
         combination.add(nums[index]);
         dfs(nums, index + 1, res, combination);
         combination.remove(combination.size() - 1);
+
+        while(index + 1< nums.length && nums[index] == nums[index+1])
+            index++;
         dfs(nums, index + 1, res, combination);
     }
 }

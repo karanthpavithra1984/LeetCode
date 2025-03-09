@@ -38,7 +38,6 @@ public class CombinationSumII {
 
         for (int i = idx; i < candidates.length && candidates[i] <= remaining; i++) {
             if(i > idx && candidates[i - 1] == candidates[i]){
-                System.out.println("what is here - > i " + i  + ", idx " + idx + "," +  candidates[i] + "," + candidates[i - 1]);
                 continue;
             }
             combination.add(candidates[i]);

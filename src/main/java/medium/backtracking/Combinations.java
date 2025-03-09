@@ -25,12 +25,13 @@ public class Combinations {
             return;
         }
 
+
         //Depending upon the size of the combination , you are figuring out remaining elements
         // If the size is 0, i.e it hasnt even started traversing, if the k = 2 , then 6,7 is the last combination.
         //you can skip 7 and hence the remaining is 6 , and you traverse through 1-> 6
-        int remaining = n - (k-combination.size()) + 1;
+       // int remaining = n - (k-combination.size()) + 1;
 
-        for(int i = index; i <= remaining; i++) {
+        for(int i = index; i <= n; i++) {
             combination.add(i);
             backtrack(n, i + 1, k, res, combination);
             combination.remove(combination.size()-1);
