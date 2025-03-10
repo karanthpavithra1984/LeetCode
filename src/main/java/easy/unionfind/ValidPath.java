@@ -1,6 +1,7 @@
 package easy.unionfind;
 
 import utils.UnionFind;
+import utils.UnionFindii;
 
 /**
  * Time Complexity -
@@ -13,7 +14,7 @@ import utils.UnionFind;
  */
 public class ValidPath {
     public boolean validPath(int n, int[][] edges, int source, int destination) {
-        UnionFind unionFind = new UnionFind(n);
+        UnionFindii unionFind = new UnionFindii(n);
 
         for(int[] edge : edges) {
             unionFind.union(edge[0], edge[1]);

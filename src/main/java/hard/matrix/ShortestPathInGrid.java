@@ -5,6 +5,6 @@ public class ShortestPathInGrid {
         int ROW = grid.length;
         int COL = grid[0].length;
 
-
+        return 0;
     }
 }
