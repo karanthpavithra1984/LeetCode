@@ -12,9 +12,13 @@ public class ReverseLinkedList {
         ListNode currentNode = head;
 
         while(currentNode != null){
+            //Save the next Node
             ListNode nextNode = currentNode.next;
+            //point currentNode to reverse
             currentNode.next = reversed;
+            //Now the reversed is the currentNode
             reversed = currentNode;
+            //CurrentNode is nextNode
             currentNode = nextNode;
         }
 
