@@ -15,20 +15,20 @@ public class RemoveNthFromEnd {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         int count = n+1;
         ListNode sentinel = new ListNode(0, head);
-        ListNode firstPointer = sentinel;
-        ListNode secondPointer = sentinel;
+        ListNode firstTraverse = sentinel;
+        ListNode secondTraverse = sentinel;
 
-        while(count > 0){
-            firstPointer = firstPointer.next;
+        while(count >0){
+            firstTraverse = firstTraverse.next;
             count--;
         }
 
-        while(firstPointer != null){
-            secondPointer = secondPointer.next;
-            firstPointer = firstPointer.next;
+        while(firstTraverse != null){
+            firstTraverse = firstTraverse.next;
+            secondTraverse = secondTraverse.next;
         }
 
-        secondPointer.next = secondPointer.next.next;
+        secondTraverse.next = secondTraverse.next.next;
 
         return sentinel.next;
     }
