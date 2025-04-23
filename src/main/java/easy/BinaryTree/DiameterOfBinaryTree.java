@@ -4,23 +4,22 @@ import utils.TreeNode;
 
 public class DiameterOfBinaryTree {
 
-    private int diameter = 0;
-
+    int diameter = 0;
     public int diameterOfBinaryTree(TreeNode root) {
-        longestPathOfTree(root);
+        longestPathOfTheTree(root);
         return diameter;
     }
 
-    private int longestPathOfTree(TreeNode root) {
-        if (root == null)
+    private int longestPathOfTheTree(TreeNode root){
+        if(root == null){
             return 0;
+        }
 
-        int leftLongestPath = longestPathOfTree(root.left);
-        int rightLongestPath = longestPathOfTree(root.right);
+        int leftPath = longestPathOfTheTree(root.left);
+        int rightPath = longestPathOfTheTree(root.right);
 
-        diameter = Math.max(diameter, leftLongestPath + rightLongestPath);
+        diameter = Math.max(diameter, leftPath+rightPath);
 
-        // you need to add one for the parent
-        return Math.max(leftLongestPath, rightLongestPath) + 1;
+        return Math.max(leftPath, rightPath)+1;
     }
 }

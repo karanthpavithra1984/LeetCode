@@ -9,17 +9,20 @@ import utils.TreeNode;
  */
 
 public class isValidBST {
-    Integer prevValue;
 
+    Integer prevVal;
     public boolean isValidBST(TreeNode root) {
-        if (root == null)
+        if(root == null)
             return true;
 
-        if (!isValidBST(root.left))
+        if(!isValidBST(root.left)){
             return false;
-        if (prevValue != null && root.val <= prevValue)
+        }
+        if(prevVal != null && root.val <= prevVal){
             return false;
-        prevValue = root.val;
+        }
+        prevVal = root.val;
         return isValidBST(root.right);
     }
+
 }
