@@ -36,11 +36,13 @@ public class MedianFinder {
     }
 
     public double findMedian() {
+        //Odd numbers
         if(minHeap.size() > maxHeap.size()){
             return minHeap.peek();
         }else if(maxHeap.size() > minHeap.size()){
             return maxHeap.peek();
         }
+        //Even numbers , then make sure u return the median like this
 
         return (minHeap.peek() + maxHeap.peek()) / 2;
     }

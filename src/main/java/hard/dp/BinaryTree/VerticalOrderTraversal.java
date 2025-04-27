@@ -1,4 +1,4 @@
-package hard.BinaryTree;
+package hard.dp.BinaryTree;
 
 import org.apache.commons.lang3.tuple.Pair;
 import utils.TreeNode;
