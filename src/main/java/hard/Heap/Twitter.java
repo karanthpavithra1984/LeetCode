@@ -18,11 +18,16 @@ public class Twitter {
             tweetMap.put(userId, new ArrayList<>());
         }
 
-        tweetMap.get(userId).add(new int[]{count++, tweetId});
+        tweetMap.get(userId).add(new int[] { count++, tweetId });
     }
 
     public List<Integer> getNewsFeed(int userId) {
-        PriorityQueue<int[]> minHeap = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
+        PriorityQueue<int[]> minHeap = new PriorityQueue<>(Comparator.comparingInt(a -> -a[0]));
+
+        if(followerMap.isEmpty()){
+            followerMap.put(userId, new HashSet<>());
+        }
+        followerMap.get(userId).add(userId);
 
         //Get all the followers of the userId
         for(int followee : followerMap.get(userId)){
@@ -30,7 +35,7 @@ public class Twitter {
                 int index = tweetMap.get(followee).size()-1;
                 //Last index
                 int[] tweetInfo = tweetMap.get(followee).get(index);
-                minHeap.offer(new int[]{tweetInfo[0], tweetInfo[1], followee, index-1});
+                minHeap.offer(new int[]{tweetInfo[0], tweetInfo[1], followee, index});
             }
         }
 
@@ -39,21 +44,18 @@ public class Twitter {
             int[] latest = minHeap.poll();
             result.add(latest[1]);
             //Get the next i.e previous to the last of the folowwe and add to the heap
-            int index = latest[3]-1;
+            int index = latest[3];
             if(index > 0) {
-                int[] tweetInfo = tweetMap.get(latest[2]).get(index);
-                minHeap.offer(new int[]{tweetInfo[0], tweetInfo[1]});
+                int[] tweetInfo = tweetMap.get(latest[2]).get(index-1);
+                minHeap.offer(new int[]{tweetInfo[0], tweetInfo[1],latest[2], index-1});
             }
         }
-
-
+        return result;
     }
 
     public void follow(int followerId, int followeeId) {
         if (!followerMap.containsKey(followerId)) {
             followerMap.put(followerId, new HashSet<>());
-            //same followerId to the set
-            followerMap.get(followerId).add(followerId);
         }
 
         followerMap.get(followerId).add(followeeId);
