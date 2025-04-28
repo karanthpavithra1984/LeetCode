@@ -28,21 +28,24 @@ public class LetterCombinations {
         List<String> res = new ArrayList<>();
         if (digits.length() == 0) return res;
 
-        backTrack(digits, res, new StringBuilder(), 0);
+        backtrack(digits, 0, res, new StringBuilder());
         return res;
     }
 
-    private void backTrack(String digits, List<String> res, StringBuilder sb, int index) {
-        if(sb.length() == digits.length()) {
-            res.add(sb.toString());
+    private void backtrack(String digits, int index, List<String> result, StringBuilder stringBuilder){
+        if(index == digits.length()){
+            result.add(stringBuilder.toString());
             return;
         }
 
-        String possibleValues = numberMap.get(digits.charAt(index)- '0');
-        for(Character character: possibleValues.toCharArray()){
-            sb.append(character);
-            backTrack(digits, res, sb, index+1);
-            sb.deleteCharAt(sb.length()-1);
+        String characters = numberMap.get(digits.charAt(index) - '0');
+
+        for(Character character: characters.toCharArray()){
+            stringBuilder.append(character);
+            backtrack(digits, index+1, result, stringBuilder);
+            stringBuilder.deleteCharAt(stringBuilder.length()-1);
         }
     }
+
+
 }
