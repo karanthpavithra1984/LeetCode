@@ -9,24 +9,27 @@ import java.util.List;
 
 public class Permutations {
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> res = new ArrayList<>();
+      List<List<Integer>> result = new ArrayList<>();
 
-        backtrack(res, nums, new ArrayList<>());
-        return res;
+      backtrack(result, nums, new ArrayList<>());
+
+      return result;
     }
 
     private void backtrack(List<List<Integer>> res, int[] nums, List<Integer> cur) {
-        if (cur.size() == nums.length) {
+        if(cur.size() == nums.length){
             res.add(new ArrayList<>(cur));
             return;
         }
 
-        for(int n: nums){
-            if(!cur.contains(n)) {
-                cur.add(n);
-                backtrack(res, nums, cur);
-                cur.remove(cur.size() - 1);
+        for(int num: nums){
+            if(cur.contains(num)){
+                continue;
             }
+
+            cur.add(num);
+            backtrack(res, nums, cur);
+            cur.remove(cur.size()-1);
         }
     }
 }

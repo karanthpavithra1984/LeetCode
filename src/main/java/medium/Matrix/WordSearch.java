@@ -1,5 +1,11 @@
 package medium.Matrix;
 
+/**
+ * Time Complexity is o(m*4^n)
+ * M is number of cells in the board
+ * N is the length of word. you go 4 ways in the backtracking i.e 4^n until u find the word or not.
+ *
+ */
 public class WordSearch {
     public boolean exist(char[][] board, String word) {
         int ROW = board.length;
