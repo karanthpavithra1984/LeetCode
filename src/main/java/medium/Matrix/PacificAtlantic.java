@@ -9,8 +9,8 @@ import java.util.List;
  */
 
 public class PacificAtlantic {
-    private static int ROWS;
-    private static int COLS;
+    int ROWS;
+    int COLS;
 
     public List<List<Integer>> pacificAtlantic(int[][] heights) {
         ROWS = heights.length;
@@ -23,7 +23,7 @@ public class PacificAtlantic {
         //Row first
         for(int row = 0 ; row < ROWS ; row++){
             dfs(row, 0, heights[row][0],pacific, heights); //Pacific bound
-            dfs(row, COLS-1, heights[row][COLS-1], atlantic , heights);
+            dfs(row, COLS-1, heights[row][COLS-1], atlantic , heights);//atlantic bound
         }
 
         //Col
@@ -49,6 +49,7 @@ public class PacificAtlantic {
 
     private void dfs(int row, int col,int prev, boolean[][] oceanBound, int[][] heights){
         //Usual conditions first
+        //Additionaly the current height should be less than previous height
         if(row < 0 || row >= ROWS || col < 0 || col >= COLS  || oceanBound[row][col] || heights[row][col] < prev){
             return;
         }

@@ -1,11 +1,14 @@
 package utils;
 
+import java.util.List;
+
 public class Node {
     public int val;
     public Node next;
     public Node left;
     public Node right;
     public Node random;
+    public List<GraphNode> neighbors;
 
     public Node() {
     }
