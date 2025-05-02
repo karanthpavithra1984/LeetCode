@@ -19,8 +19,8 @@ public class CourseSchedule {
         }
 
         for(int[] pre : prerequisites){
-            adj.get(pre[1]).add(pre[0]);
-            indegree[pre[0]]++;
+            adj.get(pre[0]).add(pre[1]);
+            indegree[pre[1]]++;
         }
 
         int nodesVisited = 0;

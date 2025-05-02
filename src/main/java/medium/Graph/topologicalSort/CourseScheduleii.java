@@ -9,32 +9,33 @@ public class CourseScheduleii {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         int[] inDegree = new int[numCourses];
 
-        //Adj list
-        List<List<Integer>> graph = new ArrayList<>();
+        List<List<Integer>> adjList = new ArrayList<>();
 
-        for(int i = 0; i < numCourses; i++){
-            graph.add(new ArrayList<>());
+        for(int i=0; i < numCourses; i++){
+            adjList.add(i, new ArrayList<>());
         }
 
-        for(int[] prerequisite : prerequisites){
-            graph.get(prerequisite[1]).add(prerequisite[0]);
-            inDegree[prerequisite[0]]++;
+        for(int[] pre: prerequisites){
+            adjList.get(pre[0]).add(pre[1]);
+            //Add the prerequisite to indegree
+            inDegree[pre[1]]++;
         }
-
-        List<Integer> orderOfCourses = new ArrayList<>();
 
         Queue<Integer> queue = new LinkedList<>();
-        for(int i = 0; i < numCourses; i++){
+        for(int i = 0 ; i < numCourses; i++){
+            //The one which is not a prerequisite
             if(inDegree[i] == 0){
-                queue.offer(i);
+                queue.add(i);
             }
         }
 
+        LinkedList<Integer> courses = new LinkedList<>();
+
         while(!queue.isEmpty()){
             int course = queue.poll();
-            orderOfCourses.add(course);
+            courses.addFirst(course);
 
-            for(Integer neighbor: graph.get(course)){
+            for(int neighbor : adjList.get(course)){
                 inDegree[neighbor]--;
                 if(inDegree[neighbor] == 0){
                     queue.offer(neighbor);
@@ -42,8 +43,8 @@ public class CourseScheduleii {
             }
         }
 
-        if(orderOfCourses.size() == numCourses){
-            return orderOfCourses.stream().mapToInt(i -> i).toArray();
+        if(courses.size() == numCourses) {
+            return courses.stream().mapToInt(x -> x).toArray();
         }
         return new int[0];
     }

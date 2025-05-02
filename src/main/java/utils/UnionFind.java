@@ -29,7 +29,7 @@ public class UnionFind {
         int par2 = findParent(edge2);
 
         if(par1 == par2){
-            return false; // Union wasnt possible;
+            return false; // Union wasnt possible or there is a cycle
         }
 
         if(rank[par1] > rank[par2]){
