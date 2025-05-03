@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'idea'
+    id 'org.jetbrains.kotlin.jvm' version '2.0.0'
 }
 
 repositories {
@@ -10,4 +11,8 @@ repositories {
 dependencies {
     testImplementation 'junit:junit:4.13.1'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+kotlin {
+    jvmToolchain(22)
 }
