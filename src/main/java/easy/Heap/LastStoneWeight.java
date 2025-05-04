@@ -5,21 +5,26 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class LastStoneWeight {
+    /**
+     * Time Complexity o(nlogn)
+     * @param stones
+     * @return
+     */
     public int lastStoneWeight(int[] stones) {
-        Queue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());
+        Queue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
 
         for(int stone: stones){
-            priorityQueue.offer(stone);
+            queue.offer(stone);
         }
 
-        while(priorityQueue.size() > 1){
-            int x = priorityQueue.poll();
-            int y = priorityQueue.poll();
+        while(!queue.isEmpty() && queue.size() > 1){
+            int x = queue.poll();
+            int y = queue.poll();
             if(x != y){
-                priorityQueue.offer(Math.abs(x-y));
+                queue.offer(Math.abs(x-y));
             }
         }
 
-        return priorityQueue.size()>0? priorityQueue.poll(): 0;
+        return queue.isEmpty() ? 0: queue.poll();
     }
 }

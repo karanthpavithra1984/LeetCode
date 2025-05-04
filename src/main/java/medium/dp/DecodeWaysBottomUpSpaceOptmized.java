@@ -1,8 +1,6 @@
 package medium.dp;
 
-import java.util.HashMap;
-
-public class DecodeWaysBottomUp {
+public class DecodeWaysBottomUpSpaceOptmized {
     public int numDecodings(String s) {
         int[] dp = new int[s.length()+1];
         dp[s.length()] = 1;
@@ -15,7 +13,7 @@ public class DecodeWaysBottomUp {
                 dp[i] = dp[i+1];
                 if(i+1 < s.length() && (s.charAt(i) == '1' || (
                         s.charAt(i) == '2' && s.charAt(i+1) < '7'
-                        ))){
+                ))){
                     dp[i] += dp[i+2];
                 }
             }
@@ -24,3 +22,4 @@ public class DecodeWaysBottomUp {
         return dp[0];
     }
 }
+

@@ -7,24 +7,25 @@ public class StringCompress {
      * @return
      */
     public int compress(char[] chars) {
-        int arrayIndex = 0;
-        int leftPointer = 0;
+        int arrayIndex = 0 , leftIndex = 0;
 
-        while(leftPointer < chars.length) {
-            char character = chars[leftPointer];
+        while(leftIndex < chars.length){
             int counter = 1;
+            char character = chars[leftIndex];
 
-            while(leftPointer < chars.length-1 && character == chars[leftPointer + 1]) {
+            while(leftIndex+1 < chars.length && chars[leftIndex + 1] == character){
                 counter++;
-                leftPointer++;
+                leftIndex++;
             }
 
-            leftPointer++;
-            chars[arrayIndex++] = character;
+            leftIndex++;
+            chars[arrayIndex] = character;
+            arrayIndex++;
 
             if(counter > 1){
-                for(char c: Integer.toString(counter).toCharArray()){
-                    chars[arrayIndex++] = c;
+                for(char c: (counter +"").toCharArray()){
+                    chars[arrayIndex] = c;
+                    arrayIndex++;
                 }
             }
         }

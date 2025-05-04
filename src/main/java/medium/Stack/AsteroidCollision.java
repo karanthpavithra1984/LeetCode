@@ -9,25 +9,27 @@ import java.util.Stack;
 
 public class AsteroidCollision {
     public int[] asteroidCollision(int[] asteroids) {
-        Stack<Integer> asterioids = new Stack<>();
+        Stack<Integer> astStack = new Stack<>();
 
-        for(int asteroid: asteroids){
+        for (int asteroid : asteroids) {
             boolean push = true;
-            while(!asterioids.isEmpty() && asterioids.peek() > 0 && asteroid < 0) {
-                if(Math.abs(asteroid) > Math.abs(asterioids.peek())){
-                    asterioids.pop();
+
+            while (!astStack.isEmpty() && asteroid < 0 && astStack.peek() > 0) {
+                if (Math.abs(asteroid) == astStack.peek()) {
+                    astStack.pop();
+                } else if (Math.abs(asteroid) > astStack.peek()) {
+                    astStack.pop();
                     continue;
-                }else if(Math.abs(asteroid) == Math.abs(asterioids.peek())){
-                    asterioids.pop();
                 }
+
                 push = false;
                 break;
             }
 
-            if(push)
-                asterioids.push(asteroid);
+            if (push)
+                astStack.push(asteroid);
         }
 
-        return asterioids.stream().mapToInt(x -> x).toArray();
+        return astStack.stream().mapToInt(x -> x).toArray();
     }
 }
