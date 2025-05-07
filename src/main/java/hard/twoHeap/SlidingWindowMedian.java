@@ -10,7 +10,9 @@ import java.util.PriorityQueue;
  * Space Complexity - o(n) (hasmap) + o(k)queue
  */
 public class SlidingWindowMedian {
+    //Smaller numbers
     PriorityQueue<Integer> minHeap = new PriorityQueue<>(Collections.reverseOrder());
+    //Larger elements
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
     Map<Integer, Integer> removed = new HashMap<>();
 
