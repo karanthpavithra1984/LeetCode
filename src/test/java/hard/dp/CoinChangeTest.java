@@ -1,10 +1,11 @@
 package hard.dp;
 
+import medium.dp.CoinChange;
 import medium.dp.CoinChangeTD;
 import org.junit.Test;
 
 public class CoinChangeTest {
-    CoinChangeTD coinChangeTD = new CoinChangeTD();
+    CoinChange coinChangeTD = new CoinChange();
 
     @Test
     public void testCoinChange(){
