@@ -7,8 +7,9 @@ import utils.ListNode;
 
 public class ReverseLinkedListTest {
     ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
+
     @Test
-    public void testReverseLinkedList(){
+    public void testReverseLinkedList() {
         ListNode listNode1 = new ListNode(1);
         listNode1.next = new ListNode(2);
         listNode1.next.next = new ListNode(3);
@@ -23,7 +24,7 @@ public class ReverseLinkedListTest {
         assert reverseList.next.next.next.next.val == 1;
 
 
-        GeneralUtils.validateListNode(reverseLinkedList.reverseList(GeneralUtils.getListNode(new int[]{7,3,4,8})) ,  new int[]{8,4,3,7});
+        GeneralUtils.validateListNode(reverseLinkedList.reverseList(GeneralUtils.getListNode(new int[]{7, 3, 4, 8})), new int[]{8, 4, 3, 7});
 
     }
 }

@@ -13,25 +13,25 @@ public class RemoveDuplicates {
         int[] lastIndex = new int[26];
 
         //Keep track of last occurance of a character , this will
-        for(int i = 0 ; i < s.length() ; i++){
+        for (int i = 0; i < s.length(); i++) {
             lastIndex[s.charAt(i) - 'a'] = i;
         }
 
         Stack<Character> finalString = new Stack<>();
         boolean[] seen = new boolean[26];
 
-        for(int i = 0; i < s.length() ; i++){
+        for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
 
             //Add the character to seen ,
             //If not in seen , then its a new character.
             //If not dont add it , as we dont want the duplicates
-            if(!seen[ch - 'a']) {
+            if (!seen[ch - 'a']) {
                 //if the previous character is greater than c and
                 // if there is  another character at a later index lets use that. If not its safe to remove
                 while (!finalString.isEmpty() && ch < finalString.peek() && i < lastIndex[finalString.peek() - 'a']) {
-                        seen[finalString.peek() - 'a'] = false;
-                        finalString.pop();
+                    seen[finalString.peek() - 'a'] = false;
+                    finalString.pop();
                 }
                 finalString.push(ch);
                 seen[ch - 'a'] = true;
@@ -39,7 +39,7 @@ public class RemoveDuplicates {
         }
 
         StringBuilder stringBuilder = new StringBuilder();
-        for(Character c: finalString){
+        for (Character c : finalString) {
             stringBuilder.append(c);
         }
 

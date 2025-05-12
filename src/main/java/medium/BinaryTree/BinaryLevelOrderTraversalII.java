@@ -17,13 +17,13 @@ public class BinaryLevelOrderTraversalII {
         List<List<Integer>> values = new LinkedList<>();
         Queue<TreeNode> queue = new LinkedList();
 
-        if(root != null){
+        if (root != null) {
             queue.add(root);
         }
-        while(queue.size() > 0){
+        while (queue.size() > 0) {
             List<Integer> treeVals = new ArrayList<>();
             int size = queue.size();
-            for(int i =0 ;i < size; i++) {
+            for (int i = 0; i < size; i++) {
                 TreeNode value = queue.remove();
                 treeVals.add(value.val);
                 if (value.left != null) {
@@ -33,7 +33,7 @@ public class BinaryLevelOrderTraversalII {
                     queue.add(value.right);
                 }
             }
-            values.add(0,treeVals);
+            values.add(0, treeVals);
         }
 
         return values;

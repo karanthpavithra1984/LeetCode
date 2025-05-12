@@ -11,6 +11,6 @@ public class PowTest {
         assert p.myPow(2, 2) == 4;
         assert p.myPow(2, 3) == 8;
         assert p.myPow(2, 10) == 1024;
-        assert p.myPow(2.1 , 3) == 9.26100;
+        assert p.myPow(2.1, 3) == 9.26100;
     }
 }

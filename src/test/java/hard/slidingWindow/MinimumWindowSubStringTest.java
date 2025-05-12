@@ -7,7 +7,7 @@ public class MinimumWindowSubStringTest {
     MinimumWindowSubString minimumWindowSubString = new MinimumWindowSubString();
 
     @Test
-    public void testMinimumWindowSubstring(){
-        minimumWindowSubString.minWindow("ADOBECODEBANC","ABC");
+    public void testMinimumWindowSubstring() {
+        minimumWindowSubString.minWindow("ADOBECODEBANC", "ABC");
     }
 }

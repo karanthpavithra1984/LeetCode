@@ -20,11 +20,11 @@ public class GetLargestOutlier {
 
         //total_sum=2×(sum of special numbers)+(outlier)
         // 2,3 is special number i.e 2*5 + 10 = 20;
-        for(int num: numCountMap.keySet()){
+        for (int num : numCountMap.keySet()) {
 
             int posOutlier = totalSum - num - num;
             //Either number is not equal to posOutlier or if num is same outlier , make sure it has more than 1 elements
-            if((numCountMap.containsKey(posOutlier) && (posOutlier != num || numCountMap.get(posOutlier) > 1))){
+            if ((numCountMap.containsKey(posOutlier) && (posOutlier != num || numCountMap.get(posOutlier) > 1))) {
                 result = Math.max(result, posOutlier);
             }
         }

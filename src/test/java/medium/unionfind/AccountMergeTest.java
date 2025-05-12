@@ -12,10 +12,10 @@ public class AccountMergeTest {
     @Test
     public void testAccountMerge() {
         GeneralUtils.compareListOfList(accountsMerge.accountsMerge(List.of(Arrays.asList("John", "johnsmith@mail.com", "john_newyork@mail.com"),
-                Arrays.asList("John", "johnsmith@mail.com", "john00@mail.com"), Arrays.asList("Mary", "mary@mail.com"),
-                Arrays.asList("John", "johnnybravo@mail.com"))),
+                        Arrays.asList("John", "johnsmith@mail.com", "john00@mail.com"), Arrays.asList("Mary", "mary@mail.com"),
+                        Arrays.asList("John", "johnnybravo@mail.com"))),
                 List.of(Arrays.asList("John", "john00@mail.com", "john_newyork@mail.com", "johnsmith@mail.com"),
-                Arrays.asList("Mary", "mary@mail.com"),
-                Arrays.asList("John", "johnnybravo@mail.com")));
+                        Arrays.asList("Mary", "mary@mail.com"),
+                        Arrays.asList("John", "johnnybravo@mail.com")));
     }
 }

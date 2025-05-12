@@ -10,21 +10,21 @@ public class SlidingWindow {
         double maxSum = 0;
 
 
-        for(int i=0 ; i < nums.length ; i++){
+        for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
-            if(i >= k){
+            if (i >= k) {
                 sum -= nums[i - k];
                 maxSum = Math.max(maxSum, sum);
-            }else{
+            } else {
                 maxSum = sum;
             }
         }
 
-        if(nums.length == k){
-            return sum/k;
+        if (nums.length == k) {
+            return sum / k;
         }
 
 
-        return maxSum/k;
+        return maxSum / k;
     }
 }

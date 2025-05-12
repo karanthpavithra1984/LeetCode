@@ -9,6 +9,6 @@ public class TotalAppealOfStringTest {
     public void test() {
         assert totalAppealOfAString.appealSum("abbb") == 13;
         assert totalAppealOfAString.appealSum("abbca") == 28;
-      assert   totalAppealOfAString.appealSum("code") == 20;
+        assert totalAppealOfAString.appealSum("code") == 20;
     }
 }

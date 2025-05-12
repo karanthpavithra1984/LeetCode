@@ -1,4 +1,3 @@
-
 package easy.BinaryTree;
 
 import org.junit.Test;

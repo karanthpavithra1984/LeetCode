@@ -9,8 +9,8 @@ public class PlusOneTest {
     PlusOne plusOne = new PlusOne();
 
     @Test
-    public void testPlusOne(){
-        ListNode listNode = GeneralUtils.getListNode(new int[]{1,2,3});
+    public void testPlusOne() {
+        ListNode listNode = GeneralUtils.getListNode(new int[]{1, 2, 3});
 
         ListNode newNode = plusOne.plusOne(listNode);
 
@@ -35,7 +35,7 @@ public class PlusOneTest {
         assert newNode.next != null;
         assert newNode.next.val == 0;
 
-        listNode = GeneralUtils.getListNode(new int[]{1,9,9});
+        listNode = GeneralUtils.getListNode(new int[]{1, 9, 9});
 
         newNode = plusOne.plusOne(listNode);
 

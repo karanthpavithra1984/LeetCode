@@ -13,15 +13,15 @@ import java.util.*;
 public class VerticalOrderTraversal {
     public List<List<Integer>> verticalOrder(TreeNode root) {
         Map<Integer, List<Integer>> columnNodeMap = new HashMap<>();
-        Queue<Pair<TreeNode, Integer>> queue = new ArrayDeque<>() ;
+        Queue<Pair<TreeNode, Integer>> queue = new ArrayDeque<>();
         int column = 0; //root is always 0
         queue.add(Pair.of(root, 0));
-        int minValue = 0, maxValue = 0 ;//use this to get range later to add to the list later
-        while(!queue.isEmpty()) {
+        int minValue = 0, maxValue = 0;//use this to get range later to add to the list later
+        while (!queue.isEmpty()) {
             Pair<TreeNode, Integer> pair = queue.poll();
-            if(pair.getLeft() != null) {
+            if (pair.getLeft() != null) {
                 column = pair.getRight();
-                if(!columnNodeMap.containsKey(pair.getRight())){
+                if (!columnNodeMap.containsKey(pair.getRight())) {
                     columnNodeMap.put(column, new ArrayList<>());
                 }
                 //Add it to the columnMap
@@ -35,7 +35,7 @@ public class VerticalOrderTraversal {
 
         List<List<Integer>> verticalResult = new ArrayList<>();
 
-        for(int i = minValue; i <= maxValue; i++) {
+        for (int i = minValue; i <= maxValue; i++) {
             List<Integer> values = columnNodeMap.get(i);
             verticalResult.add(values);
         }

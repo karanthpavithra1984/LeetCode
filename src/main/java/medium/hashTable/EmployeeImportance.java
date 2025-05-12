@@ -13,18 +13,18 @@ class Employee {
 public class EmployeeImportance {
     public int getImportance(List<Employee> employees, int id) {
         Map<Integer, Employee> employeeMap = new HashMap<>();
-        for(Employee employee: employees){
+        for (Employee employee : employees) {
             employeeMap.put(employee.id, employee);
         }
 
         return dfs(employeeMap, id);
     }
 
-    private int dfs(Map<Integer, Employee> employeeMap, Integer id){
+    private int dfs(Map<Integer, Employee> employeeMap, Integer id) {
         List<Integer> subordinates = employeeMap.get(id).subordinates;
         int ans = employeeMap.get(id).importance;
 
-        for(Integer subordinate: subordinates){
+        for (Integer subordinate : subordinates) {
             ans += dfs(employeeMap, subordinate);
         }
 

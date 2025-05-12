@@ -8,6 +8,7 @@ import utils.TreeNode;
  */
 public class LongestUniValuePath {
     int longestPath = 0;
+
     public int longestUnivaluePath(TreeNode root) {
         dfs(root, -1);
         return longestPath;

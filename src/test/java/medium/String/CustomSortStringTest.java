@@ -9,7 +9,7 @@ public class CustomSortStringTest {
 
     @Test
     public void test() {
-        assertEquals(cs.customSortString("cba","abcd"),"cbad");
-        assertEquals(cs.customSortString("kqep","pekeq"),"kqeep");
+        assertEquals(cs.customSortString("cba", "abcd"), "cbad");
+        assertEquals(cs.customSortString("kqep", "pekeq"), "kqeep");
     }
 }

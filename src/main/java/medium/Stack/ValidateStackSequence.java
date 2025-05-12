@@ -10,11 +10,11 @@ import java.util.Stack;
 public class ValidateStackSequence {
     public boolean validateStackSequences(int[] pushed, int[] popped) {
         Stack<Integer> pushedStack = new Stack<>();
-        int i= 0;
+        int i = 0;
 
-        for(int push : pushed){
+        for (int push : pushed) {
             pushedStack.push(push);
-            while (!pushedStack.isEmpty() && i < popped.length && pushedStack.peek() == popped[i]){
+            while (!pushedStack.isEmpty() && i < popped.length && pushedStack.peek() == popped[i]) {
                 pushedStack.pop();
                 i++;
             }

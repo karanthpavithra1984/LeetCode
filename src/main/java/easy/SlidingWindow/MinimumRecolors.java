@@ -10,20 +10,20 @@ public class MinimumRecolors {
         //Edge cases , what if the length of string is same as the K
         //What if the W is towards the end of the k range, and doesnt get to have a Min
 
-        while(left <= right && right < blocks.length()) {
-            if(right - left >= k){
+        while (left <= right && right < blocks.length()) {
+            if (right - left >= k) {
                 minFlips = Math.min(minFlips, numOfFlips);
-                if(blocks.charAt(left) == 'W'){
+                if (blocks.charAt(left) == 'W') {
                     numOfFlips--;
                 }
                 left++;
             }
-            if(blocks.charAt(right) == 'W') {
+            if (blocks.charAt(right) == 'W') {
                 numOfFlips++;
             }
             right++;
         }
 
-        return minFlips == Integer.MAX_VALUE ? numOfFlips  : Math.min(minFlips, numOfFlips);
+        return minFlips == Integer.MAX_VALUE ? numOfFlips : Math.min(minFlips, numOfFlips);
     }
 }

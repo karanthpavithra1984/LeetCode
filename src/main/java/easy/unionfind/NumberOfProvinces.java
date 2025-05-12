@@ -8,11 +8,11 @@ public class NumberOfProvinces {
         UnionFind unionFind = new UnionFind(N);
         int numberOfProvinces = N;
 
-        for(int r=0 ; r< isConnected.length; r++){
-            for(int c=0; c< isConnected[0].length;c++){
+        for (int r = 0; r < isConnected.length; r++) {
+            for (int c = 0; c < isConnected[0].length; c++) {
                 //If i and j are difference coordinates
-                if(isConnected[r][c] == 1 && r != c){
-                    if(unionFind.union(r,c)){
+                if (isConnected[r][c] == 1 && r != c) {
+                    if (unionFind.union(r, c)) {
                         numberOfProvinces--;
                     }
                 }

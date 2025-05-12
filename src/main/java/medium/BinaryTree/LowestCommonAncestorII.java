@@ -16,10 +16,10 @@ public class LowestCommonAncestorII {
         //The only edge case is when p or q are returned.
         if (ans == p) {
             //Check if q is in the tree p side of the tree.
-            return dfa(p,q)? p : null;
+            return dfa(p, q) ? p : null;
         } else if (ans == q) {
             //Check if p i in the q side of the tree.
-            return  dfa(q,p)? q: null;
+            return dfa(q, p) ? q : null;
         }
 
         return ans;
@@ -40,10 +40,10 @@ public class LowestCommonAncestorII {
 
     private boolean dfa(TreeNode node, TreeNode target) {
 
-        if(node == target){
+        if (node == target) {
             return true;
         }
-        if(node == null){
+        if (node == null) {
             return false;
         }
 

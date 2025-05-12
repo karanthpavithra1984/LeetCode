@@ -26,6 +26,5 @@ public class MinimumDistanceInBstTest {
         assert minimumDistanceInBst.minDiffInBST(root) == 1;
 
 
-
     }
 }

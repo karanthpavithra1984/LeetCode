@@ -7,8 +7,8 @@ public class CountVowelSubstringsTest {
 
     @Test
     public void countVowelSubstrings() {
-        assert countVowelSubstrings.countVowelSubstrings("cuaieuouac") ==7;
-        assert countVowelSubstrings.countVowelSubstrings("aeiouu") ==2;
+        assert countVowelSubstrings.countVowelSubstrings("cuaieuouac") == 7;
+        assert countVowelSubstrings.countVowelSubstrings("aeiouu") == 2;
 
     }
 }

@@ -1,7 +1,5 @@
-
 package medium.BinarySearch;
 
-import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /**
@@ -13,7 +11,7 @@ public class MinimumNumberOfDays {
         int start = 0;//array index starts at 0
         //Get the max day or the last day the flower is going to boom
         int end = IntStream.of(bloomDay).max().getAsInt();
-        int numberOfBoquets =0 ;
+        int numberOfBoquets = 0;
         int minDays = -1;
 
         //Get a middle day and see if we can pick adjacent flowers of k and can make m bouqets from it
@@ -32,7 +30,7 @@ public class MinimumNumberOfDays {
 
                 if (count == k) {
                     numberOfBoquets++;
-                    count=0;
+                    count = 0;
                 }
             }
 
@@ -40,13 +38,13 @@ public class MinimumNumberOfDays {
                 //Enough flowers have bloomed, we can hopefully get boquets sooner
                 //You need minimum hence better to keep track of it.
                 minDays = mid;
-                end = mid-1; //remember to this if there is equal , because its inclusive
+                end = mid - 1; //remember to this if there is equal , because its inclusive
             } else {
                 //Havent gotten enough flowers yet, we need to wait for more days
                 //Hence move towards the right
                 start = mid + 1;
             }
         }
-        return  minDays;
+        return minDays;
     }
 }

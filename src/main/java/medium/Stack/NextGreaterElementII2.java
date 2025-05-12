@@ -7,7 +7,7 @@ public class NextGreaterElementII2 {
         System.arraycopy(nums, 0, doublenums, 0, nums.length);
         System.arraycopy(nums, 0, doublenums, nums.length, nums.length);
         for (int i = 0; i < nums.length; i++) {
-            res[i]=-1;
+            res[i] = -1;
             for (int j = i + 1; j < doublenums.length; j++) {
                 if (doublenums[j] > doublenums[i]) {
                     res[i] = doublenums[j];

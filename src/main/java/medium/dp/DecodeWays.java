@@ -11,7 +11,7 @@ public class DecodeWays {
     }
 
     private int dfs(String s, int i) {
-        if(i >= s.length()){
+        if (i >= s.length()) {
             return 1;
         }
         if (map.containsKey(i)) {

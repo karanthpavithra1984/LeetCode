@@ -10,6 +10,7 @@ public class DiagonalTraverseIIBFS {
      * Time Complexity o(n)
      * Space complexity half of it , since queue might have maximum over the diagonal, which is square root n
      * so square root of n
+     *
      * @param nums
      * @return
      */
@@ -23,24 +24,24 @@ public class DiagonalTraverseIIBFS {
 
         queue.add(new int[]{row, col});
 
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int[] values = queue.poll();
             int curRow = values[0];
             int curCol = values[1];
             ans.add(nums.get(curRow).get(curCol));
 
             //Add beginning of the rows
-            if(curCol == 0  && curRow + 1 < nums.size()){
+            if (curCol == 0 && curRow + 1 < nums.size()) {
                 queue.add(new int[]{curRow + 1, curCol});
             }
 
             //Add Columns
-            if(curCol+1 < nums.get(curRow).size()){
+            if (curCol + 1 < nums.get(curRow).size()) {
                 queue.add(new int[]{curRow, curCol + 1});
             }
 
         }
 
-        return ans.stream().mapToInt(i->i).toArray();
+        return ans.stream().mapToInt(i -> i).toArray();
     }
 }

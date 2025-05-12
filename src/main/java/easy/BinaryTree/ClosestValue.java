@@ -24,7 +24,7 @@ public class ClosestValue {
         double diff1 = Math.abs(ceil - target);
         double diff2 = Math.abs(floor - target);
 
-        if(diff1 == diff2) return Math.min(ceil, floor);
+        if (diff1 == diff2) return Math.min(ceil, floor);
         return diff1 > diff2 ? floor : ceil;
     }
 }

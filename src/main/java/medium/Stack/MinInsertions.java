@@ -8,26 +8,26 @@ public class MinInsertions {
 
         int index = 0;
         int numOfInsertions = 0;
-        while(index < s.length()) {
+        while (index < s.length()) {
             char c = s.charAt(index);
 
-            if(c == '('){
+            if (c == '(') {
                 paranthStack.push(c);
-            }else{
+            } else {
                 //Character is ')'
-                if(index+1 < s.length() && s.charAt(index+1) == ')'){
+                if (index + 1 < s.length() && s.charAt(index + 1) == ')') {
                     //Ideal condition
-                    if(!paranthStack.isEmpty() && paranthStack.peek() == '('){
+                    if (!paranthStack.isEmpty() && paranthStack.peek() == '(') {
                         paranthStack.pop();
-                    }else{
+                    } else {
                         numOfInsertions++;
                     }
                     index++;
-                }else{
-                    if(!paranthStack.isEmpty() && paranthStack.peek() == '('){
+                } else {
+                    if (!paranthStack.isEmpty() && paranthStack.peek() == '(') {
                         paranthStack.pop();
                         numOfInsertions++;
-                    }else{
+                    } else {
                         numOfInsertions += 2;
                     }
                 }
@@ -37,7 +37,7 @@ public class MinInsertions {
             index++;
         }
 
-        while(!paranthStack.isEmpty()){
+        while (!paranthStack.isEmpty()) {
             numOfInsertions += 2;
             paranthStack.pop();
         }

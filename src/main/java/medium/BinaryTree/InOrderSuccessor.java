@@ -11,6 +11,7 @@ public class InOrderSuccessor {
     Integer prevVal;
     int globalP;
     TreeNode successor;
+
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
         globalP = p.val;
         inorderSuccessor(root);
@@ -19,7 +20,7 @@ public class InOrderSuccessor {
 
     private void inorderSuccessor(TreeNode root) {
         if (root == null) return;
-        if(successor == null) {
+        if (successor == null) {
             inorderSuccessor(root.left);
             if (prevVal != null && prevVal == globalP) {
                 successor = root;

@@ -14,30 +14,30 @@ public class CourseSchedule {
         List<List<Integer>> adj = new ArrayList<>();
 
         //Add adjucency list
-        for(int i = 0; i < numCourses; i++){
+        for (int i = 0; i < numCourses; i++) {
             adj.add(new ArrayList<>());
         }
 
-        for(int[] pre : prerequisites){
+        for (int[] pre : prerequisites) {
             adj.get(pre[0]).add(pre[1]);
             indegree[pre[1]]++;
         }
 
         int nodesVisited = 0;
         Queue<Integer> queue = new LinkedList<>();
-        for(int i = 0; i < numCourses; i++){
-            if(indegree[i] == 0){
+        for (int i = 0; i < numCourses; i++) {
+            if (indegree[i] == 0) {
                 queue.add(i);
             }
         }
 
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int node = queue.poll();
             nodesVisited++;
 
-            for(Integer neighbor : adj.get(node)){
+            for (Integer neighbor : adj.get(node)) {
                 indegree[neighbor]--;
-                if(indegree[neighbor] == 0){
+                if (indegree[neighbor] == 0) {
                     queue.offer(neighbor);
                 }
             }

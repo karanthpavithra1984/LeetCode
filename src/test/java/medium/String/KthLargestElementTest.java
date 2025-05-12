@@ -9,6 +9,6 @@ public class KthLargestElementTest {
 
     @Test
     public void kthLargestElement() {
-        assertEquals(k.kthLargestNumber(new String[]{"10","3","6","7"}, 4),"3");
+        assertEquals(k.kthLargestNumber(new String[]{"10", "3", "6", "7"}, 4), "3");
     }
 }

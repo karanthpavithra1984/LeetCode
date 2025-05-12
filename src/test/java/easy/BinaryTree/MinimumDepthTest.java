@@ -7,6 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class MinimumDepthTest {
     MinimumDepth minimumDepth = new MinimumDepth();
+
     @Test
     public void minDepth() {
         TreeNode tree = new TreeNode(3);
@@ -15,6 +16,6 @@ public class MinimumDepthTest {
         tree.right.left = new TreeNode(15);
         tree.right.right = new TreeNode(7);
 
-       assertEquals(minimumDepth.minDepth(tree),2);
+        assertEquals(minimumDepth.minDepth(tree), 2);
     }
 }

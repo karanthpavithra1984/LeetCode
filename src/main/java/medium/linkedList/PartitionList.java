@@ -5,7 +5,7 @@ import utils.ListNode;
 /**
  * Time Complexity - o(n)
  * Space Complexity - o(1)
- *
+ * <p>
  * Create two nodes one left and right and merge them
  */
 
@@ -17,11 +17,11 @@ public class PartitionList {
         ListNode rightNode = new ListNode(0, head);
         ListNode tmpRightNode = rightNode;
 
-        while(head != null){
-            if(head.val < x){
+        while (head != null) {
+            if (head.val < x) {
                 tmpLeftNode.next = head;
                 tmpLeftNode = tmpLeftNode.next;
-            }else{
+            } else {
                 tmpRightNode.next = head;
                 tmpRightNode = tmpRightNode.next;
             }

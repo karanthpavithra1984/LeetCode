@@ -7,7 +7,7 @@ public class SwapTwoPairsTest {
     SwapTwoPairs swapTwoPairs = new SwapTwoPairs();
 
     @Test
-    public void testSwapPairs(){
+    public void testSwapPairs() {
         ListNode listNode = new ListNode(1);
         listNode.next = new ListNode(2);
         listNode.next.next = new ListNode(3);

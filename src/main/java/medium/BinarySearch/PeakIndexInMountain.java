@@ -6,12 +6,12 @@ public class PeakIndexInMountain {
 
         while (left < right) {
             int middle = (right + left) / 2;
-            if(arr[middle] > arr[middle - 1] && arr[middle] > arr[middle + 1]) {
+            if (arr[middle] > arr[middle - 1] && arr[middle] > arr[middle + 1]) {
                 return middle;
             }
-            if(arr[middle] < arr[middle+1]){
+            if (arr[middle] < arr[middle + 1]) {
                 left = middle;
-            }else{
+            } else {
                 right = middle;
             }
         }

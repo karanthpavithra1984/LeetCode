@@ -8,6 +8,6 @@ public class BSTFromPreOrderTest {
 
     @Test
     public void test() {
-        TreeNode treeNode = bst.bstFromPreorder(new int[]{8,5,1,7,10,12});
+        TreeNode treeNode = bst.bstFromPreorder(new int[]{8, 5, 1, 7, 10, 12});
     }
 }

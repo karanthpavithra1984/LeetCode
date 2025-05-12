@@ -10,19 +10,19 @@ public class ReplaceWords {
         Set<String> dictSet = new HashSet<>(dictionary);
 
         StringBuilder stringBuilder = new StringBuilder();
-        for(String word: words){
+        for (String word : words) {
             boolean found = false;
             StringBuilder characterBuilder = new StringBuilder();
-            for(Character character: word.toCharArray()){
+            for (Character character : word.toCharArray()) {
                 characterBuilder.append(character);
-                if(dictSet.contains(characterBuilder.toString())){
+                if (dictSet.contains(characterBuilder.toString())) {
                     stringBuilder.append(characterBuilder + " ");
                     found = true;
                     break;
                 }
             }
 
-            if(!found){
+            if (!found) {
                 stringBuilder.append(word + " ");
             }
         }

@@ -12,6 +12,6 @@ public class BinarySearchPostOrderTraversalTest {
     @Test
     public void test() {
         BinarySearchPostOrderTraversal bst = new BinarySearchPostOrderTraversal();
-        assertEquals(GeneralUtils.convertToCommaSeperatedString(bst.postorderTraversal(BinaryTreeUtils.getTreeNode())),"1,2,4,3,6,7,9,8,5");
+        assertEquals(GeneralUtils.convertToCommaSeperatedString(bst.postorderTraversal(BinaryTreeUtils.getTreeNode())), "1,2,4,3,6,7,9,8,5");
     }
 }

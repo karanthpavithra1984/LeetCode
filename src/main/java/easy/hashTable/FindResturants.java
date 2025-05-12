@@ -9,18 +9,18 @@ public class FindResturants {
     public String[] findRestaurant(String[] list1, String[] list2) {
         Map<String, Integer> stringIntegerMap = new HashMap<>();
 
-        for(int i = 0 ; i < list1.length; i++){
+        for (int i = 0; i < list1.length; i++) {
             stringIntegerMap.put(list1[i], i);
         }
 
         int minIndexSum = Integer.MAX_VALUE;
         List<String> values = new ArrayList<>();
-        for(int j=0;j < list2.length; j++){
-            if(stringIntegerMap.containsKey(list2[j])){
+        for (int j = 0; j < list2.length; j++) {
+            if (stringIntegerMap.containsKey(list2[j])) {
                 int indexSum = stringIntegerMap.get(list2[j]) + j;
-                if(indexSum == minIndexSum){
+                if (indexSum == minIndexSum) {
                     values.add(list2[j]);
-                }else if(indexSum < minIndexSum){
+                } else if (indexSum < minIndexSum) {
                     values.clear();
                     values.add(list2[j]);
                     minIndexSum = indexSum;

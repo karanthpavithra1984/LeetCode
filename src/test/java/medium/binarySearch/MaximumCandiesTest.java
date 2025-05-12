@@ -8,9 +8,9 @@ public class MaximumCandiesTest {
 
     @Test
     public void test() {
-        assert ma.maximumCandies(new int[]{2,5}, 11) == 0;
-        assert ma.maximumCandies(new int[]{4,7,5}, 16) == 1;
-        assert ma.maximumCandies(new int[]{5,8,6}, 3) == 5;
+        assert ma.maximumCandies(new int[]{2, 5}, 11) == 0;
+        assert ma.maximumCandies(new int[]{4, 7, 5}, 16) == 1;
+        assert ma.maximumCandies(new int[]{5, 8, 6}, 3) == 5;
 
     }
 }

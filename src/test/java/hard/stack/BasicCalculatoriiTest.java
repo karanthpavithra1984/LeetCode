@@ -8,7 +8,7 @@ public class BasicCalculatoriiTest {
     BasicCalcluatorii basicCalcluatorii = new BasicCalcluatorii();
 
     @Test
-    public void testBasicCalculatorII(){
+    public void testBasicCalculatorII() {
         assert basicCalcluatorii.calculate("1+1") == 2;
         assert basicCalcluatorii.calculate("3+2*2") == 7;
         assert basicCalcluatorii.calculate(" 3/2 ") == 1;

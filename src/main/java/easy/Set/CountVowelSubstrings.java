@@ -13,15 +13,15 @@ public class CountVowelSubstrings {
         Set<Character> vowels = new HashSet<>();
         int vowelSSCount = 0;
         //At the least the word substring should have all the vowels i.e 5
-        for(int i=0;i <word.length()-4;i++){
+        for (int i = 0; i < word.length() - 4; i++) {
             vowels.clear();
-            for(int j=i;j<word.length();j++){
-                if(isVowel(word.charAt(j))){
+            for (int j = i; j < word.length(); j++) {
+                if (isVowel(word.charAt(j))) {
                     vowels.add(word.charAt(j));
-                }else{
+                } else {
                     break;
                 }
-                if(vowels.size() == 5)
+                if (vowels.size() == 5)
                     vowelSSCount++;
             }
         }
@@ -30,8 +30,8 @@ public class CountVowelSubstrings {
 
     }
 
-    private boolean isVowel(Character ch){
-        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+    private boolean isVowel(Character ch) {
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
             return true;
         }
 

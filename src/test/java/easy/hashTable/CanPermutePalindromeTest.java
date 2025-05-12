@@ -9,7 +9,7 @@ public class CanPermutePalindromeTest {
     CanPermutatePalindrome canPermutatePalindrome = new CanPermutatePalindrome();
 
     @Test
-    public void testCanPermutatePalindrome(){
+    public void testCanPermutatePalindrome() {
         assertTrue(canPermutatePalindrome.canPermutePalindrome("carerac"));
         assertTrue(canPermutatePalindrome.canPermutePalindrome("aab"));
         assertFalse(canPermutatePalindrome.canPermutePalindrome("code"));

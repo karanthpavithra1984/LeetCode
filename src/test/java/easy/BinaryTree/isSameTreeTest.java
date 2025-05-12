@@ -8,6 +8,7 @@ import static org.junit.Assert.assertTrue;
 
 public class isSameTreeTest {
     isSameTree isSameTree = new isSameTree();
+
     @Test
     public void isSameTreeTest() {
         TreeNode root = new TreeNode(1);

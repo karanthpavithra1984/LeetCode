@@ -14,7 +14,7 @@ public class CanPlaceFlowersTest {
         assertFalse(canPlaceFlowers.canPlaceFlowers(new int[]{1, 0, 0, 0, 1}, 2));
         assertFalse(canPlaceFlowers.canPlaceFlowers(new int[]{1, 0, 0, 0, 0, 1}, 2));
         assertTrue(canPlaceFlowers.canPlaceFlowers(new int[]{1, 0, 0, 0, 1, 0, 0}, 2));
-        assertFalse(canPlaceFlowers.canPlaceFlowers(new int[]{0,1,0}, 1));
-        assertTrue(canPlaceFlowers.canPlaceFlowers(new int[]{0,0,0,0,0,1,0,0}, 0));
+        assertFalse(canPlaceFlowers.canPlaceFlowers(new int[]{0, 1, 0}, 1));
+        assertTrue(canPlaceFlowers.canPlaceFlowers(new int[]{0, 0, 0, 0, 0, 1, 0, 0}, 0));
     }
 }

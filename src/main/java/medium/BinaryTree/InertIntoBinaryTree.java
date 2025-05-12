@@ -10,14 +10,14 @@ import utils.TreeNode;
 public class InertIntoBinaryTree {
     public TreeNode insertIntoBST(TreeNode root, int val) {
         // Insert into the leaf Node
-        if(root == null){
+        if (root == null) {
             return new TreeNode(val);
         }
 
-        if(val > root.val){
+        if (val > root.val) {
             //right node
             root.right = insertIntoBST(root.right, val);
-        }else{
+        } else {
             //left node
             root.left = insertIntoBST(root.left, val);
         }

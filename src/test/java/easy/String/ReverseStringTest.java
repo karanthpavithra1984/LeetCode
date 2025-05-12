@@ -8,9 +8,9 @@ public class ReverseStringTest {
 
     @Test
     public void reverseString() {
-        char[] characters = new char[]{'h','e','l','l','o'};
+        char[] characters = new char[]{'h', 'e', 'l', 'l', 'o'};
         reverseString.reverseString(characters);
         GeneralUtils.compareValues(characters
-                , new char[]{'o','l','l','e','h'});
+                , new char[]{'o', 'l', 'l', 'e', 'h'});
     }
 }

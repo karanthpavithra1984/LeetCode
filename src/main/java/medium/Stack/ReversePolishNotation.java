@@ -12,17 +12,17 @@ public class ReversePolishNotation {
         binaryOperatorMap.put("+", (((aLong, aLong2) -> aLong + aLong2)));
         binaryOperatorMap.put("-", (((aLong, aLong2) -> aLong - aLong2)));
         binaryOperatorMap.put("*", (((aLong, aLong2) -> aLong * aLong2)));
-        binaryOperatorMap.put("/", (((aLong, aLong2) -> aLong/aLong2)));
+        binaryOperatorMap.put("/", (((aLong, aLong2) -> aLong / aLong2)));
 
         Stack<Long> valueStack = new Stack<>();
 
-        for(String token: tokens){
-            if(binaryOperatorMap.containsKey(token)){
-                Long number2 =  valueStack.pop();
+        for (String token : tokens) {
+            if (binaryOperatorMap.containsKey(token)) {
+                Long number2 = valueStack.pop();
                 Long number = valueStack.pop();
 
                 valueStack.push(binaryOperatorMap.get(token).apply(number, number2));
-            }else{
+            } else {
                 valueStack.push(Long.valueOf(token));
             }
         }

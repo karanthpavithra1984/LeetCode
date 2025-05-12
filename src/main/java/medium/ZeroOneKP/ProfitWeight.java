@@ -12,7 +12,7 @@ public class ProfitWeight {
             return 0;
         }
 
-        System.out.println(" i-> " + i );
+        System.out.println(" i-> " + i);
         // Skip item i
         int maxProfit = dfsHelper(i + 1, profit, weight, capacity);
 
@@ -22,9 +22,9 @@ public class ProfitWeight {
             System.out.println("Capacity " + i);
             int p = profit.get(i) + dfsHelper(i + 1, profit, weight, newCap);
             // Compute the max
-            System.out.println(" i-> " + i+ " weight -> " + weight.get(i) + " profit " + profit.get(i) + " maxProfit " + maxProfit );
+            System.out.println(" i-> " + i + " weight -> " + weight.get(i) + " profit " + profit.get(i) + " maxProfit " + maxProfit);
             maxProfit = Math.max(maxProfit, p);
-            System.out.println(" i-> " + i+ " weight -> " + weight.get(i) + " profit " + profit.get(i) + " maxProfit After " + maxProfit );
+            System.out.println(" i-> " + i + " weight -> " + weight.get(i) + " profit " + profit.get(i) + " maxProfit After " + maxProfit);
         }
         return maxProfit;
     }

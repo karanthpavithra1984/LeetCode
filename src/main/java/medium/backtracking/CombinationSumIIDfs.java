@@ -45,7 +45,7 @@ public class CombinationSumIIDfs {
         combination.add(candidates[i]);
         backtrack(candidates, remaining - candidates[i], res, i + 1, combination);
         combination.remove(combination.size() - 1);
-        backtrack(candidates , remaining , res, i+1, combination);
+        backtrack(candidates, remaining, res, i + 1, combination);
     }
 
 

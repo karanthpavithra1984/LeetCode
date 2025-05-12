@@ -13,7 +13,7 @@ public class DoubleIt {
         ListNode doubleList = reverseList;
         int carry = 0;
 
-        while(doubleList != null ){
+        while (doubleList != null) {
             int doubledValue = doubleList.val * 2;
             int sum = (doubledValue) % 10 + carry;
             carry = doubledValue / 10;
@@ -22,15 +22,15 @@ public class DoubleIt {
         }
 
 
-        ListNode reverseAgain =  reverseList(reverseList);
+        ListNode reverseAgain = reverseList(reverseList);
         return carry > 0 ? new ListNode(carry, reverseAgain) : reverseAgain;
     }
 
-    private ListNode reverseList(ListNode head){
+    private ListNode reverseList(ListNode head) {
         ListNode tmp = head;
         ListNode reversed = null;
 
-        while(tmp != null){
+        while (tmp != null) {
             ListNode nextNode = tmp.next;
             tmp.next = reversed;
             reversed = tmp;

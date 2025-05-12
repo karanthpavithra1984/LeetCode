@@ -14,6 +14,6 @@ public class ValidPalindrome3Test {
         assertTrue(validPalindrome3.isValidPalindrome("abcdeca", 2));
         assertTrue(validPalindrome3.isValidPalindrome("abbababa", 1));
         assertTrue(validPalindrome3.isValidPalindrome("baaaabaa", 3));
-        assertFalse(validPalindrome3.isValidPalindrome("daabbddbdaadcabbccdddabaabadadadacaababdabdbaaccadadbbadaacbbbdd",4));
+        assertFalse(validPalindrome3.isValidPalindrome("daabbddbdaadcabbccdddabaabadadadacaababdabdbaaccadadbbadaacbbbdd", 4));
     }
 }

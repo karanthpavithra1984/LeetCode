@@ -9,8 +9,8 @@ public class LongestPalindromicSubStringTest {
 
     @Test
     public void longestPalindrome() {
-        assertEquals(lsp.longestPalindrome("babad"),"bab");
-        assertEquals(lsp.longestPalindrome("aba"),"aba");
-        assertEquals(lsp.longestPalindrome("cbbd"),"bb");
+        assertEquals(lsp.longestPalindrome("babad"), "bab");
+        assertEquals(lsp.longestPalindrome("aba"), "aba");
+        assertEquals(lsp.longestPalindrome("cbbd"), "bb");
     }
 }

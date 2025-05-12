@@ -1,10 +1,14 @@
 package medium.backtracking;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class CombinationSumII {
     /**
      * O(N*2^n) + nlogn
+     *
      * @param candidates
      * @param target
      * @return
@@ -20,6 +24,7 @@ public class CombinationSumII {
 
     /**
      * n*2^n
+     *
      * @param candidates
      * @param remaining
      * @param res
@@ -37,7 +42,7 @@ public class CombinationSumII {
             return;
 
         for (int i = idx; i < candidates.length && candidates[i] <= remaining; i++) {
-            if(i > idx && candidates[i - 1] == candidates[i]){
+            if (i > idx && candidates[i - 1] == candidates[i]) {
                 continue;
             }
             combination.add(candidates[i]);

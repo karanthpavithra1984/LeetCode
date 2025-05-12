@@ -7,6 +7,6 @@ public class ShortestPathBinaryMatrixTest {
 
     @Test
     public void testShortestPath() {
-       assert shortestPathBinaryMatrix.shortestPathBinaryMatrix(new int[][]{{0,1},{1,0}}) == 2;
+        assert shortestPathBinaryMatrix.shortestPathBinaryMatrix(new int[][]{{0, 1}, {1, 0}}) == 2;
     }
 }

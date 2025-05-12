@@ -13,12 +13,12 @@ public class MinRemoveToMakeValid {
     public String minRemoveToMakeValid(String s) {
         Set<Integer> indexesToRemove = new HashSet<>();
         Stack<Integer> pArray = new Stack<>();
-        for(int i = 0 ; i< s.length(); i++){
+        for (int i = 0; i < s.length(); i++) {
             char paranthesis = s.charAt(i);
-            if(paranthesis == '('){
+            if (paranthesis == '(') {
                 pArray.push(i);
-            }else if(paranthesis == ')'){
-                if(pArray.isEmpty()){
+            } else if (paranthesis == ')') {
+                if (pArray.isEmpty()) {
                     indexesToRemove.add(i);
                 } else pArray.pop();
             }
@@ -28,8 +28,8 @@ public class MinRemoveToMakeValid {
         while (!pArray.isEmpty()) indexesToRemove.add(pArray.pop());
         StringBuilder stringBuilder = new StringBuilder();
 
-        for(int i= 0 ; i < s.length(); i++){
-            if(!indexesToRemove.contains(i))
+        for (int i = 0; i < s.length(); i++) {
+            if (!indexesToRemove.contains(i))
                 stringBuilder.append(s.charAt(i));
         }
 

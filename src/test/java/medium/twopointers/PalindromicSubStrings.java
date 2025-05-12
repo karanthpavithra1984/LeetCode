@@ -11,7 +11,7 @@ public class PalindromicSubStrings {
 
         //Check around centers
 
-        for(int i = 0 ; i < s.length() ; i++) {
+        for (int i = 0; i < s.length(); i++) {
             //Odd
             totalCount += checkPalindrome(s, i, i);
             //eVEN
@@ -24,7 +24,7 @@ public class PalindromicSubStrings {
     private int checkPalindrome(String s, int left, int right) {
         int count = 0;
         while (left >= 0 && right < s.length()) {
-            if(s.charAt(left) != s.charAt(right)) {
+            if (s.charAt(left) != s.charAt(right)) {
                 break;
             }
             count++;

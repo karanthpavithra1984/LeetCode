@@ -9,7 +9,7 @@ public class MinMeetingRooms {
         int[] starts = new int[intervals.length];
         int[] ends = new int[intervals.length];
 
-        for(int i = 0; i < intervals.length; i++){
+        for (int i = 0; i < intervals.length; i++) {
             starts[i] = intervals[i][0];
             ends[i] = intervals[i][1];
         }
@@ -22,14 +22,14 @@ public class MinMeetingRooms {
 
         int startIndex = 0;
         int endIndex = 0;
-        while(startIndex < starts.length && endIndex < ends.length){
-            if(starts[startIndex] >= ends[endIndex]){
+        while (startIndex < starts.length && endIndex < ends.length) {
+            if (starts[startIndex] >= ends[endIndex]) {
                 numOfRooms--;
                 endIndex++;
             }
 
-                numOfRooms++;
-                startIndex++;
+            numOfRooms++;
+            startIndex++;
 
         }
 

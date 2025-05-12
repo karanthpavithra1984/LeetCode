@@ -6,14 +6,14 @@ public class LongestMonotonicSubArray {
         int decLength = 1;
         int maxLength = 1;
 
-        for(int i = 0; i < nums.length-1; i++){
-            if(nums[i+1] > nums[i]){
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i + 1] > nums[i]) {
                 incLength++;
                 decLength = 1;
-            }else if(nums[i+1] < nums[i]){
+            } else if (nums[i + 1] < nums[i]) {
                 incLength = 1;
                 decLength++;
-            }else{
+            } else {
                 incLength = 1;
                 decLength = 1;
             }

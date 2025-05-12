@@ -7,6 +7,6 @@ public class NumberOfEnclavesTest {
 
     @Test
     public void numberOfEnclaves() {
-        assert n.numEnclaves(new int[][]{{0,0,0,0},{1,0,1,0},{0,1,1,0},{0,0,0,0}}) == 3;
+        assert n.numEnclaves(new int[][]{{0, 0, 0, 0}, {1, 0, 1, 0}, {0, 1, 1, 0}, {0, 0, 0, 0}}) == 3;
     }
 }

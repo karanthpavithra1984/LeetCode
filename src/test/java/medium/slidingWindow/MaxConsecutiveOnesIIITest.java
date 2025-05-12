@@ -7,6 +7,6 @@ public class MaxConsecutiveOnesIIITest {
 
     @Test
     public void testMaxConsecutiveOnesIII() {
-        assert maxConsecutiveOnes.longestOnes(new int[]{1,1,1,0,0,0,1,1,1,1,0} , 2) == 6;
+        assert maxConsecutiveOnes.longestOnes(new int[]{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2) == 6;
     }
 }

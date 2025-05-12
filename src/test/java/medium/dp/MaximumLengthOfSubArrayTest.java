@@ -7,6 +7,6 @@ public class MaximumLengthOfSubArrayTest {
 
     @Test
     public void test() {
-        assert solution.getMaxLen(new int[]{1,-2,-3,4}) == 4;
+        assert solution.getMaxLen(new int[]{1, -2, -3, 4}) == 4;
     }
 }

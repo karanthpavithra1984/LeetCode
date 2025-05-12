@@ -5,6 +5,7 @@ import java.util.List;
 
 public class CombinationsNonOptimized {
     private int counter;
+
     public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> combination = new ArrayList<>();

@@ -8,7 +8,7 @@ public class IntersectionOfTwoLinkedListsTest {
     IntersectionOfTwoLinkedLists intersectionOfTwoLinkedLists = new IntersectionOfTwoLinkedLists();
 
     @Test
-    public void testIntersectionOfTwoLinkedLists(){
+    public void testIntersectionOfTwoLinkedLists() {
         ListNode mergedNode = new ListNode(4);
         mergedNode.next = new ListNode(5);
 

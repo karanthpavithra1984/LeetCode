@@ -1,6 +1,9 @@
 package medium.Heap;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
 
 public class StockPrice {
     Map<Integer, Integer> timeStampStockMap;
@@ -29,7 +32,7 @@ public class StockPrice {
     public int maximum() {
         //Clean up the heap atleast the top ones
         int[] maximum = maximumHeap.peek();
-        while(timeStampStockMap.get(maximum[1]) !=  maximum[0]){
+        while (timeStampStockMap.get(maximum[1]) != maximum[0]) {
             maximumHeap.poll();
             maximum = maximumHeap.peek();
         }
@@ -40,7 +43,7 @@ public class StockPrice {
     public int minimum() {
         //Clean up the heap atleast the top ones
         int[] minimum = minimumHeap.peek();
-        while(timeStampStockMap.get(minimum[1]) !=  minimum[0]){
+        while (timeStampStockMap.get(minimum[1]) != minimum[0]) {
             minimumHeap.poll();
             minimum = minimumHeap.peek();
         }

@@ -21,17 +21,17 @@ public class SubSets {
     }
 
 
-    private void dfs(int[] nums, List<Integer> subset, int index, List<List<Integer>> result){
-        if(index >= nums.length){
+    private void dfs(int[] nums, List<Integer> subset, int index, List<List<Integer>> result) {
+        if (index >= nums.length) {
             //Make sure u clone
             result.add(new ArrayList<>(subset));
             return;
         }
 
         subset.add(nums[index]);
-        dfs(nums, subset, index+1, result);
-        subset.remove(subset.size()-1);
-        dfs(nums, subset, index+1, result);
+        dfs(nums, subset, index + 1, result);
+        subset.remove(subset.size() - 1);
+        dfs(nums, subset, index + 1, result);
     }
 
 

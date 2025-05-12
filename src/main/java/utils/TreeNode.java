@@ -35,7 +35,7 @@ public class TreeNode {
         this.next = next;
     }
 
-    public TreeNode(int val, TreeNode next){
+    public TreeNode(int val, TreeNode next) {
         this.val = val;
         this.next = next;
     }

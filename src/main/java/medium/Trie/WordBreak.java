@@ -12,6 +12,7 @@ public class WordBreak {
      * n is the length of the string
      * m is the number of words
      * k is the number of characters in the word
+     *
      * @param s
      * @param wordDict
      * @return

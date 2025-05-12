@@ -9,8 +9,8 @@ public class toArrayTest {
     toArray toArray = new toArray();
 
     @Test
-    public void testToArray(){
-        ListNode node = GeneralUtils.getListNode(new int[]{1,2,3,4,3,2,1});
+    public void testToArray() {
+        ListNode node = GeneralUtils.getListNode(new int[]{1, 2, 3, 4, 3, 2, 1});
 
         int[] arr = toArray.toArray(node);
 

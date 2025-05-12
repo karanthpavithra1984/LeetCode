@@ -7,6 +7,6 @@ public class MinMeetingRoomsTest {
 
     @Test
     public void minMeetingRooms() {
-       assert  m.minMeetingRooms(new int[][]{{0,30},{5,10},{15,20}}) == 2;
+        assert m.minMeetingRooms(new int[][]{{0, 30}, {5, 10}, {15, 20}}) == 2;
     }
 }

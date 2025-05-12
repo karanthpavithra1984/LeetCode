@@ -5,7 +5,7 @@ public class MaxCount {
         int[] nums = new int[n + 1];
 
         for (int i : banned) {
-            if(i < nums.length){
+            if (i < nums.length) {
                 nums[i]--;
             }
         }

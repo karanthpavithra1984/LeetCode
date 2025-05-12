@@ -33,15 +33,15 @@ public class WordBreakII {
         }
 
         TrieNode cur = root;
-        for(int i = index; i < s.length(); i++) {
+        for (int i = index; i < s.length(); i++) {
             char c = s.charAt(i);
-            if(!cur.children.containsKey(c)) {
+            if (!cur.children.containsKey(c)) {
                 return;
             }
             sentence += c;
             cur = cur.children.get(c);
-            if(cur.isWord){
-                recurse(ans, s, root, i+1, sentence + " ");
+            if (cur.isWord) {
+                recurse(ans, s, root, i + 1, sentence + " ");
             }
         }
     }

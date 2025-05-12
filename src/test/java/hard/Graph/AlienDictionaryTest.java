@@ -10,6 +10,6 @@ public class AlienDictionaryTest {
 
     @Test
     public void test() {
-       assertEquals(dic.alienOrder(new String[]{"wrt","wrf","er","ett","rftt"}),"wertf");
+        assertEquals(dic.alienOrder(new String[]{"wrt", "wrf", "er", "ett", "rftt"}), "wertf");
     }
 }

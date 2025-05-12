@@ -8,6 +8,6 @@ public class EraseOverLapIntervalsTest {
 
     @Test
     public void test() {
-        eraseOverLapIntervals.eraseOverlapIntervals(new int[][]{{1,2},{2,3},{3,4},{1,3}});
+        eraseOverLapIntervals.eraseOverlapIntervals(new int[][]{{1, 2}, {2, 3}, {3, 4}, {1, 3}});
     }
 }

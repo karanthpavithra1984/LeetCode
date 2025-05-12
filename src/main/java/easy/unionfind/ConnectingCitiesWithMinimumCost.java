@@ -13,18 +13,18 @@ public class ConnectingCitiesWithMinimumCost {
         int cost = 0;
         Arrays.sort(connections, Comparator.comparingInt(o -> o[2]));
 
-        for(int[] connection: connections){
-            if(!unionFindii.union(connection[0], connection[1])){
+        for (int[] connection : connections) {
+            if (!unionFindii.union(connection[0], connection[1])) {
                 continue;
             }
-            cost+= connection[2];
+            cost += connection[2];
             totalVertex++;
         }
 
-        if(totalVertex == n-1){
+        if (totalVertex == n - 1) {
             return cost;
         }
 
-        return  -1;
+        return -1;
     }
 }

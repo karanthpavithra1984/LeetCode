@@ -11,15 +11,15 @@ public class CarFleet {
         }
 
         //Sort by Position
-        Arrays.sort(pair, (a,b) -> b[0]-a[0]);
+        Arrays.sort(pair, (a, b) -> b[0] - a[0]);
 
         double previousTime = 0.0;
         double currentTime = 0.0;
-        int fleet=0;
+        int fleet = 0;
 
-        for(int i=0; i< pair.length; i++){
-            currentTime = (double)(target-pair[i][0])/pair[i][1];
-            if(previousTime == 0.0 || currentTime > previousTime){
+        for (int i = 0; i < pair.length; i++) {
+            currentTime = (double) (target - pair[i][0]) / pair[i][1];
+            if (previousTime == 0.0 || currentTime > previousTime) {
                 //This will be fleet;
                 fleet++;
                 previousTime = currentTime;

@@ -9,7 +9,7 @@ public class TwoSumIITest {
 
     @Test
     public void twoSum() {
-        GeneralUtils.compareValues(twoSumII.twoSum(new int[]{2, 7, 11, 15}, 9), new int[]{1,2});
+        GeneralUtils.compareValues(twoSumII.twoSum(new int[]{2, 7, 11, 15}, 9), new int[]{1, 2});
 
     }
 }

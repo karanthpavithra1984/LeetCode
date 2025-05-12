@@ -7,16 +7,16 @@ public class SearchInRotatedArray {
             int middleIndex = (leftIndex + rightIndex) / 2;
             if (nums[middleIndex] == target) {
                 return middleIndex;
-            }else  if(nums[middleIndex] >= nums[leftIndex]) {
-                if(target >= nums[leftIndex] && target < nums[middleIndex]) {
+            } else if (nums[middleIndex] >= nums[leftIndex]) {
+                if (target >= nums[leftIndex] && target < nums[middleIndex]) {
                     rightIndex = middleIndex - 1;
-                }else{
+                } else {
                     leftIndex = middleIndex + 1;
                 }
-            }else{
-                if(target <= nums[rightIndex] && target > nums[middleIndex]) {
+            } else {
+                if (target <= nums[rightIndex] && target > nums[middleIndex]) {
                     leftIndex = middleIndex + 1;
-                }else{
+                } else {
                     rightIndex = middleIndex - 1;
                 }
             }

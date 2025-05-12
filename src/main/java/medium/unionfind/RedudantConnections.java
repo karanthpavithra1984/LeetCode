@@ -1,9 +1,5 @@
 package medium.unionfind;
 
-import utils.UnionFind;
-
-import java.util.Arrays;
-
 /**
  * Refer to Count Components
  * Time Complexity - O(V+E) - V is vertices or nodes, E is edges
@@ -16,7 +12,7 @@ import java.util.Arrays;
 public class RedudantConnections {
 
     public int[] findRedundantConnection(int[][] edges) {
-       UF unionFind = new UF(edges.length + 1);
+        UF unionFind = new UF(edges.length + 1);
 
         for (int i = 0; i < edges.length; i++) {
             if (!unionFind.unionFind(edges[i][0], edges[i][1])) {
@@ -32,37 +28,37 @@ class UF {
     int[] parent;
     int[] rank;
 
-    UF(int n){
+    UF(int n) {
         parent = new int[n];
         rank = new int[n];
 
-        for(int i=1; i < n; i++){
+        for (int i = 1; i < n; i++) {
             parent[i] = i;
             rank[i] = i;
         }
     }
 
-    public int findParent(int n){
-        if(parent[n] != n){
+    public int findParent(int n) {
+        if (parent[n] != n) {
             parent[n] = findParent(parent[n]);
         }
 
         return parent[n];
     }
 
-    public boolean unionFind(int n1, int n2){
+    public boolean unionFind(int n1, int n2) {
         int parent1 = findParent(n1);
         int parent2 = findParent(n2);
 
-        if(parent1 == parent2){
+        if (parent1 == parent2) {
             return false;
         }
 
-        if(rank[parent1] > rank[parent2]){
+        if (rank[parent1] > rank[parent2]) {
             parent[parent2] = parent1;
             rank[parent1] += rank[parent2];
-        }else{
-            parent[parent1] =  parent2;
+        } else {
+            parent[parent1] = parent2;
             rank[parent2] += rank[parent1];
         }
 

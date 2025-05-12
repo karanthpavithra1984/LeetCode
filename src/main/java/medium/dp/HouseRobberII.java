@@ -2,24 +2,24 @@ package medium.dp;
 
 public class HouseRobberII {
     public int rob(int[] nums) {
-        if(nums.length == 1){
+        if (nums.length == 1) {
             return nums[0];
         }
 
         //Since first and last are connected
         //Rob between first and last but one
         //Second and last One
-        int withoutLast = rob(nums, 0, nums.length-1);
+        int withoutLast = rob(nums, 0, nums.length - 1);
         int withLast = rob(nums, 1, nums.length);
 
         return Math.max(withLast, withoutLast);
     }
 
-    private int rob(int[] nums, int start, int end){
+    private int rob(int[] nums, int start, int end) {
         int prevRob = 0;
         int maxRob = nums[start];
 
-        for(int i= start+1; i < end; i++){
+        for (int i = start + 1; i < end; i++) {
             int temp = Math.max(nums[i] + prevRob, maxRob);
             prevRob = maxRob;
             maxRob = temp;

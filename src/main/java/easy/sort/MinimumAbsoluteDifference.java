@@ -11,15 +11,15 @@ public class MinimumAbsoluteDifference {
         int minDifference = Integer.MAX_VALUE;
         List<List<Integer>> arrList = new ArrayList<>();
 
-        for(int i=0; i < arr.length-1; i++){
-            int currDifference = arr[i+1] - arr[i];
+        for (int i = 0; i < arr.length - 1; i++) {
+            int currDifference = arr[i + 1] - arr[i];
 
-            if(currDifference == minDifference){
-                arrList.add(Arrays.asList(arr[i], arr[i+1]));
-            }else if(currDifference < minDifference){
+            if (currDifference == minDifference) {
+                arrList.add(Arrays.asList(arr[i], arr[i + 1]));
+            } else if (currDifference < minDifference) {
                 //New minDifference
                 arrList.clear();
-                arrList.add(Arrays.asList(arr[i], arr[i+1]));
+                arrList.add(Arrays.asList(arr[i], arr[i + 1]));
                 minDifference = currDifference;
             }
         }

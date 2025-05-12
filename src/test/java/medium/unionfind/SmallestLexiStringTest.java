@@ -8,8 +8,8 @@ public class SmallestLexiStringTest {
     SmallestEquivalentString smallestEquivalentString = new SmallestEquivalentString();
 
     @Test
-    public void testSmallestEquivalentString(){
+    public void testSmallestEquivalentString() {
         assertEquals(smallestEquivalentString
-                .smallestEquivalentString("leetcode","programs","sourcecode") , "aauaaaaada");
+                .smallestEquivalentString("leetcode", "programs", "sourcecode"), "aauaaaaada");
     }
 }

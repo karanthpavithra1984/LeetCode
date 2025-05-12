@@ -10,20 +10,20 @@ import java.util.Map;
 
 public class ContinousSubArraySum {
     public boolean checkSubarraySum(int[] nums, int k) {
-        Map<Integer , Integer> sumMod = new HashMap<>();
-        sumMod.put(0,-1);
+        Map<Integer, Integer> sumMod = new HashMap<>();
+        sumMod.put(0, -1);
 
         int sum = 0;
-        for(int i= 0 ; i < nums.length; i++){
+        for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
 
-            int mod = sum%k;
-            if(sumMod.containsKey(mod)){
-                if(i - sumMod.get(mod) >= 2){
+            int mod = sum % k;
+            if (sumMod.containsKey(mod)) {
+                if (i - sumMod.get(mod) >= 2) {
                     return true;
                 }
-            }else{
-                sumMod.put(mod,i);
+            } else {
+                sumMod.put(mod, i);
             }
         }
 

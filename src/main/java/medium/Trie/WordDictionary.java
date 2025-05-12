@@ -13,22 +13,22 @@ class WordDictionary {
     public void addWord(String word) {
         TrieN current = this.trieNode;
 
-        for(Character character: word.toCharArray()){
-            if(!current.children.containsKey(character)){
+        for (Character character : word.toCharArray()) {
+            if (!current.children.containsKey(character)) {
                 current.children.put(character, new TrieN());
             }
 
             current = current.children.get(character);
         }
 
-        current.isWord= true;
+        current.isWord = true;
     }
 
     public boolean search(String word) {
-        return recursiveSearch(word,trieNode);
+        return recursiveSearch(word, trieNode);
     }
 
-    private boolean recursiveSearch(String word,TrieN trieNode){
+    private boolean recursiveSearch(String word, TrieN trieNode) {
         TrieN current = trieNode;
         for (Character c : word.toCharArray()) {
             if (c.equals('.')) {
@@ -51,14 +51,13 @@ class WordDictionary {
     }
 
 
-
 }
 
 class TrieN {
     Map<Character, TrieN> children;
     boolean isWord;
 
-    TrieN(){
+    TrieN() {
         this.children = new HashMap<>();
         this.isWord = false;
     }

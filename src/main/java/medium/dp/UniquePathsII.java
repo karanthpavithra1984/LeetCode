@@ -7,19 +7,19 @@ public class UniquePathsII {
 
         int[][] cache = new int[m][n];
 
-        return dfs(0,0,cache,obstacleGrid);
+        return dfs(0, 0, cache, obstacleGrid);
     }
 
-    private int dfs(int row, int col, int[][] cache, int[][] obstacleGrid){
-        if(row == cache.length || col == cache[0].length || obstacleGrid[row][col] == 1){
+    private int dfs(int row, int col, int[][] cache, int[][] obstacleGrid) {
+        if (row == cache.length || col == cache[0].length || obstacleGrid[row][col] == 1) {
             return 0;
         }
 
-        if(cache[row][col] > 0){
+        if (cache[row][col] > 0) {
             return cache[row][col];
         }
 
-        if(row == cache.length-1 && col == cache[0].length - 1){
+        if (row == cache.length - 1 && col == cache[0].length - 1) {
             return 1;
         }
 

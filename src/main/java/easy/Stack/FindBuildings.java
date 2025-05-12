@@ -1,6 +1,5 @@
 package easy.Stack;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
@@ -18,13 +17,13 @@ public class FindBuildings {
         Stack<Integer> buildings = new Stack<>();
         List<Integer> indexList = new LinkedList<>();
 
-        for(int i = heights.length - 1; i >= 0; i--){
-            while(!buildings.isEmpty() && heights[i] > buildings.peek()){
+        for (int i = heights.length - 1; i >= 0; i--) {
+            while (!buildings.isEmpty() && heights[i] > buildings.peek()) {
                 buildings.pop();
             }
 
             //Push if the buildings are empty
-            if(buildings.isEmpty()) {
+            if (buildings.isEmpty()) {
                 indexList.addFirst(i);
             }
             //Lets push to the stack

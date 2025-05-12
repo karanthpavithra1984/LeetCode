@@ -6,7 +6,7 @@ public class DecodeWaysTest {
     DecodeWays decodeWays = new DecodeWays();
 
     @Test
-    public void testDecodeWays(){
+    public void testDecodeWays() {
         assert decodeWays.numDecoding("226") == 3;
     }
 }

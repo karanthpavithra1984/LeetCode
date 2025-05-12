@@ -13,7 +13,7 @@ public class isSymmetric {
      */
 
     public boolean isSymmetric(TreeNode root) {
-       return isSameTree(root, root);
+        return isSameTree(root, root);
     }
 
     private boolean isSameTree(TreeNode root1, TreeNode root2) {

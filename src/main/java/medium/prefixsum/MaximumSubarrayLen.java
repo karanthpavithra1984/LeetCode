@@ -14,19 +14,19 @@ public class MaximumSubarrayLen {
         int prefixSum = 0;
         Map<Integer, Integer> prefixSumMapping = new HashMap<>();
 
-        for(int i = 0 ; i< nums.length; i++){
+        for (int i = 0; i < nums.length; i++) {
             prefixSum += nums[i];
 
-            if(prefixSum == k){
-                maxLength = i+1;
+            if (prefixSum == k) {
+                maxLength = i + 1;
             }
 
             int subArraySum = prefixSum - k;
-            if(prefixSumMapping.containsKey(subArraySum)){
-                maxLength = Math.max(maxLength, i- prefixSumMapping.get(subArraySum));
+            if (prefixSumMapping.containsKey(subArraySum)) {
+                maxLength = Math.max(maxLength, i - prefixSumMapping.get(subArraySum));
             }
 
-            if(!prefixSumMapping.containsKey(prefixSum))
+            if (!prefixSumMapping.containsKey(prefixSum))
                 prefixSumMapping.put(prefixSum, i);
         }
 

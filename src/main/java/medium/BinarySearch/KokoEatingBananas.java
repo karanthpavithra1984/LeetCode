@@ -21,28 +21,28 @@ public class KokoEatingBananas {
 
         //Get the maxSpeed
         int maxSpeed = 0;
-        for(int pile: piles)
+        for (int pile : piles)
             maxSpeed = Math.max(maxSpeed, pile);
 
         int minSpeed = 1; //At the least , koko has to eat 1
 
-        while(minSpeed < maxSpeed){
-            int midSpeed = minSpeed + (maxSpeed - minSpeed)/2; //To prevent over flow if the maxSpeed is higher
+        while (minSpeed < maxSpeed) {
+            int midSpeed = minSpeed + (maxSpeed - minSpeed) / 2; //To prevent over flow if the maxSpeed is higher
 
             int hours = 0;
-            for (int pile: piles){
-                hours += (int) Math.ceil((double) pile/midSpeed);
+            for (int pile : piles) {
+                hours += (int) Math.ceil((double) pile / midSpeed);
 
-                if(hours > h){
+                if (hours > h) {
                     break;
                 }
             }
 
-            if(hours <= h){
+            if (hours <= h) {
                 //Monkey was able to eat all
                 //Find next possible lower speed
                 maxSpeed = midSpeed;
-            }else{
+            } else {
                 //Monkey wasnt able to eat, so increase the speed
                 minSpeed = midSpeed + 1;
             }

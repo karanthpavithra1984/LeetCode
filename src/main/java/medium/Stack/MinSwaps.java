@@ -7,18 +7,18 @@ public class MinSwaps {
         Stack<Character> characterStack = new Stack<>();
         int unbalanced = 0;
 
-        for(Character character : s.toCharArray()){
-            if(character == '['){
+        for (Character character : s.toCharArray()) {
+            if (character == '[') {
                 characterStack.push(character);
-            }else{
-                if(!characterStack.isEmpty()){
+            } else {
+                if (!characterStack.isEmpty()) {
                     characterStack.pop();
-                }else{
+                } else {
                     unbalanced++;
                 }
             }
         }
 
-        return (unbalanced + 1)/2;
+        return (unbalanced + 1) / 2;
     }
 }

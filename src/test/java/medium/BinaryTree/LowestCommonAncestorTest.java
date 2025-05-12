@@ -25,7 +25,7 @@ public class LowestCommonAncestorTest {
         TreeNode treeNode1 = lca.lowestCommonAncestor(treeNode, p, q);
         assert treeNode1.val == 3;
 
-        q= treeNode.left.right.right;
+        q = treeNode.left.right.right;
 
         treeNode1 = lca.lowestCommonAncestor(treeNode, p, q);
         assert treeNode1.val == 5;

@@ -11,9 +11,9 @@ import java.util.List;
 
 public class IntervalIntersection {
     public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
-        if(firstList.length == 0 || secondList.length == 0){
-           return new int[0][];
-       }
+        if (firstList.length == 0 || secondList.length == 0) {
+            return new int[0][];
+        }
 
         List<int[]> result = new ArrayList<>();
 
@@ -23,19 +23,19 @@ public class IntervalIntersection {
         int firstIndex = 0;
         int secondIndex = 0;
 
-        while(firstIndex < firstLength && secondIndex < secondLength){
+        while (firstIndex < firstLength && secondIndex < secondLength) {
 
             int minValue = Math.max(firstList[firstIndex][0], secondList[secondIndex][0]);
             int maxValue = Math.min(firstList[firstIndex][1], secondList[secondIndex][1]);
 
 
-            if(minValue <= maxValue) {
+            if (minValue <= maxValue) {
                 result.add(new int[]{minValue, maxValue});
             }
 
-            if(firstList[firstIndex][1] <= secondList[secondIndex][1]){
+            if (firstList[firstIndex][1] <= secondList[secondIndex][1]) {
                 firstIndex++;
-            }else{
+            } else {
                 secondIndex++;
             }
         }

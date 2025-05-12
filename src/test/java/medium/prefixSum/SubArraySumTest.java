@@ -7,7 +7,7 @@ public class SubArraySumTest {
     SubArraySum subArraySum = new SubArraySum();
 
     @Test
-    public void testSubArraySum(){
-       assert  subArraySum.subarraySum(new int[]{1,1,1}, 2) == 2;
+    public void testSubArraySum() {
+        assert subArraySum.subarraySum(new int[]{1, 1, 1}, 2) == 2;
     }
 }

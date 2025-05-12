@@ -8,6 +8,7 @@ public class PermutationsII {
     /**
      * Time Complexity o(nlogn + n!n)
      * Space Complexity o(n!n + some n for boolean, array list etc)
+     *
      * @param nums
      * @return
      */
@@ -32,10 +33,10 @@ public class PermutationsII {
         for (int i = 0; i < nums.length; i++) {
             //o(!n)
             //Since the values have to be unique , we cant reuse the used ones.
-            if(used[i]) continue;
+            if (used[i]) continue;
             //If two values are same (array is sorted) , make sure the previous one is not used.
             //Then continue , since the permutation is already created
-            if(i > 0 && nums[i] == nums[i-1] && !used[i-1]){
+            if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1]) {
                 continue;
             }
             used[i] = true;

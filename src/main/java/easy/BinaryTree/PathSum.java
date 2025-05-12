@@ -8,19 +8,19 @@ public class PathSum {
         return calculatePathSum(root, targetSum, sum);
     }
 
-    private boolean calculatePathSum(TreeNode root, int targetSum, int sum){
-        if(root== null)return false;
+    private boolean calculatePathSum(TreeNode root, int targetSum, int sum) {
+        if (root == null) return false;
 
-        sum+= root.val;
+        sum += root.val;
 
-        if(root.left == null && root.right == null && sum == targetSum){
+        if (root.left == null && root.right == null && sum == targetSum) {
             return true;
         }
 
-        if(calculatePathSum(root.left, targetSum, sum)){
+        if (calculatePathSum(root.left, targetSum, sum)) {
             return true;
         }
-        if(calculatePathSum(root.right, targetSum, sum)) {
+        if (calculatePathSum(root.right, targetSum, sum)) {
             return true;
         }
 

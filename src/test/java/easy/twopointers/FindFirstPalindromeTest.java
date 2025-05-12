@@ -10,8 +10,8 @@ public class FindFirstPalindromeTest {
 
     @Test
     public void test() {
-        assertEquals(fixture.firstPalindrome(new String[]{"abc","car","ada","racecar","cool"}), "ada");
-        assertEquals(fixture.firstPalindrome(new String[]{"notapalindrome","racecar"}), "racecar");
-        assertEquals(fixture.firstPalindrome(new String[]{"def","ghi"}),"");
+        assertEquals(fixture.firstPalindrome(new String[]{"abc", "car", "ada", "racecar", "cool"}), "ada");
+        assertEquals(fixture.firstPalindrome(new String[]{"notapalindrome", "racecar"}), "racecar");
+        assertEquals(fixture.firstPalindrome(new String[]{"def", "ghi"}), "");
     }
 }

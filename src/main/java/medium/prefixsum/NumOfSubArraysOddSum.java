@@ -17,15 +17,15 @@ public class NumOfSubArraysOddSum {
         int result = 0;
         final int MOD = 1000000007;
 
-        for(int a : arr){
+        for (int a : arr) {
             prefixSum += a;
 
             //If its even
-            if(prefixSum % 2 == 0){
+            if (prefixSum % 2 == 0) {
                 //Add all the previous Odd encounters
                 result += oddCount;
                 evenCount++;
-            }else{//If its odd
+            } else {//If its odd
                 //All the previous even encounters
                 result += evenCount + 1;
                 oddCount++;

@@ -10,8 +10,8 @@ public class VerifyingAnAlienDictTest {
 
     @Test
     public void test() {
-        assertFalse(verifyingAnAlienDict.isAlienSorted(new String[]{"apple","app"},"abcdefghijklmnopqrstuvwxyz"));
-        assertTrue(verifyingAnAlienDict.isAlienSorted(new String[]{"hello","leetcode"},"hlabcdefgijkmnopqrstuvwxyz"));
-        assertFalse(verifyingAnAlienDict.isAlienSorted(new String[]{"word","world","row"},"worldabcefghijkmnpqstuvxyz"));
+        assertFalse(verifyingAnAlienDict.isAlienSorted(new String[]{"apple", "app"}, "abcdefghijklmnopqrstuvwxyz"));
+        assertTrue(verifyingAnAlienDict.isAlienSorted(new String[]{"hello", "leetcode"}, "hlabcdefgijkmnopqrstuvwxyz"));
+        assertFalse(verifyingAnAlienDict.isAlienSorted(new String[]{"word", "world", "row"}, "worldabcefghijkmnpqstuvxyz"));
     }
 }

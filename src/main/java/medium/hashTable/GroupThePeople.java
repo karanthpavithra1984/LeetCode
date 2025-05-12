@@ -11,13 +11,13 @@ public class GroupThePeople {
 
         List<List<Integer>> result = new ArrayList<>();
 
-        for(int i=0; i < groupSizes.length; i++){
+        for (int i = 0; i < groupSizes.length; i++) {
             int size = groupSizes[i];
-            if(!groupMap.containsKey(size)){
+            if (!groupMap.containsKey(size)) {
                 groupMap.put(size, new ArrayList<>());
             }
             groupMap.get(size).add(i);
-            if(groupMap.get(size).size() == size){
+            if (groupMap.get(size).size() == size) {
                 result.add(groupMap.get(size));
                 groupMap.remove(size);
             }

@@ -32,7 +32,7 @@ public class BinaryLevelZigZagOrder {
                     queue.add(value.right);
                 }
             }
-            if(level % 2 == 0) Collections.reverse(treeVals);
+            if (level % 2 == 0) Collections.reverse(treeVals);
             values.add(treeVals);
         }
 

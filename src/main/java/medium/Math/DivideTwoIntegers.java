@@ -21,13 +21,14 @@ public class DivideTwoIntegers {
 
     /**
      * Time Complexity o(logn * logn)
+     *
      * @param dividend
      * @param divisor
      * @return
      */
     public int divide(int dividend, int divisor) {
         //Handle edge case
-        if(dividend == Integer.MIN_VALUE && divisor == -1){
+        if (dividend == Integer.MIN_VALUE && divisor == -1) {
             return Integer.MAX_VALUE;
         }
 
@@ -40,25 +41,25 @@ public class DivideTwoIntegers {
         //So it's better to use negative
 
         int negative = 2;
-        if(divisor > 0 ){
+        if (divisor > 0) {
             divisor = -divisor;
             negative--;
         }
 
-        if(dividend > 0){
+        if (dividend > 0) {
             dividend = -dividend;
             negative--;
         }
         int quotient = 0;
-        while(divisor >= dividend){
+        while (divisor >= dividend) {
             int powerOfTwo = -1;
             int value = divisor;
             //HALF_INT_MIN is negative and the moment the value becomes less than
             //We need to stop doubling.
             //By less if it hits -1073741824 , and then double of that would be out of range
             //for positive number
-            while(value >= HALF_INT_MIN && value + value >= dividend){
-                value+= value;
+            while (value >= HALF_INT_MIN && value + value >= dividend) {
+                value += value;
                 powerOfTwo += powerOfTwo;
             }
 
@@ -66,7 +67,7 @@ public class DivideTwoIntegers {
             quotient += powerOfTwo;
         }
 
-        if(negative != 1){
+        if (negative != 1) {
             quotient = -quotient;
         }
 

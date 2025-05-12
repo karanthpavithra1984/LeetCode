@@ -15,18 +15,18 @@ public class SumOfDistances {
         Map<Integer, List<Integer>> mapValues = new HashMap<>();
 
 
-        for(int i = 0; i < nums.length; i++){
-            if(!mapValues.containsKey(nums[i])){
+        for (int i = 0; i < nums.length; i++) {
+            if (!mapValues.containsKey(nums[i])) {
                 mapValues.put(nums[i], new ArrayList<>());
             }
             mapValues.get(nums[i]).add(i);
         }
 
 
-        for(List<Integer> indices : mapValues.values()) {
+        for (List<Integer> indices : mapValues.values()) {
             int n = indices.size();
             long sum = 0;
-            for(int i = 0; i < n; i++) {
+            for (int i = 0; i < n; i++) {
                 sum += indices.get(i);
             }
             /**
@@ -46,14 +46,14 @@ public class SumOfDistances {
             long leftsum = 0;
             long rightsum = sum;
             long currsum = 0;
-            for(int i = 0; i < n; i++) {
+            for (int i = 0; i < n; i++) {
                 currsum = 0;
                 //add the leftSum - i*index - leftSum
-                currsum += Math.abs((long)i*indices.get(i) - leftsum);
+                currsum += Math.abs((long) i * indices.get(i) - leftsum);
                 //Add the rightSum - (n-i)*index - rightsum.
-                currsum += Math.abs((long)(n-i)*indices.get(i) - rightsum);
-                leftsum += (long)indices.get(i);
-                rightsum -= (long)indices.get(i);
+                currsum += Math.abs((long) (n - i) * indices.get(i) - rightsum);
+                leftsum += (long) indices.get(i);
+                rightsum -= (long) indices.get(i);
                 ans[indices.get(i)] = currsum;
             }
         }

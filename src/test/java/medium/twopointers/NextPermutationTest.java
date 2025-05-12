@@ -8,14 +8,14 @@ public class NextPermutationTest {
 
     @Test
     public void nextPermutation() {
-        int[] nums = new int[]{1,2,3};
+        int[] nums = new int[]{1, 2, 3};
         nextPermutation.nextPermutation(nums);
         GeneralUtils.compareValues(
-                nums, new int[]{1,3,2});
+                nums, new int[]{1, 3, 2});
 
-        int[] nums2 = new int[]{3,2,1};
+        int[] nums2 = new int[]{3, 2, 1};
         nextPermutation.nextPermutation(nums2);
         GeneralUtils.compareValues(
-                nums2, new int[]{1,2,3});
+                nums2, new int[]{1, 2, 3});
     }
 }

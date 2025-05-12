@@ -6,6 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class CountAndSayTest {
     CountAndSay countAndSay = new CountAndSay();
+
     @Test
     public void countAndSay() {
         assertEquals(countAndSay.countAndSay(3), "21");

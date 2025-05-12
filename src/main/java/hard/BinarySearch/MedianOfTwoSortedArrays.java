@@ -18,7 +18,7 @@ public class MedianOfTwoSortedArrays {
         //Now find the left partition of smaller nums i.e A
         int l = 0, r = A.length;
         while (l <= r) {
-            int midA = (l + r)/2;
+            int midA = (l + r) / 2;
             //Mid B is half - left partition length, since indexes start with 0
             //We are considering them as well
             int midB = half - midA;

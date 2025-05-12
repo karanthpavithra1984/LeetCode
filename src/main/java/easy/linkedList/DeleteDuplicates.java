@@ -10,16 +10,17 @@ import utils.ListNode;
 public class DeleteDuplicates {
     /**
      * Remove duplicates
+     *
      * @param head
      * @return
      */
     public ListNode deleteDuplicates(ListNode head) {
         ListNode deduped = head;
 
-        while(deduped != null && deduped.next != null){
-            if(deduped.val == deduped.next.val){
-               deduped.next = deduped.next.next;
-            }else {
+        while (deduped != null && deduped.next != null) {
+            if (deduped.val == deduped.next.val) {
+                deduped.next = deduped.next.next;
+            } else {
                 deduped = deduped.next;
             }
         }

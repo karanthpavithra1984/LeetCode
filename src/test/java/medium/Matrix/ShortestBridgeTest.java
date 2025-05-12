@@ -7,6 +7,6 @@ public class ShortestBridgeTest {
 
     @Test
     public void test() {
-       assert  bridge.shortestBridge(new int[][]{{0,1},{1,0}}) == 1;
+        assert bridge.shortestBridge(new int[][]{{0, 1}, {1, 0}}) == 1;
     }
 }

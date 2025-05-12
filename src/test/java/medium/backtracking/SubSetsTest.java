@@ -8,6 +8,6 @@ public class SubSetsTest {
 
     @Test
     public void test() {
-        subSets.subsets(new int[] { 1, 2, 3 });
+        subSets.subsets(new int[]{1, 2, 3});
     }
 }

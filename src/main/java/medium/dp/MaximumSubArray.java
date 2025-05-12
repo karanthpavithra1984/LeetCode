@@ -5,13 +5,13 @@ public class MaximumSubArray {
         int currentSum = 0;
         int maxSum = Integer.MIN_VALUE;
 
-        for (int num : nums){
-            if(currentSum < 0){
+        for (int num : nums) {
+            if (currentSum < 0) {
                 currentSum = 0;
             }
             currentSum += num;
 
-            maxSum =  Math.max(currentSum, maxSum);
+            maxSum = Math.max(currentSum, maxSum);
         }
 
         return maxSum;

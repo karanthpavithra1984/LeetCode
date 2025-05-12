@@ -9,7 +9,7 @@ public class WordLadderIITest {
 
     @Test
     public void test() {
-        wordLadderII.findLadders("hit",  "cog",
-                Arrays.asList("hot","dot","dog","lot","log","cog"));
+        wordLadderII.findLadders("hit", "cog",
+                Arrays.asList("hot", "dot", "dog", "lot", "log", "cog"));
     }
 }

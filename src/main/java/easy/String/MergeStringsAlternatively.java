@@ -5,6 +5,7 @@ public class MergeStringsAlternatively {
     /**
      * Time Complexity o(m+n) where m is word1 length and n is word2 length
      * Space Complexity o(m+n) the result space
+     *
      * @param word1
      * @param word2
      * @return
@@ -17,8 +18,8 @@ public class MergeStringsAlternatively {
         StringBuffer wordbuffer = new StringBuffer(len1 + len2);
 
         while (start1 < len1 || start2 < len2) {
-            if(start1 < len1) wordbuffer.append(word1.charAt(start1));
-            if(start2 < len2) wordbuffer.append(word2.charAt(start2));
+            if (start1 < len1) wordbuffer.append(word1.charAt(start1));
+            if (start2 < len2) wordbuffer.append(word2.charAt(start2));
 
             start1++;
             start2++;

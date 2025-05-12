@@ -5,6 +5,7 @@ import utils.TreeNode;
 public class MinimumDistanceInBsT {
     private int minValue;
     private Integer prev;
+
     public int minDiffInBST(TreeNode root) {
         minValue = Integer.MAX_VALUE;
         prev = null;
@@ -17,7 +18,7 @@ public class MinimumDistanceInBsT {
 
         //In Order traversal
         dfs(root.left);
-        if(prev != null){
+        if (prev != null) {
             minValue = Math.min(minValue, root.val - prev);
         }
         prev = root.val;

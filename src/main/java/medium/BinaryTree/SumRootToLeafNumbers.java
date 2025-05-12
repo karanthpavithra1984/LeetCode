@@ -11,9 +11,9 @@ public class SumRootToLeafNumbers {
     private Integer preOrderTraversal(TreeNode root, int sum) {
         if (root == null) return 0;
 
-        sum = sum*10 + root.val;
+        sum = sum * 10 + root.val;
 
-        if(root.right == null && root.left == null) {
+        if (root.right == null && root.left == null) {
             return sum;
         }
 

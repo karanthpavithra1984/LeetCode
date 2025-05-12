@@ -9,25 +9,25 @@ import java.util.Stack;
 
 public class isValidString {
 
-    public boolean isValid(String word){
+    public boolean isValid(String word) {
 
-            Stack<Character> characterStack = new Stack<>();
+        Stack<Character> characterStack = new Stack<>();
 
-            for(Character character : word.toCharArray()){
-                if(character == 'a' || character == 'b'){
-                    characterStack.push(character);
-                }else{
-                    if(characterStack.isEmpty() || characterStack.size() == 1) return false;
-                    char isB = characterStack.pop();
-                    char isA = characterStack.pop();
+        for (Character character : word.toCharArray()) {
+            if (character == 'a' || character == 'b') {
+                characterStack.push(character);
+            } else {
+                if (characterStack.isEmpty() || characterStack.size() == 1) return false;
+                char isB = characterStack.pop();
+                char isA = characterStack.pop();
 
-                    if(isB != 'b' || isA != 'a'){
-                        return false;
-                    }
+                if (isB != 'b' || isA != 'a') {
+                    return false;
                 }
             }
+        }
 
-            return characterStack.isEmpty() ;
+        return characterStack.isEmpty();
 
     }
 }

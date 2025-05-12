@@ -9,23 +9,23 @@ public class DecodeString {
         StringBuilder currentString = new StringBuilder();
         int number = 0;
 
-        for(Character c: s.toCharArray()){
-            if(Character.isDigit(c)){
+        for (Character c : s.toCharArray()) {
+            if (Character.isDigit(c)) {
                 number = number * 10 + c - '0';
-            }else if (c == '['){
+            } else if (c == '[') {
                 numbers.push(number);
                 number = 0; //reset the number
                 stringStack.push(currentString);
                 currentString = new StringBuilder(); // reset the current String
-            }else if(c == ']'){
-                int k =numbers.pop();
+            } else if (c == ']') {
+                int k = numbers.pop();
                 StringBuilder decodedString = stringStack.pop();
-                while(k > 0){
+                while (k > 0) {
                     decodedString.append(currentString);
                     k--;
                 }
                 currentString = decodedString;
-            }else{
+            } else {
                 currentString.append(c);
             }
         }

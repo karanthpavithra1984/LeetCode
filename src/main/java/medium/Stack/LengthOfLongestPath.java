@@ -15,22 +15,22 @@ public class LengthOfLongestPath {
         Stack<String> files = new Stack<>();
         int maxLength = 0;
 
-        for(String filePath : filePaths){
+        for (String filePath : filePaths) {
             int lastIndex = filePath.lastIndexOf("\t");
             //Make sure the number of \t is greater than previous \t
             //this is basically moving up if the dead end is hit or if its the end of the path
-            while(!files.isEmpty() && lastIndex < files.size() - 1){
+            while (!files.isEmpty() && lastIndex < files.size() - 1) {
                 files.pop();
             }
-            if(filePath.contains("\t")){
+            if (filePath.contains("\t")) {
                 filePath = filePath.replaceAll("\t", "");
             }
 
             files.push(filePath);
 
-            if(filePath.contains(".")){
+            if (filePath.contains(".")) {
                 int length = 0;
-                for(String file: files){
+                for (String file : files) {
                     length += file.length() + 1;
                 }
 

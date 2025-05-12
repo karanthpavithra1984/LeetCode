@@ -19,6 +19,6 @@ public class LowestCommonAncestorIITest {
         treeNode.right.left = new TreeNode(0);
         treeNode.right.right = new TreeNode(8);
 
-        lowestCommonAncestorII.lowestCommonAncestor(treeNode,treeNode.left,treeNode.right);
+        lowestCommonAncestorII.lowestCommonAncestor(treeNode, treeNode.left, treeNode.right);
     }
 }

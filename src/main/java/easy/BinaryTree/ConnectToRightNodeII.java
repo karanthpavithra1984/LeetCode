@@ -1,6 +1,5 @@
 package easy.BinaryTree;
 
-import utils.Node;
 import utils.TreeNode;
 
 import java.util.LinkedList;
@@ -14,11 +13,11 @@ public class ConnectToRightNodeII {
 
         while (!queue.isEmpty()) {
             int size = queue.size();
-            for(int i = 0; i < size; i++) {
+            for (int i = 0; i < size; i++) {
                 //Get the top one
                 TreeNode node = queue.poll();
 
-                if(node != null) {
+                if (node != null) {
                     //Connect to next one
                     if (i < size - 1) {
                         node.next = queue.peek();

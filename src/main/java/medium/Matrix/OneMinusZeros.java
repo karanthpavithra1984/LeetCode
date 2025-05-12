@@ -15,8 +15,8 @@ public class OneMinusZeros {
         }
 
         int[][] diff = new int[ROW][COL];
-        for(int r= 0 ; r< ROW; r++){
-            for(int c=0; c< COL; c++){
+        for (int r = 0; r < ROW; r++) {
+            for (int c = 0; c < COL; c++) {
                 int zerosRow = ROW - onesRow[r];
                 int zerosCol = COL - onesCol[c];
 

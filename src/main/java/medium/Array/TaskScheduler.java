@@ -6,6 +6,7 @@ public class TaskScheduler {
     /**
      * Time Complexity sorting 26log26 + n = o(n)
      * Space for charFreq which 26 which is constant
+     *
      * @param tasks
      * @param n
      * @return

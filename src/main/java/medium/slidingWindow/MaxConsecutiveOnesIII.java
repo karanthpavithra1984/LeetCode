@@ -4,6 +4,7 @@ public class MaxConsecutiveOnesIII {
     /**
      * time - o(n)
      * space complexity o(1)
+     *
      * @param nums
      * @param k
      * @return
@@ -13,13 +14,13 @@ public class MaxConsecutiveOnesIII {
         int max = 0;
         int leftIndex = 0, rightIndex = 0;
 
-        while(rightIndex < nums.length) {
-            if(nums[rightIndex] == 0) {
+        while (rightIndex < nums.length) {
+            if (nums[rightIndex] == 0) {
                 zeroCounter++;
             }
 
-            while(zeroCounter > k){
-                if(nums[leftIndex] == 0) {
+            while (zeroCounter > k) {
+                if (nums[leftIndex] == 0) {
                     zeroCounter--;
                 }
                 leftIndex++;

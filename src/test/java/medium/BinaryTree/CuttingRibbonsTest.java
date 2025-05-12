@@ -8,7 +8,7 @@ public class CuttingRibbonsTest {
 
     @Test
     public void test() {
-        assert cuttingRibbons.maxLength(new int[]{7,5,9},4) == 4;
-        assert cuttingRibbons.maxLength(new int[]{9,7,5},3) == 5;
+        assert cuttingRibbons.maxLength(new int[]{7, 5, 9}, 4) == 4;
+        assert cuttingRibbons.maxLength(new int[]{9, 7, 5}, 3) == 5;
     }
 }

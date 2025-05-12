@@ -7,13 +7,13 @@ public class BestTimeToBuyOrSellStockWithTransactionFee {
         int buy = -prices[0];
         int sell = 0;
 
-        for(int i = 1; i < prices.length ; i++){
+        for (int i = 1; i < prices.length; i++) {
             int tempBuy = buy;
             //If we have already sold , what would be the buying purse
             //U r deducting money from sell;
-            buy = Math.max(buy, sell-prices[i]);
+            buy = Math.max(buy, sell - prices[i]);
             //If we are selling the next one
-            sell = Math.max(sell, prices[i]+tempBuy-fee);
+            sell = Math.max(sell, prices[i] + tempBuy - fee);
         }
 
         return sell;

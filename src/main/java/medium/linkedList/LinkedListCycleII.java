@@ -8,21 +8,21 @@ public class LinkedListCycleII {
         ListNode slow = head;
         boolean foundCycle = false;
 
-        while (fast != null && fast.next != null){
+        while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
 
-            if(fast == slow){
+            if (fast == slow) {
                 foundCycle = true;
                 break;
             }
         }
 
-        if(!foundCycle) return null;
+        if (!foundCycle) return null;
 
         fast = head;
 
-        while (fast != slow){
+        while (fast != slow) {
             fast = fast.next;
             slow = slow.next;
         }

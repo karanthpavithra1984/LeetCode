@@ -12,6 +12,7 @@ import java.util.Map;
 
 public class CopyRandomBinaryTree {
     Map<Node, NodeCopy> cloneNodeMap = new HashMap<>();
+
     public NodeCopy copyRandomBinaryTree(Node root) {
         Node head = root;
 
@@ -23,7 +24,7 @@ public class CopyRandomBinaryTree {
     }
 
     private void copyRandomPointers(Node head) {
-        if(head == null) return;
+        if (head == null) return;
 
         //Remember u have to create a copy
         //Not point to the reference
@@ -37,11 +38,11 @@ public class CopyRandomBinaryTree {
     }
 
     private NodeCopy deepCopy(Node root) {
-        if(root == null) return null;
+        if (root == null) return null;
 
         NodeCopy copy = new NodeCopy(root.val);
-        copy.left   = deepCopy(root.left);
-        copy.right   = deepCopy(root.right);
+        copy.left = deepCopy(root.left);
+        copy.right = deepCopy(root.right);
 
         cloneNodeMap.put(root, copy);
         return copy;

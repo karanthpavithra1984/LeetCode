@@ -4,6 +4,7 @@ public class MyAtoi {
     /**
      * Time Complexity o(n)
      * Space Complexity o(1)
+     *
      * @param s
      * @return
      */
@@ -19,20 +20,20 @@ public class MyAtoi {
         }
 
 
-        if(index >= length) {
+        if (index >= length) {
             return result;
         }
 
-        if(s.charAt(index) == '-') {
+        if (s.charAt(index) == '-') {
             sign = -1;
             index++;
-        }else if(s.charAt(index) == '+') {
+        } else if (s.charAt(index) == '+') {
             sign = 1;
             index++;
         }
 
-        while(index < length){
-            if(!Character.isDigit(s.charAt(index))){
+        while (index < length) {
+            if (!Character.isDigit(s.charAt(index))) {
                 return result;
             }
 

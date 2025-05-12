@@ -9,11 +9,11 @@ public class GraphValidTree {
     public boolean validTree(int n, int[][] edges) {
         List<List<Integer>> adjList = new ArrayList<>();
 
-        for(int i= 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             adjList.add(new ArrayList<>());
         }
 
-        for(int[] edge: edges){
+        for (int[] edge : edges) {
             adjList.get(edge[0]).add(edge[1]);
             adjList.get(edge[1]).add(edge[0]);
         }
@@ -21,7 +21,7 @@ public class GraphValidTree {
         //To Detect cycle
         Set<Integer> visited = new HashSet<>();
 
-        if(!dfs(adjList, -1, 0, visited)){
+        if (!dfs(adjList, -1, 0, visited)) {
             return false;
         }
 
@@ -29,20 +29,20 @@ public class GraphValidTree {
         return visited.size() == n;
     }
 
-    private boolean dfs(List<List<Integer>> adjList, int parent, int node, Set<Integer> visited){
-        if(visited.contains(node)){
+    private boolean dfs(List<List<Integer>> adjList, int parent, int node, Set<Integer> visited) {
+        if (visited.contains(node)) {
             return false;
         }
 
         visited.add(node);
 
-        for(int neighbor : adjList.get(node)){
+        for (int neighbor : adjList.get(node)) {
             //Bidirectional adjList
-            if(neighbor == parent){
+            if (neighbor == parent) {
                 continue;
             }
 
-            if(!dfs(adjList, node, neighbor, visited)){
+            if (!dfs(adjList, node, neighbor, visited)) {
                 return false;
             }
         }

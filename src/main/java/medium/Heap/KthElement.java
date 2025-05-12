@@ -10,12 +10,12 @@ public class KthElement {
         //Time Complexity n*n*logk
 
         //Space complexity at the max u will have k
-        for(int i = 0; i < matrix.length; i++){
-            for(int j = 0; j < matrix[i].length; j++){
-                if(queue.size() < k){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (queue.size() < k) {
                     queue.offer(matrix[i][j]);
-                }else {
-                    if(matrix[i][j] < queue.peek()){
+                } else {
+                    if (matrix[i][j] < queue.peek()) {
                         queue.poll();
                         queue.offer(matrix[i][j]);
                     }

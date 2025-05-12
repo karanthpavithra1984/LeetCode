@@ -8,7 +8,7 @@ public class DecodeStringTest {
     DecodeString decodeString = new DecodeString();
 
     @Test
-    public void testDecodeString(){
+    public void testDecodeString() {
         assertEquals(decodeString.decodeString("3[a]2[bc]"), "aaabcbc");
         assertEquals(decodeString.decodeString("3[a2[c]]"), "accaccacc");
         assertEquals(decodeString.decodeString("2[abc]3[cd]ef"), "abcabccdcdcdef");

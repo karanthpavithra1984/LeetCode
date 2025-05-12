@@ -7,7 +7,7 @@ public class FloodFillTest {
 
     @Test
     public void floodFill() {
-        ff.floodFill( new int[][]{{1,1,1},{1,1,0},{1,0,1}}, 1,  1,  2);
-        ff.floodFill(new int[][]{{0,0,0},{0,0,0}},  0, 0,  0);
+        ff.floodFill(new int[][]{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}}, 1, 1, 2);
+        ff.floodFill(new int[][]{{0, 0, 0}, {0, 0, 0}}, 0, 0, 0);
     }
 }

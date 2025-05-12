@@ -7,6 +7,6 @@ public class LongestMonotonicSubArrayTest {
 
     @Test
     public void longestMonotonicSubArray() {
-        assert longestMonotonicSubArray.longestMonotonicSubarray(new int[]{1,4,3,3,2}) == 2;
+        assert longestMonotonicSubArray.longestMonotonicSubarray(new int[]{1, 4, 3, 3, 2}) == 2;
     }
 }

@@ -19,9 +19,9 @@ public class ThreeSumClosest {
             while (left < right) {
                 int sum = nums[left] + nums[right] + nums[i];
 
-               if(Math.abs(sum - target) < Math.abs(minDistance)) {
-                   minDistance = target - sum;
-               }
+                if (Math.abs(sum - target) < Math.abs(minDistance)) {
+                    minDistance = target - sum;
+                }
 
                 if (sum < target) {
                     left++;

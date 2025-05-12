@@ -7,6 +7,6 @@ public class TopKFrequentTest {
 
     @Test
     public void testTopKFrequent() {
-        topKFrequent.topKFrequent(new String[]{"i","love","leetcode","i","love","coding"}, 2);
+        topKFrequent.topKFrequent(new String[]{"i", "love", "leetcode", "i", "love", "coding"}, 2);
     }
 }

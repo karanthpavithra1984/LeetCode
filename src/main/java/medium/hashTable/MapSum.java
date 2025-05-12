@@ -7,19 +7,20 @@ public class MapSum {
     Map<String, Integer> hashMap;
     //Pre calculate Prefixes if possible
     Map<String, Integer> prefixMap;
+
     public MapSum() {
         hashMap = new HashMap<>();
         prefixMap = new HashMap<>();
     }
 
     public void insert(String key, int val) {
-        int delta = val - hashMap.getOrDefault(key,0);
+        int delta = val - hashMap.getOrDefault(key, 0);
         hashMap.put(key, val);
         StringBuilder stringBuilder = new StringBuilder();
-        for(Character character: key.toCharArray()){
+        for (Character character : key.toCharArray()) {
             stringBuilder.append(character);
             prefixMap.put(stringBuilder.toString(),
-                    prefixMap.getOrDefault(stringBuilder.toString(),0)+delta);
+                    prefixMap.getOrDefault(stringBuilder.toString(), 0) + delta);
         }
     }
 

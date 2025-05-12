@@ -6,8 +6,8 @@ package easy.twopointers;
  */
 public class FindFirstPalindrome {
     public String firstPalindrome(String[] words) {
-        for(String word : words){
-            if(isPalindrome(word)){
+        for (String word : words) {
+            if (isPalindrome(word)) {
                 return word;
             }
         }

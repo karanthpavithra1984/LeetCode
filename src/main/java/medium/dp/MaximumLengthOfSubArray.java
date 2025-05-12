@@ -9,25 +9,25 @@ public class MaximumLengthOfSubArray {
         int negative = 0;
         int ans = 0;
 
-        for(int n: nums){
-            if(n == 0){
+        for (int n : nums) {
+            if (n == 0) {
                 positive = 0;
                 negative = 0; //reset both
-            }else if(n > 0){
+            } else if (n > 0) {
                 //Definetly increase positive
                 positive++;
                 //If there is a negative number , also increase that.
                 // Suppose array is -1,2,3 , the subarray product is already negaitve
-                if(negative != 0 ){
+                if (negative != 0) {
                     negative++;
                 }
-            }else{
+            } else {
                 //A negative number has encounterd.
-               //You will have to swap positive with negative
+                //You will have to swap positive with negative
                 int temp = positive;
                 //there were no negative , reset positive
                 // else negative is new positive
-                positive = negative == 0? 0 : negative + 1;
+                positive = negative == 0 ? 0 : negative + 1;
                 negative = temp + 1;
             }
 

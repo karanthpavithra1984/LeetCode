@@ -7,8 +7,8 @@ public class MergeInBetween {
         ListNode start = null;
         ListNode end = list1;
 
-        for(int i= 0  ; i < b; i++){
-            if(i == a-1){
+        for (int i = 0; i < b; i++) {
+            if (i == a - 1) {
                 start = end;
             }
             end = end.next;
@@ -16,7 +16,7 @@ public class MergeInBetween {
         ListNode listPointer = list2;
         start.next = list2;
 
-        while(listPointer.next != null){
+        while (listPointer.next != null) {
             listPointer = listPointer.next;
         }
 

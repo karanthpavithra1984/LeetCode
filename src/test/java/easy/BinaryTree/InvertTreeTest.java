@@ -9,7 +9,7 @@ public class InvertTreeTest {
     @Test
     public void invertTree() {
         //4,2,7,1,3,6,9
-        TreeNode treeNode   = new TreeNode(4);
+        TreeNode treeNode = new TreeNode(4);
         treeNode.left = new TreeNode(2);
         treeNode.left.left = new TreeNode(1);
         treeNode.left.right = new TreeNode(3);
@@ -18,6 +18,6 @@ public class InvertTreeTest {
         treeNode.right.left = new TreeNode(6);
         treeNode.right.right = new TreeNode(9);
 
-      TreeNode invertedTree =  tree.invertTree(treeNode);
+        TreeNode invertedTree = tree.invertTree(treeNode);
     }
 }

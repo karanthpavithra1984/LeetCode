@@ -9,16 +9,17 @@ import utils.TreeNode;
  */
 public class BalancedBinaryTree {
     public boolean isBalanced(TreeNode root) {
-        if(root == null) return true;
+        if (root == null) return true;
         int leftHeight = root.left == null ? 0 : checkHeight(root.left);
         int rightHeight = root.right == null ? 0 : checkHeight(root.right);
         return Math.abs(leftHeight - rightHeight) <= 1 && isBalanced(root.left) && isBalanced(root.right);
     }
+
     private int checkHeight(TreeNode root) {
-        if(root == null) return 0;
+        if (root == null) return 0;
 
         int left = checkHeight(root.left);
         int right = checkHeight(root.right);
-        return Math.max(left,right) + 1;
+        return Math.max(left, right) + 1;
     }
 }

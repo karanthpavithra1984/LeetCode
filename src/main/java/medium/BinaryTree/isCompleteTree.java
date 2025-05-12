@@ -16,10 +16,10 @@ public class isCompleteTree {
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
 
-            if(node == null){
+            if (node == null) {
                 isNulNodeFound = true;
-            }else{
-                if(isNulNodeFound){
+            } else {
+                if (isNulNodeFound) {
                     return false;
                 }
 

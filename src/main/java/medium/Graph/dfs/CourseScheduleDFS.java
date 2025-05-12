@@ -12,11 +12,11 @@ public class CourseScheduleDFS {
         List<List<Integer>> adj = new ArrayList<>();
 
         //Initialize
-        for(int i = 0; i < numCourses; i++){
+        for (int i = 0; i < numCourses; i++) {
             adj.add(new ArrayList<>());
         }
 
-        for(int[] preReq: prerequisites){
+        for (int[] preReq : prerequisites) {
             adj.get(preReq[0]).add(preReq[1]);
         }
 
@@ -25,8 +25,8 @@ public class CourseScheduleDFS {
 
         //Run dfs on them
 
-        for(int i = 0; i < numCourses; i++){
-            if(!dfs(i, adj, inThePath, visited)){
+        for (int i = 0; i < numCourses; i++) {
+            if (!dfs(i, adj, inThePath, visited)) {
                 return false;
             }
         }
@@ -34,21 +34,21 @@ public class CourseScheduleDFS {
         return true;
     }
 
-    private boolean dfs(int i, List<List<Integer>> adj, boolean[] visited, boolean[] inThePath){
-       //If in the path cyclic
-        if(inThePath[i]){
+    private boolean dfs(int i, List<List<Integer>> adj, boolean[] visited, boolean[] inThePath) {
+        //If in the path cyclic
+        if (inThePath[i]) {
             return false;
         }
 
-        if(visited[i]){
+        if (visited[i]) {
             return true;
         }
 
         visited[i] = true;
         inThePath[i] = true;
 
-        for(int neighbor: adj.get(i)){
-            if(!dfs(neighbor, adj, visited, inThePath)){
+        for (int neighbor : adj.get(i)) {
+            if (!dfs(neighbor, adj, visited, inThePath)) {
                 return false;
             }
         }

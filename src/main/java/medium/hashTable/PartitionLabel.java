@@ -9,19 +9,19 @@ public class PartitionLabel {
     public List<Integer> partitionLabels(String s) {
         //Get the lastIndex
         Map<Character, Integer> characterIndexMap = new HashMap<>();
-        for(int i=0; i < s.length(); i++){
+        for (int i = 0; i < s.length(); i++) {
             characterIndexMap.put(s.charAt(i), i);
         }
 
-        int partitionStart = 0 , partitionEnd = 0;
+        int partitionStart = 0, partitionEnd = 0;
         List<Integer> indexes = new ArrayList<>();
-        for(int i =0 ; i < s.length(); i++){
+        for (int i = 0; i < s.length(); i++) {
             partitionEnd = Math.max(partitionEnd, characterIndexMap.get(s.charAt(i)));
 
             //If the partition has ended here , I mean the last Index
-            if(i == partitionEnd){
+            if (i == partitionEnd) {
                 indexes.add(partitionEnd - partitionStart + 1);
-                partitionStart = i+1;
+                partitionStart = i + 1;
             }
         }
 

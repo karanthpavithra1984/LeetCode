@@ -6,9 +6,9 @@ public class ArrayStringEquals {
 
         int index = 0;
 
-        for(String word: word2){
-            for(Character character: word.toCharArray()){
-                if( index >= str1.length() || character != str1.charAt(index)){
+        for (String word : word2) {
+            for (Character character : word.toCharArray()) {
+                if (index >= str1.length() || character != str1.charAt(index)) {
                     return false;
                 }
 

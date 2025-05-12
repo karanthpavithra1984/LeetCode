@@ -9,7 +9,7 @@ import utils.Node;
 
 public class InsertIntoCircularSortedList {
     public Node insert(Node head, int insertVal) {
-        if(head == null){
+        if (head == null) {
             Node node = new Node(insertVal, null);
             node.next = node;
             return node;
@@ -18,12 +18,12 @@ public class InsertIntoCircularSortedList {
         Node prev = head;
         Node curr = head.next;
 
-        do{
-            if(prev.val <= insertVal && insertVal <= curr.val){
+        do {
+            if (prev.val <= insertVal && insertVal <= curr.val) {
                 insertNode(prev, curr, insertVal);
                 return head;
-            }else if(prev.val > curr.val ){
-                if(insertVal >= prev.val || insertVal <= curr.val){
+            } else if (prev.val > curr.val) {
+                if (insertVal >= prev.val || insertVal <= curr.val) {
                     insertNode(prev, curr, insertVal);
                     return head;
                 }
@@ -31,7 +31,7 @@ public class InsertIntoCircularSortedList {
 
             prev = curr;
             curr = curr.next;
-        }while(prev != head);
+        } while (prev != head);
 
         prev.next = new Node(insertVal, curr);
 
@@ -39,7 +39,7 @@ public class InsertIntoCircularSortedList {
     }
 
 
-    private void insertNode(Node prev, Node current, int insertVal){
+    private void insertNode(Node prev, Node current, int insertVal) {
         prev.next = new Node(insertVal, current);
     }
 

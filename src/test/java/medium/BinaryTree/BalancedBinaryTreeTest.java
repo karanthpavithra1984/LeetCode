@@ -11,7 +11,7 @@ public class BalancedBinaryTreeTest {
 
     @Test
     public void isBalanced() {
-        TreeNode treeNode=  new TreeNode(3);
+        TreeNode treeNode = new TreeNode(3);
         treeNode.left = new TreeNode(9);
         treeNode.right = new TreeNode(20);
         treeNode.right.left = new TreeNode(15);
@@ -20,7 +20,7 @@ public class BalancedBinaryTreeTest {
         assertTrue(bt.isBalanced(treeNode));
 
 
-        TreeNode treeNode1=  new TreeNode(1);
+        TreeNode treeNode1 = new TreeNode(1);
         treeNode1.left = new TreeNode(2);
         treeNode1.left.left = new TreeNode(3);
         treeNode1.left.left.left = new TreeNode(4);

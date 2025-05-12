@@ -4,6 +4,7 @@ public class ValidWordAbbreviation {
 
     /**
      * Time Complexity o(length of abbr)
+     *
      * @param word
      * @param abbr
      * @return
@@ -16,7 +17,7 @@ public class ValidWordAbbreviation {
         while (abbrIndex < abbr.length()) {
             char character = abbr.charAt(abbrIndex);
             //If num is o , its first charact is 0 then return false;
-            if(num == 0 && character == '0') return false;
+            if (num == 0 && character == '0') return false;
             if (Character.isDigit(character)) {
                 num = num * 10 + character - '0';
                 abbrIndex++;

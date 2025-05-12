@@ -3,7 +3,6 @@ package medium.BinaryTree;
 import utils.TreeNode;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class AllNodesDistanceK {
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {

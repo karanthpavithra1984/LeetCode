@@ -8,7 +8,7 @@ public class RemoveAdjacentDuplicatesTest {
     RemoveAdjacentDuplicates removeAdjacentDuplicates = new RemoveAdjacentDuplicates();
 
     @Test
-    public void testRemoveAdjacentDuplicates(){
+    public void testRemoveAdjacentDuplicates() {
         assertEquals(removeAdjacentDuplicates.removeDuplicates("abbaca"), "ca");
         assertEquals(removeAdjacentDuplicates.removeDuplicates("azxxzy"), "ay");
     }

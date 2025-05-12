@@ -16,21 +16,21 @@ public class PermutationInString {
             s2CharCount[s2.charAt(i) - 'a']++;
         }
 
-        if(Arrays.equals(s1CharCount, s2CharCount)) {
+        if (Arrays.equals(s1CharCount, s2CharCount)) {
             return true;
         }
 
         int left = 0;
         int right = s1.length();
 
-        while(right < s2.length()) {
+        while (right < s2.length()) {
             //Decrease the outgoing
             s2CharCount[s2.charAt(left) - 'a']--;
             //Increase the incoming
             s2CharCount[s2.charAt(right) - 'a']++;
             left++;
             right++;
-            if(Arrays.equals(s1CharCount, s2CharCount)) {
+            if (Arrays.equals(s1CharCount, s2CharCount)) {
                 return true;
             }
 

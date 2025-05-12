@@ -6,6 +6,7 @@ public class BasicCalcluatorii {
     /**
      * Time Complexity o(n)
      * Space complexity o(n)
+     *
      * @param s
      * @return
      */
@@ -13,12 +14,12 @@ public class BasicCalcluatorii {
         Stack<Integer> numberStack = new Stack<>();
         int currentNumber = 0;
         char operation = '+';
-        for(int i = 0 ;i < s.length() ; i++){
+        for (int i = 0; i < s.length(); i++) {
             char character = s.charAt(i);
-            if(Character.isDigit(character)){
+            if (Character.isDigit(character)) {
                 currentNumber = (currentNumber * 10) + (character - '0');
             }
-            if((character != 32 && !Character.isDigit(character)) || i + 1== s.length()){
+            if ((character != 32 && !Character.isDigit(character)) || i + 1 == s.length()) {
                 switch (operation) {
                     case '+' -> numberStack.push(currentNumber);
                     case '-' -> numberStack.push(-currentNumber);
@@ -32,7 +33,7 @@ public class BasicCalcluatorii {
 
         int result = 0;
 
-        while (!numberStack.isEmpty()){
+        while (!numberStack.isEmpty()) {
             result += numberStack.pop();
         }
 

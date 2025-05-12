@@ -9,7 +9,7 @@ public class MaxRepeating {
         int maxRepeat = 0;
         String repeat = word;
 
-        while(sequence.contains(repeat)){
+        while (sequence.contains(repeat)) {
             maxRepeat++;
             repeat += word;
         }

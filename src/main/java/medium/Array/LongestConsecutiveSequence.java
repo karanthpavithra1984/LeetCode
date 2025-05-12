@@ -7,13 +7,13 @@ public class LongestConsecutiveSequence {
     public int longestConsecutive(int[] nums) {
         Set<Integer> values = new HashSet<>();
 
-        for(int num: nums){
+        for (int num : nums) {
             values.add(num);
         }
 
         int maxLength = 0;
-        for(int num: nums){
-            if(!values.contains(num-1)){
+        for (int num : nums) {
+            if (!values.contains(num - 1)) {
                 int length = 1;
                 while (values.contains(num + length)) {
                     length++;

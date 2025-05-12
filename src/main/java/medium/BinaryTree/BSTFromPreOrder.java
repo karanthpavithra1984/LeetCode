@@ -12,22 +12,22 @@ public class BSTFromPreOrder {
      */
     public TreeNode bstFromPreorder(int[] preorder) {
         TreeNode root = null;
-        for(int num : preorder){
+        for (int num : preorder) {
             root = traverse(num, root);
         }
         return root;
     }
 
-    private TreeNode traverse(int num, TreeNode root){
-        if(root == null){
+    private TreeNode traverse(int num, TreeNode root) {
+        if (root == null) {
             return new TreeNode(num);
         }
 
-        if(num < root.val){
+        if (num < root.val) {
             root.left = traverse(num, root.left);
         }
 
-        if(num > root.val){
+        if (num > root.val) {
             root.right = traverse(num, root.right);
         }
 

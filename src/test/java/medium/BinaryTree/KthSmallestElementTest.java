@@ -14,6 +14,6 @@ public class KthSmallestElementTest {
 
         treeNode.right = new TreeNode(4);
 
-        assert  kthSmallestElement.kthSmallest(treeNode, 1) == 1;
+        assert kthSmallestElement.kthSmallest(treeNode, 1) == 1;
     }
 }

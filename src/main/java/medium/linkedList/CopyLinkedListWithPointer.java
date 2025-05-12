@@ -10,14 +10,14 @@ public class CopyLinkedListWithPointer {
         Map<Node, Node> oldToNewMap = new HashMap<>();
         Node curr = head;
 
-        while(curr != null){
+        while (curr != null) {
             oldToNewMap.put(curr, new Node(curr.val));
             curr = curr.next;
         }
 
         curr = head;
 
-        while(curr != null){
+        while (curr != null) {
             Node copy = oldToNewMap.get(curr);
             copy.next = oldToNewMap.get(curr.next);
             copy.random = oldToNewMap.get(curr.random);

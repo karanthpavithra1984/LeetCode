@@ -7,7 +7,7 @@ public class CountTheCompleteComponentsTest {
 
     @Test
     public void testCountTheCompleteComponents() {
-       assert  ccm.countCompleteComponents(6, new int[][]{{0,1},{0,2},{1,2},{3,4}}) == 3;
-       assert ccm.countCompleteComponents(  6, new int[][]{{0,1},{0,2},{1,2},{3,4},{3,5}}) == 1;
+        assert ccm.countCompleteComponents(6, new int[][]{{0, 1}, {0, 2}, {1, 2}, {3, 4}}) == 3;
+        assert ccm.countCompleteComponents(6, new int[][]{{0, 1}, {0, 2}, {1, 2}, {3, 4}, {3, 5}}) == 1;
     }
 }

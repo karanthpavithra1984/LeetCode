@@ -12,15 +12,15 @@ public class FourSum {
 
         Arrays.sort(nums);
 
-        for(int i = 0; i < nums.length - 3; i++) {
+        for (int i = 0; i < nums.length - 3; i++) {
             //First loop
             //Avoid duplicates
-            if(i == 0 || nums[i] != nums[i-1]) continue;
+            if (i == 0 || nums[i] != nums[i - 1]) continue;
 
-            for(int j = i + 1; j < nums.length - 2; j++) {
-                if(j == i+1 || nums[j] != nums[j-1]) continue;
+            for (int j = i + 1; j < nums.length - 2; j++) {
+                if (j == i + 1 || nums[j] != nums[j - 1]) continue;
 
-                twoSum(nums, target , i, j, res);
+                twoSum(nums, target, i, j, res);
             }
         }
 
@@ -29,24 +29,24 @@ public class FourSum {
 
 
     private void twoSum(int[] nums, int target, int firstIndex, int secondIndex, List<List<Integer>> result) {
-        int left = secondIndex+1;
-        int right = nums.length-1;
+        int left = secondIndex + 1;
+        int right = nums.length - 1;
 
-        while(left < right) {
+        while (left < right) {
             long sum = nums[left] + nums[right] + nums[firstIndex] + nums[secondIndex];
 
-            if(sum < target) {
+            if (sum < target) {
                 left++;
-            }else if (sum > target) {
+            } else if (sum > target) {
                 right--;
-            }else {
+            } else {
                 result.add(Arrays.asList(nums[firstIndex], nums[secondIndex], nums[left++], nums[right--]));
 
                 //Similar to the first method, avoid duplciates;
 
-                while(left < right && nums[left] == nums[left-1]) left++;
+                while (left < right && nums[left] == nums[left - 1]) left++;
 
-                while(left < right && nums[right] == nums[right+1]) right--;
+                while (left < right && nums[right] == nums[right + 1]) right--;
             }
         }
     }

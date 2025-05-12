@@ -11,14 +11,14 @@ I am basically releiving the currentRow , sot hat
 
 public class PascalsTriangle2 {
     public List<Integer> getRow(int numRows) {
-        if(numRows == 0){
+        if (numRows == 0) {
             return Arrays.asList(1);
         }
         List<Integer> previousRow = new ArrayList<>();
-        List<Integer> currentRow ;
+        List<Integer> currentRow;
 
-        for (int i = 1; i < numRows +  1; i++) {
-            currentRow= new ArrayList<>();
+        for (int i = 1; i < numRows + 1; i++) {
+            currentRow = new ArrayList<>();
 
             currentRow.add(1);
 

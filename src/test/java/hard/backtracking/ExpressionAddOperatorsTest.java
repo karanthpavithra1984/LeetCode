@@ -10,11 +10,11 @@ public class ExpressionAddOperatorsTest {
 
     @Test
     public void test() {
-        assertEquals(GeneralUtils.convertToCommaSeperatedString(exp.addOperators("105",5)), "");
+        assertEquals(GeneralUtils.convertToCommaSeperatedString(exp.addOperators("105", 5)), "");
         assertEquals(GeneralUtils.convertToArrowSeperatedString(
-                exp.addOperators("123",6).stream()),"1+2+3->1*2*3");
+                exp.addOperators("123", 6).stream()), "1+2+3->1*2*3");
         assertEquals(GeneralUtils.convertToArrowSeperatedString(
-                exp.addOperators("12",2).stream()),"1*2");
+                exp.addOperators("12", 2).stream()), "1*2");
 
     }
 }

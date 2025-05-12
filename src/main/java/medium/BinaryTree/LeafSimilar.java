@@ -23,7 +23,7 @@ public class LeafSimilar {
     private void preOrderTraversal(TreeNode root, List<Integer> list) {
         if (root == null) return;
 
-        if(root.right == null && root.left == null) list.add(root.val);
+        if (root.right == null && root.left == null) list.add(root.val);
 
         preOrderTraversal(root.left, list);
         preOrderTraversal(root.right, list);

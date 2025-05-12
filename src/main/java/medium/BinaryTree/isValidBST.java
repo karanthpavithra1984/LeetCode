@@ -11,14 +11,15 @@ import utils.TreeNode;
 public class isValidBST {
 
     Integer prevVal;
+
     public boolean isValidBST(TreeNode root) {
-        if(root == null)
+        if (root == null)
             return true;
 
-        if(!isValidBST(root.left)){
+        if (!isValidBST(root.left)) {
             return false;
         }
-        if(prevVal != null && root.val <= prevVal){
+        if (prevVal != null && root.val <= prevVal) {
             return false;
         }
         prevVal = root.val;

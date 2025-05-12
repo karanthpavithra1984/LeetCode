@@ -8,7 +8,7 @@ public class DeleteDuplicatesTest {
     DeleteDuplicates deleteDuplicates = new DeleteDuplicates();
 
     @Test
-    public void deleteDuplicates(){
+    public void deleteDuplicates() {
         ListNode listNode = new ListNode(1);
         listNode.next = new ListNode(1);
         listNode.next.next = new ListNode(3);
@@ -18,6 +18,6 @@ public class DeleteDuplicatesTest {
         ListNode dedupedNode = deleteDuplicates.deleteDuplicates(listNode);
         assert dedupedNode.val == 1;
         assert dedupedNode.next.val == 3;
-        assert  dedupedNode.next.next.val == 5;
+        assert dedupedNode.next.next.val == 5;
     }
 }

@@ -3,6 +3,7 @@ package medium.segmentTree;
 public class NumArray {
     int[] tree;
     int n;
+
     public NumArray(int[] nums) {
         if (nums.length > 0) {
             n = nums.length;

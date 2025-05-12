@@ -22,6 +22,7 @@ public class ConnectToRightNodeIITest {
     }
 
     ConnectToRightNodeIII connectToRightNodeIII = new ConnectToRightNodeIII();
+
     @Test
     public void connectToRightNodeII() {
         TreeNode treeNode = new TreeNode(1);
@@ -41,8 +42,6 @@ public class ConnectToRightNodeIITest {
 
 
         connectToRightNodeIII.connect(treeNode);
-
-
 
 
     }

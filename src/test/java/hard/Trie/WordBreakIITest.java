@@ -10,6 +10,6 @@ public class WordBreakIITest {
     @Test
     public void test() {
         wb.wordBreak("catsanddog",
-                Arrays.asList("cat","cats","and","sand","dog"));
+                Arrays.asList("cat", "cats", "and", "sand", "dog"));
     }
 }

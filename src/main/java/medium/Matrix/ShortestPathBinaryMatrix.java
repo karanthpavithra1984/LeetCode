@@ -14,17 +14,17 @@ public class ShortestPathBinaryMatrix {
      * @return
      */
     public int shortestPathBinaryMatrix(int[][] grid) {
-        if(grid[0][0] == 1) return -1;
+        if (grid[0][0] == 1) return -1;
         int rowLength = grid.length;
         int colLength = grid[0].length;
         int length = 1;
         boolean[][] visited = new boolean[rowLength][colLength];
 
         Queue<int[]> queue = new ArrayDeque<>();
-        queue.add(new int[]{0,0});
+        queue.add(new int[]{0, 0});
         visited[0][0] = true;
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             int queueSize = queue.size();
             for (int i = 0; i < queueSize; i++) {
                 int[] cur = queue.poll();
@@ -32,18 +32,18 @@ public class ShortestPathBinaryMatrix {
                 int col = cur[1];
 
                 //Reached the end of the matrix
-                if(row == rowLength - 1 && col == colLength - 1) {
+                if (row == rowLength - 1 && col == colLength - 1) {
                     return length;
                 }
 
                 //Define neighbors. Here we need to consider the diagonals as well
-                int[][] neighbors = new int[][]{{row, col+1},{row, col-1},{row+1, col},
-                        {row-1, col}, {row-1, col-1},{row+1, col+1},{row+1, col-1}, {row-1, col+1}};
+                int[][] neighbors = new int[][]{{row, col + 1}, {row, col - 1}, {row + 1, col},
+                        {row - 1, col}, {row - 1, col - 1}, {row + 1, col + 1}, {row + 1, col - 1}, {row - 1, col + 1}};
 
-                for(int[] neighbor : neighbors) {
+                for (int[] neighbor : neighbors) {
                     int newRow = neighbor[0];
                     int newCol = neighbor[1];
-                    if(newRow < 0 || newRow >= rowLength || newCol < 0 ||
+                    if (newRow < 0 || newRow >= rowLength || newCol < 0 ||
                             newCol >= colLength ||
                             visited[newRow][newCol] || grid[newRow][newCol] == 1) continue;
 

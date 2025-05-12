@@ -7,6 +7,6 @@ public class MissingIntegerTest {
 
     @Test
     public void test() {
-        assert m.missingInteger(new int[]{1,2,3,2,5}) == 6;
+        assert m.missingInteger(new int[]{1, 2, 3, 2, 5}) == 6;
     }
 }

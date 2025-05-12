@@ -7,7 +7,7 @@ package medium.Array;
 public class SingleNumberII {
     public int singleNumber(int[] nums) {
         int seenOnce = 0, seenTwice = 0;
-        for(int num: nums ){
+        for (int num : nums) {
             seenOnce = (seenOnce ^ num) & (~seenTwice);
             seenTwice = (seenTwice ^ num) & (~seenOnce);
         }

@@ -18,7 +18,7 @@ public class RemoveNthFromEndTest {
 
         ListNode result = removeNthFromEnd.removeNthFromEnd(listNode, 2);
 
-        assert result.val  == 1;
+        assert result.val == 1;
         assert result.next.val == 2;
         assert result.next.next.val == 3;
         assert result.next.next.next.val == 5;

@@ -8,7 +8,7 @@ public class MinimizedMaximumTest {
 
     @Test
     public void test() {
-        minimizedMaximum.minimizedMaximum(7, new int[]{10,10,15});
-        minimizedMaximum.minimizedMaximum(6, new int[]{11,6});
+        minimizedMaximum.minimizedMaximum(7, new int[]{10, 10, 15});
+        minimizedMaximum.minimizedMaximum(6, new int[]{11, 6});
     }
 }

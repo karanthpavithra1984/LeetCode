@@ -10,7 +10,7 @@ public class NextGreaterElementTest {
     @Test
     public void test() {
         GeneralUtils.compareValues(
-                nextGreaterElement.nextGreaterElement(new int[]{4,1,2}, new int[]{1,3,4,2}
-                       ), new int[]{-1,3,-1});
+                nextGreaterElement.nextGreaterElement(new int[]{4, 1, 2}, new int[]{1, 3, 4, 2}
+                ), new int[]{-1, 3, -1});
     }
 }

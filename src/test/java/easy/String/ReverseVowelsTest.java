@@ -9,9 +9,9 @@ public class ReverseVowelsTest {
 
     @Test
     public void testReverseVowels() {
-       assertEquals(rev.reverseVowels("IceCreAm"), "AceCreIm");
-       assertEquals(rev.reverseVowels("aA"), "Aa");
-       assertEquals(rev.reverseVowels("leetcode"), "leotcede");
-       assertEquals(rev.reverseVowels("Euston saw I was not Sue."), "euston saw I was not SuE.");
+        assertEquals(rev.reverseVowels("IceCreAm"), "AceCreIm");
+        assertEquals(rev.reverseVowels("aA"), "Aa");
+        assertEquals(rev.reverseVowels("leetcode"), "leotcede");
+        assertEquals(rev.reverseVowels("Euston saw I was not Sue."), "euston saw I was not SuE.");
     }
 }

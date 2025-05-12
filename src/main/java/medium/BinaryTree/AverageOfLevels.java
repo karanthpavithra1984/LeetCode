@@ -18,14 +18,14 @@ public class AverageOfLevels {
         Queue<TreeNode> queue = new LinkedList();
 
 
-        if(root != null){
+        if (root != null) {
             queue.add(root);
         }
-        while(queue.size() > 0){
+        while (queue.size() > 0) {
             long sum = 0;
             int level = 0;
             int size = queue.size();
-            for(int i =0 ;i < size; i++) {
+            for (int i = 0; i < size; i++) {
                 TreeNode value = queue.remove();
                 sum += value.val;
                 level++;
@@ -36,7 +36,7 @@ public class AverageOfLevels {
                     queue.add(value.right);
                 }
             }
-            values.add((double)sum/level);
+            values.add((double) sum / level);
         }
 
         return values;

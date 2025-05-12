@@ -7,6 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class MaximumDepthTest {
     MaximumDepth maximumDepth = new MaximumDepth();
+
     @Test
     public void maxDepth() {
         TreeNode tree = new TreeNode(3);
@@ -15,6 +16,6 @@ public class MaximumDepthTest {
         tree.right.left = new TreeNode(15);
         tree.right.right = new TreeNode(7);
 
-        assertEquals(maximumDepth.maxDepth(tree),3);
+        assertEquals(maximumDepth.maxDepth(tree), 3);
     }
 }

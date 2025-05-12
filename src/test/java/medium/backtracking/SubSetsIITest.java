@@ -7,6 +7,6 @@ public class SubSetsIITest {
 
     @Test
     public void test() {
-        s.subsetsWithDup(new int[]{1,2,1});
+        s.subsetsWithDup(new int[]{1, 2, 1});
     }
 }

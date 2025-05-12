@@ -10,10 +10,10 @@ public class GroupShiftedStrings {
     public List<List<String>> groupStrings(String[] strings) {
         Map<String, List<String>> hashGroup = new HashMap<>();
 
-        for(String str: strings){
+        for (String str : strings) {
             String hash = getHash(str);
-            if(!hashGroup.containsKey(hash)){
-                hashGroup.put(hash,new ArrayList<>());
+            if (!hashGroup.containsKey(hash)) {
+                hashGroup.put(hash, new ArrayList<>());
             }
             hashGroup.get(hash).add(str);
         }
@@ -21,15 +21,15 @@ public class GroupShiftedStrings {
         return hashGroup.entrySet().stream().map(x -> x.getValue()).collect(Collectors.toList());
     }
 
-    private String getHash(String str){
+    private String getHash(String str) {
         StringBuilder hash = new StringBuilder();
         int firstChar = str.charAt(0);
-        for(int i=0 ; i < str.length(); i++){
+        for (int i = 0; i < str.length(); i++) {
             int diff = str.charAt(i) - firstChar;
-            if(diff < 0)
+            if (diff < 0)
                 diff += 26;
 
-            hash.append(diff+ ":");
+            hash.append(diff + ":");
         }
 
         return hash.toString();

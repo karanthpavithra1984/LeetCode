@@ -29,7 +29,7 @@ public class MakingALargeIsland {
             }
         }
 
-        if(islandIdSizeMap.size() == 0){
+        if (islandIdSizeMap.size() == 0) {
             return 1;
         }
         //With whatever we have this is the maxIsland

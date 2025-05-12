@@ -10,22 +10,22 @@ public class BoundaryOfBinaryTree {
     public List<Integer> boundaryOfBinaryTree(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         //Add the root
-        if(!isLeaf(root)){
+        if (!isLeaf(root)) {
             result.add(root.val);
         }
         //Add all the left nodes which dont have leaves
         TreeNode leftTrace = root.left;
-        while(leftTrace != null){
+        while (leftTrace != null) {
             //Only add the non leaf
-            if(!isLeaf(leftTrace)) {
+            if (!isLeaf(leftTrace)) {
                 result.add(leftTrace.val);
             }
 
             //If there is no leftNode add right and add it to the result
             //Or else right is inside and will be ignored
-            if(leftTrace.left != null){
+            if (leftTrace.left != null) {
                 leftTrace = leftTrace.left;
-            }else{
+            } else {
                 leftTrace = leftTrace.right;
             }
         }
@@ -40,41 +40,41 @@ public class BoundaryOfBinaryTree {
         TreeNode rightTrace = root.right;
         Stack<Integer> values = new Stack<>();
 
-        while(rightTrace != null){
-            if(!isLeaf(rightTrace)){
+        while (rightTrace != null) {
+            if (!isLeaf(rightTrace)) {
                 values.add(rightTrace.val);
             }
 
-            if(rightTrace.right != null){
+            if (rightTrace.right != null) {
                 rightTrace = rightTrace.right;
-            }else{
+            } else {
                 rightTrace = rightTrace.left;
             }
         }
 
-        while(!values.isEmpty()){
+        while (!values.isEmpty()) {
             result.add(values.pop());
         }
 
         return result;
     }
 
-    private void addLeaves(List<Integer> result, TreeNode leaveTrace){
-        if(isLeaf(leaveTrace)){
+    private void addLeaves(List<Integer> result, TreeNode leaveTrace) {
+        if (isLeaf(leaveTrace)) {
             result.add(leaveTrace.val);
             return;
         }
 
-        if(leaveTrace.left != null){
+        if (leaveTrace.left != null) {
             addLeaves(result, leaveTrace.left);
         }
 
-        if(leaveTrace.right != null){
+        if (leaveTrace.right != null) {
             addLeaves(result, leaveTrace.right);
         }
     }
 
-    private boolean isLeaf(TreeNode root){
+    private boolean isLeaf(TreeNode root) {
         return root.left == null && root.right == null;
     }
 }

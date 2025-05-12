@@ -8,7 +8,7 @@ public class RemoveStackTest {
     RemoveStar removeStar = new RemoveStar();
 
     @Test
-    public void testRemoveStar(){
+    public void testRemoveStar() {
         assertEquals(removeStar.removeStars("leet**cod*e"), "lecoe");
     }
 }

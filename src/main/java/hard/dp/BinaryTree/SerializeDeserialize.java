@@ -1,6 +1,5 @@
 package hard.dp.BinaryTree;
 
-import com.sun.source.tree.Tree;
 import utils.TreeNode;
 
 import java.util.ArrayList;
@@ -14,8 +13,8 @@ public class SerializeDeserialize {
         return String.join(",", result);
     }
 
-    private void dfsSeralize(TreeNode root, List<String> result){
-        if(root == null) {
+    private void dfsSeralize(TreeNode root, List<String> result) {
+        if (root == null) {
             result.add("N");
             return;
         }
@@ -34,8 +33,8 @@ public class SerializeDeserialize {
         return dfsDeserialize(nodes);
     }
 
-    private TreeNode dfsDeserialize(String[] nodes){
-        if(nodes[index].equals("N")){
+    private TreeNode dfsDeserialize(String[] nodes) {
+        if (nodes[index].equals("N")) {
             index++;
             return null;
         }

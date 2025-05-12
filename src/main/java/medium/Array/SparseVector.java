@@ -10,10 +10,11 @@ public class SparseVector {
      * Space Complexity - o(size of both the hashMaps)
      */
     Map<Integer, Integer> map;
+
     SparseVector(int[] nums) {
         map = new HashMap<>();
-        for(int i = 0 ; i < nums.length ; i++){
-            if(nums[i] > 0 ){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {
                 map.put(i, nums[i]);
             }
         }
@@ -23,8 +24,8 @@ public class SparseVector {
     public int dotProduct(SparseVector vec) {
         int sum = 0;
         Set<Integer> keys = map.size() > vec.map.size() ? vec.map.keySet() : map.keySet();
-        for(int key: keys){
-            if(map.get(key) != null && vec.map.get(key) != null)
+        for (int key : keys) {
+            if (map.get(key) != null && vec.map.get(key) != null)
                 sum += map.get(key) * vec.map.get(key);
         }
 

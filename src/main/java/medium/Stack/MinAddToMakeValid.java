@@ -6,6 +6,7 @@ public class MinAddToMakeValid {
     /**
      * Time Complexity o(n)
      * Space Complexity o(n)
+     *
      * @param s
      * @return
      */
@@ -13,13 +14,13 @@ public class MinAddToMakeValid {
         Stack<Character> paranth = new Stack<>();
         int numberRequired = 0;
 
-        for(Character character: s.toCharArray()){
-            if(character == '('){
+        for (Character character : s.toCharArray()) {
+            if (character == '(') {
                 paranth.push(character);
-            }else{
-                if(paranth.isEmpty()){
+            } else {
+                if (paranth.isEmpty()) {
                     numberRequired++;
-                }else {
+                } else {
                     paranth.pop();
                 }
             }

@@ -10,11 +10,11 @@ public class WordLadderTest {
     @Test
     public void testLadder() {
         assert wordLadder.
-                ladderLength(  "hit",
-                        "cog", Arrays.asList("hot","dot","dog","lot","log","cog")) == 5;
+                ladderLength("hit",
+                        "cog", Arrays.asList("hot", "dot", "dog", "lot", "log", "cog")) == 5;
 
         assert wordLadder.
-                ladderLength(  "hit",
-                        "cog", Arrays.asList("hot","dot","dog","lot","log")) == 0;
+                ladderLength("hit",
+                        "cog", Arrays.asList("hot", "dot", "dog", "lot", "log")) == 0;
     }
 }

@@ -7,8 +7,8 @@ package easy.String;
 public class PrefixCount {
     public int prefixCount(String[] words, String pref) {
         int prefCount = 0;
-        for(String word: words){
-            if(word.indexOf(pref) == 0){
+        for (String word : words) {
+            if (word.indexOf(pref) == 0) {
                 prefCount++;
             }
         }

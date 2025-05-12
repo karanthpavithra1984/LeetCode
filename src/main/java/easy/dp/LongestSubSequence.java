@@ -9,8 +9,8 @@ public class LongestSubSequence {
         List<String> values = new ArrayList<>();
         values.add(words[0]);
 
-        for(int i = 1; i < words.length; i++){
-            if(groups[i] != current){
+        for (int i = 1; i < words.length; i++) {
+            if (groups[i] != current) {
                 values.add(words[i]);
             }
 

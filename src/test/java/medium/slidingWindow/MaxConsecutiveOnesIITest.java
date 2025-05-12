@@ -7,7 +7,7 @@ public class MaxConsecutiveOnesIITest {
 
     @Test
     public void testMaxConsecutiveOnesII() {
-        assert  m.findMaxConsecutiveOnes(new int[]{1,0,1,1,0,1}) == 4;
-        assert  m.findMaxConsecutiveOnes(new int[]{1,0,1,1,0}) == 4;
+        assert m.findMaxConsecutiveOnes(new int[]{1, 0, 1, 1, 0, 1}) == 4;
+        assert m.findMaxConsecutiveOnes(new int[]{1, 0, 1, 1, 0}) == 4;
     }
 }

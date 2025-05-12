@@ -23,11 +23,11 @@ public class BinaryTreePath {
         if (root == null) return;
         path.add(root.val);
 
-        if(root.left == null && root.right == null) {
+        if (root.left == null && root.right == null) {
             StringBuilder sb = new StringBuilder();
-            for(int i=0 ;i < path.size() ; i++) {
+            for (int i = 0; i < path.size(); i++) {
                 sb.append(path.get(i));
-                if(i != path.size() - 1) {
+                if (i != path.size() - 1) {
                     sb.append("->");
                 }
 

@@ -14,15 +14,15 @@ public class PascalsTriangle {
         List<List<Integer>> pascalsTriangle = new ArrayList<>();
         pascalsTriangle.add(Arrays.asList(1));
 
-        for(int i= 1; i < numRows; i++){
+        for (int i = 1; i < numRows; i++) {
             List<Integer> currentRow = new ArrayList<>();
 
             currentRow.add(1);
 
-            List<Integer> previousRow = pascalsTriangle.get(i-1);
+            List<Integer> previousRow = pascalsTriangle.get(i - 1);
 
-            for(int j= 1; j < i; j++){
-                currentRow.add(previousRow.get(j) + previousRow.get(j-1));
+            for (int j = 1; j < i; j++) {
+                currentRow.add(previousRow.get(j) + previousRow.get(j - 1));
             }
 
             currentRow.add(1);

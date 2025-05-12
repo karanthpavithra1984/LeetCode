@@ -13,13 +13,13 @@ public class FinalPrices {
     public int[] finalPrices(int[] prices) {
         Stack<Integer> priceHolder = new Stack<>();
 
-        for(int i=prices.length-1;i>=0;i--){
+        for (int i = prices.length - 1; i >= 0; i--) {
             int temp = prices[i]; //since i am overrding it.
-            while(!priceHolder.isEmpty() &&  (priceHolder.peek() > prices[i])) {
+            while (!priceHolder.isEmpty() && (priceHolder.peek() > prices[i])) {
                 priceHolder.pop();
             }
 
-            if(!priceHolder.isEmpty()){
+            if (!priceHolder.isEmpty()) {
                 prices[i] -= priceHolder.peek();
             }
 

@@ -11,6 +11,7 @@ import java.util.Stack;
 
 public class KthSmallestElement {
     int globalK;
+
     public int kthSmallest(TreeNode root, int k) {
         Stack<Integer> stack = new Stack<>();
         globalK = k;
@@ -19,11 +20,11 @@ public class KthSmallestElement {
     }
 
     private void kthSmallest(TreeNode root, Stack<Integer> stack) {
-        if(root == null)return;
+        if (root == null) return;
 
-        if(stack.size()< globalK) {
+        if (stack.size() < globalK) {
             kthSmallest(root.left, stack);
-            if(stack.size()< globalK)
+            if (stack.size() < globalK)
                 stack.push(root.val);
             kthSmallest(root.right, stack);
         }

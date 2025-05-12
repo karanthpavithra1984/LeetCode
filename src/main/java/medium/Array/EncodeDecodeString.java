@@ -7,7 +7,7 @@ public class EncodeDecodeString {
     // Encodes a list of strings to a single string.
     public String encode(List<String> strs) {
         StringBuilder res = new StringBuilder();
-        for(String str: strs){
+        for (String str : strs) {
             res.append(str.length() + "#" + str);
         }
 
@@ -18,15 +18,15 @@ public class EncodeDecodeString {
     public List<String> decode(String s) {
         int start = 0;
         List<String> values = new ArrayList<>();
-        while(start < s.length()){
+        while (start < s.length()) {
             int temp = start;
             int number = 0;
-            while(s.charAt(temp) != '#'){
-                number = number *10 +  (s.charAt(temp) - '0');
+            while (s.charAt(temp) != '#') {
+                number = number * 10 + (s.charAt(temp) - '0');
                 temp++;
             }
-            values.add(s.substring(temp+1, temp+number+1));
-            start = temp+ number+1;
+            values.add(s.substring(temp + 1, temp + number + 1));
+            start = temp + number + 1;
         }
 
         return values;

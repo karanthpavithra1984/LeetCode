@@ -18,9 +18,10 @@ public class LetterTilePossibilities {
      */
 
     Map<Character, Integer> characterCount = new HashMap<>();
+
     public int numTilePossibilities(String tiles) {
         //Count the frequency
-        for(Character c : tiles.toCharArray()){
+        for (Character c : tiles.toCharArray()) {
             characterCount.put(c, characterCount.getOrDefault(c, 0) + 1);
         }
 
@@ -30,15 +31,14 @@ public class LetterTilePossibilities {
     private int backTrack() {
         int result = 0;
 
-        for(Character c : characterCount.keySet()){
-            if(characterCount.get(c) > 0){
+        for (Character c : characterCount.keySet()) {
+            if (characterCount.get(c) > 0) {
                 characterCount.put(c, characterCount.get(c) - 1);
-                result += 1 ; //The characters
+                result += 1; //The characters
                 result += backTrack();
                 characterCount.put(c, characterCount.get(c) + 1);
             }
         }
-
 
 
         return result;

@@ -10,7 +10,7 @@ public class DCompressRLengthEncoding {
             int freq = nums[i];
             int value = nums[i + 1];
 
-            while(freq > 0 ){
+            while (freq > 0) {
                 array.add(value);
                 freq--;
             }

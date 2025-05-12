@@ -6,6 +6,7 @@ import java.util.PriorityQueue;
 public class MedianFinder {
     PriorityQueue<Double> minHeap;
     PriorityQueue<Double> maxHeap;
+
     public MedianFinder() {
         minHeap = new PriorityQueue<>(Comparator.reverseOrder());
         maxHeap = new PriorityQueue<>();
@@ -14,8 +15,9 @@ public class MedianFinder {
     /**
      * Inserting/Deleting from a priorityQueue takes around o(logn) - We have around 7
      * Peeking takes o(1) so o(logn)
-     *
+     * <p>
      * Space Complexity is o(n)
+     *
      * @param num
      */
 
@@ -23,23 +25,23 @@ public class MedianFinder {
         minHeap.add(Double.valueOf(num));
 
         //If minHeap value is greater than maxHeap ,then move it to maxHeap
-        if(minHeap.size() > 0 && maxHeap.size() > 0 && minHeap.peek() > maxHeap.peek()) {
+        if (minHeap.size() > 0 && maxHeap.size() > 0 && minHeap.peek() > maxHeap.peek()) {
             maxHeap.offer(minHeap.poll());
         }
-        if(minHeap.size() > maxHeap.size() + 1){ //If the size is uneven then move it
+        if (minHeap.size() > maxHeap.size() + 1) { //If the size is uneven then move it
             maxHeap.offer(minHeap.poll());
         }
 
-        if(maxHeap.size() > minHeap.size() + 1){
+        if (maxHeap.size() > minHeap.size() + 1) {
             minHeap.offer(maxHeap.poll());
         }
     }
 
     public double findMedian() {
         //Odd numbers
-        if(minHeap.size() > maxHeap.size()){
+        if (minHeap.size() > maxHeap.size()) {
             return minHeap.peek();
-        }else if(maxHeap.size() > minHeap.size()){
+        } else if (maxHeap.size() > minHeap.size()) {
             return maxHeap.peek();
         }
         //Even numbers , then make sure u return the median like this

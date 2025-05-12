@@ -15,7 +15,7 @@ public class ReOrderList {
         //Now reverse from the middle
         ListNode currentNode = slow;
         ListNode prev = null;
-        while(currentNode != null){
+        while (currentNode != null) {
             ListNode temp = currentNode.next;
             currentNode.next = prev;
             prev = currentNode;
@@ -29,8 +29,8 @@ public class ReOrderList {
         ListNode first = head;
         ListNode second = prev;
 
-        while(second.next != null){
-            ListNode temp1 =  first.next;
+        while (second.next != null) {
+            ListNode temp1 = first.next;
             first.next = second;
             first = temp1;
 

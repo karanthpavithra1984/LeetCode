@@ -7,6 +7,7 @@ public class EraseOverLapIntervals {
 
     /**
      * sorting is nlogn + n
+     *
      * @param intervals
      * @return
      */
@@ -17,10 +18,10 @@ public class EraseOverLapIntervals {
         int prevEnd = intervals[0][1];
         int remove = 0;
 
-        for(int i = 1; i < intervals.length; i++){
-            if(prevEnd > intervals[i][0]){
+        for (int i = 1; i < intervals.length; i++) {
+            if (prevEnd > intervals[i][0]) {
                 remove++;
-            }else{
+            } else {
                 prevEnd = intervals[i][1];
             }
         }

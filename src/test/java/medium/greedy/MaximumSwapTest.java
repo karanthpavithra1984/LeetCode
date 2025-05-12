@@ -7,8 +7,8 @@ public class MaximumSwapTest {
 
     @Test
     public void maximumSwap() {
-       assert  maximumSwap.maximumSwap(2736) == 7236;
-       assert  maximumSwap.maximumSwap(9973) == 9973;
+        assert maximumSwap.maximumSwap(2736) == 7236;
+        assert maximumSwap.maximumSwap(9973) == 9973;
     }
 
     @Test

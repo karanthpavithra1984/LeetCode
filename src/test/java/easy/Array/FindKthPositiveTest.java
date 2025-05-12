@@ -7,6 +7,6 @@ public class FindKthPositiveTest {
 
     @Test
     public void findKthPositiveTest() {
-       assert  findKthPositive.findKthPositive(new int[]{2,3,4,7,11},5) == 9;
+        assert findKthPositive.findKthPositive(new int[]{2, 3, 4, 7, 11}, 5) == 9;
     }
 }

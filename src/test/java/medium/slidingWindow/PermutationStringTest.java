@@ -7,6 +7,6 @@ public class PermutationStringTest {
 
     @Test
     public void testPermutation() {
-        p.checkInclusion("ab","eidbaooo");
+        p.checkInclusion("ab", "eidbaooo");
     }
 }

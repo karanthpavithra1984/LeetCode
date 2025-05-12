@@ -6,6 +6,7 @@ public class SplitToParts {
     /**
      * Space Complexity - o(n)
      * Time Complexity - o(1) -     a`
+     *
      * @param head
      * @param k
      * @return
@@ -14,26 +15,26 @@ public class SplitToParts {
         int size = 0;
         ListNode tmp = head;
 
-        while(tmp != null){
+        while (tmp != null) {
             size++;
             tmp = tmp.next;
         }
 
-        int splitsize = size/k;
+        int splitsize = size / k;
         int numOfRemainingElements = size % k;
 
-        ListNode[] listNodes =  new ListNode[k];
+        ListNode[] listNodes = new ListNode[k];
         tmp = head;
         ListNode prev = tmp;
-        for(int i= 0; i < k; i++ ){
+        for (int i = 0; i < k; i++) {
             ListNode newPointer = tmp;
             int sizeOfArray = splitsize;
-            if(numOfRemainingElements > 0 ){
+            if (numOfRemainingElements > 0) {
                 numOfRemainingElements--;
                 sizeOfArray++;
             }
 
-            while(sizeOfArray > 0){
+            while (sizeOfArray > 0) {
                 prev = tmp;
                 tmp = tmp.next;
                 sizeOfArray--;

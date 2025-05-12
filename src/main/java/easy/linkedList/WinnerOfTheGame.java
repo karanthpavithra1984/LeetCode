@@ -12,11 +12,11 @@ public class WinnerOfTheGame {
         ListNode tmp = head;
         int result = 0;
 
-        while(tmp != null && tmp.next != null) {
+        while (tmp != null && tmp.next != null) {
             result += tmp.val > tmp.next.val ? 1 : -1;
             tmp = tmp.next.next;
         }
 
-        return  result == 0 ? "Tie": (result >= 1 ? "Even":"Odd");
+        return result == 0 ? "Tie" : (result >= 1 ? "Even" : "Odd");
     }
 }

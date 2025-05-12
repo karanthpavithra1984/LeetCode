@@ -13,7 +13,7 @@ public class LongestUniValuePathTest {
         treeNode.right = new TreeNode(5);
         treeNode.left.left = new TreeNode(1);
         treeNode.left.right = new TreeNode(1);
-        treeNode.right.right  = new TreeNode(5);
+        treeNode.right.right = new TreeNode(5);
 
         assert longestUniValuePath.longestUnivaluePath(treeNode) == 2;
     }

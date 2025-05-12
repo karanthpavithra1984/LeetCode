@@ -8,7 +8,7 @@ public class MergeTwoSortedListsTest {
     MergeTwoSortedLists mergeTwoSortedLists = new MergeTwoSortedLists();
 
     @Test
-    public void testMergeSortedLists(){
+    public void testMergeSortedLists() {
         ListNode listNode1 = new ListNode(1);
         listNode1.next = new ListNode(2);
         listNode1.next.next = new ListNode(3);

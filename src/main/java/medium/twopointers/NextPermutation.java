@@ -4,6 +4,7 @@ public class NextPermutation {
 
     /**
      * Time Complexity o(n)
+     *
      * @param nums
      */
 

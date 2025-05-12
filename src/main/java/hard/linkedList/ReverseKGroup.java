@@ -11,9 +11,9 @@ public class ReverseKGroup {
         ListNode sentinnel = new ListNode(0, head);
         ListNode start = sentinnel;
 
-        while(true){
+        while (true) {
             ListNode kthNode = getKth(start, k);
-            if(kthNode == null){
+            if (kthNode == null) {
                 break;
             }
 
@@ -23,7 +23,7 @@ public class ReverseKGroup {
             ListNode current = start.next;
 
             //Make sure you do it only till here
-            while(current != nextInTheLine){
+            while (current != nextInTheLine) {
                 ListNode temp = current.next;
                 current.next = prev;
                 prev = current;
@@ -39,8 +39,8 @@ public class ReverseKGroup {
         return sentinnel.next;
     }
 
-    private ListNode getKth(ListNode listNode, int k){
-        while(listNode != null && k > 0){
+    private ListNode getKth(ListNode listNode, int k) {
+        while (listNode != null && k > 0) {
             listNode = listNode.next;
             k--;
         }

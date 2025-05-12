@@ -7,8 +7,8 @@ public class NumArrayTest {
     NumArray numArray;
 
     @Test
-    public void testNumArray(){
-        numArray = new NumArray(new int[]{1,3,5,6,7,8});
-        numArray.update(1,10);
+    public void testNumArray() {
+        numArray = new NumArray(new int[]{1, 3, 5, 6, 7, 8});
+        numArray.update(1, 10);
     }
 }

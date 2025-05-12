@@ -9,7 +9,7 @@ public class MergeStringsAlternativelyTest {
 
     @Test
     public void testMergeStringsAlternatively() {
-        assertEquals(mergeStringsAlternatively.mergeAlternately("abc","pqr"),"apbqcr");
-        assertEquals(mergeStringsAlternatively.mergeAlternately("ab","pqrs"),"apbqrs");
+        assertEquals(mergeStringsAlternatively.mergeAlternately("abc", "pqr"), "apbqcr");
+        assertEquals(mergeStringsAlternatively.mergeAlternately("ab", "pqrs"), "apbqrs");
     }
 }

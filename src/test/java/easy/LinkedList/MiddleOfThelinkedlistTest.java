@@ -9,7 +9,7 @@ public class MiddleOfThelinkedlistTest {
     MiddleOfTheLinkedList middleOfTheLinkedList = new MiddleOfTheLinkedList();
 
     @Test
-    public void testMiddleOfTheLinkedList(){
+    public void testMiddleOfTheLinkedList() {
         ListNode listNode = new ListNode(1);
         listNode.next = new ListNode(2);
         listNode.next.next = new ListNode(3);

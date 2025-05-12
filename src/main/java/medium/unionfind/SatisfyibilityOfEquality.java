@@ -14,7 +14,7 @@ public class SatisfyibilityOfEquality {
             int y = chars[3] - 'a';
 
             if (chars[1] == '=') {
-                unionFind.union(x,y);
+                unionFind.union(x, y);
             }
         }
 

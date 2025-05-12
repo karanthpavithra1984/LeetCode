@@ -16,20 +16,20 @@ public class TicTacToe {
     }
 
     public int move(int row, int col, int player) {
-        int value = player == 1? 1: -1;
+        int value = player == 1 ? 1 : -1;
         rows[row] += value;
-        cols[col] +=  value;
+        cols[col] += value;
 
-        if(row == col){
+        if (row == col) {
             diagonal += value;
         }
 
-        if(row + col  == matrixSize - 1){
+        if (row + col == matrixSize - 1) {
             antiDiagonal += value;
         }
 
 
-        if(Math.abs(rows[row]) == matrixSize || Math.abs(cols[col]) == matrixSize || Math.abs(diagonal) == matrixSize || Math.abs(antiDiagonal) == matrixSize){
+        if (Math.abs(rows[row]) == matrixSize || Math.abs(cols[col]) == matrixSize || Math.abs(diagonal) == matrixSize || Math.abs(antiDiagonal) == matrixSize) {
             return player;
         }
 

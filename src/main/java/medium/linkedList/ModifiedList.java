@@ -7,10 +7,9 @@ import java.util.Set;
 
 /**
  * Use Set instead of List to reduce the time.
- *
+ * <p>
  * Time Complexity o(n)
  * space complexity o(1)
- *
  */
 
 public class ModifiedList {
@@ -18,7 +17,7 @@ public class ModifiedList {
         ListNode sentinel = new ListNode(0, head);
         ListNode tmp = sentinel;
         Set<Integer> numList = new HashSet<>();
-        for(int num: nums) {
+        for (int num : nums) {
             numList.add(num);
         }
         while (head != null) {

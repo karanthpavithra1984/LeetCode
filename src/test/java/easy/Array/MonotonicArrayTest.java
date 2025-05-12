@@ -9,6 +9,6 @@ public class MonotonicArrayTest {
 
     @Test
     public void monotonicArray() {
-        assertFalse(monotonicArray.isMonotonic(new int[]{1,3,2}));
+        assertFalse(monotonicArray.isMonotonic(new int[]{1, 3, 2}));
     }
 }

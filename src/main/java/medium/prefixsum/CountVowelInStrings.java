@@ -21,7 +21,7 @@ public class CountVowelInStrings {
         int[] values = new int[queries.length];
         for (int i = 0; i < queries.length; i++) {
             int[] query = queries[i];
-            int left = query[0] == 0 ? 0 : prefixSum[query[0]-1];
+            int left = query[0] == 0 ? 0 : prefixSum[query[0] - 1];
             values[i] = prefixSum[query[1]] - left;
         }
 

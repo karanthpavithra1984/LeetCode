@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * This is similar to subsets except the array is not unique
  * And you cant have duplicate subsets.
- *
+ * <p>
  * [1,2,2,3] -
  * [],[1],[1,2],[1,2,2],[1,2,2,3]
  * Note with two 2's its possible to have [1,2] & [1,2] twice.
@@ -23,7 +23,7 @@ public class SubSetsII {
     }
 
     private void dfs(int[] nums, int index, List<List<Integer>> res, List<Integer> combination) {
-        if(index == nums.length){
+        if (index == nums.length) {
             res.add(new ArrayList<>(combination));
             return;
         }
@@ -32,7 +32,7 @@ public class SubSetsII {
         dfs(nums, index + 1, res, combination);
         combination.remove(combination.size() - 1);
 
-        while(index + 1< nums.length && nums[index] == nums[index+1])
+        while (index + 1 < nums.length && nums[index] == nums[index + 1])
             index++;
         dfs(nums, index + 1, res, combination);
     }

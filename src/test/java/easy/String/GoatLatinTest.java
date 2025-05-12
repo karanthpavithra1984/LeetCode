@@ -9,6 +9,6 @@ public class GoatLatinTest {
 
     @Test
     public void test() {
-        assertEquals(goatLatin.toGoatLatin("I speak Goat Latin"),"Imaa peaksmaaa oatGmaaaa atinLmaaaaa");
+        assertEquals(goatLatin.toGoatLatin("I speak Goat Latin"), "Imaa peaksmaaa oatGmaaaa atinLmaaaaa");
     }
 }

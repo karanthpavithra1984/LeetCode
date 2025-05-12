@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * This is similar to subsets except the array is not unique
  * And you cant have duplicate subsets.
- *
+ * <p>
  * [1,2,2,3] -
  * [],[1],[1,2],[1,2,2],[1,2,2,3]
  * Note with two 2's its possible to have [1,2] & [1,2] twice.

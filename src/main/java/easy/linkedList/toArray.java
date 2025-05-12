@@ -14,12 +14,12 @@ public class toArray {
         int size = 0;
 
         int[] array = new int[50];
-        while (temp != null){
+        while (temp != null) {
             array[size] = temp.val;
             temp = temp.next;
             size++;
         }
 
-        return Arrays.copyOf(array,size);
+        return Arrays.copyOf(array, size);
     }
 }

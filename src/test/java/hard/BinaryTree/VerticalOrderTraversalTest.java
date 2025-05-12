@@ -19,7 +19,7 @@ public class VerticalOrderTraversalTest {
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
 
-        assertEquals(GeneralUtils.convertToArrowSeperatedString(vor.verticalTraversal(root).stream()),"[9]->[3, 15]->[20]->[7]");
+        assertEquals(GeneralUtils.convertToArrowSeperatedString(vor.verticalTraversal(root).stream()), "[9]->[3, 15]->[20]->[7]");
 
     }
 }

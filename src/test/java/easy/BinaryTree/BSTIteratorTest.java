@@ -10,6 +10,6 @@ public class BSTIteratorTest {
     @Test
     public void testBSTIterator() {
         bstIterator = new BSTIterator(BinaryTreeUtils.getTreeNode());
-        assert bstIterator.next() ==    1;
+        assert bstIterator.next() == 1;
     }
 }

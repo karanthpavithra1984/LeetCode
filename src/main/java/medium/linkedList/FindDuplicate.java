@@ -2,20 +2,20 @@ package medium.linkedList;
 
 public class FindDuplicate {
     public int findDuplicate(int[] nums) {
-        int slow = 0 , fast = 0;
+        int slow = 0, fast = 0;
 
-        while(true){
+        while (true) {
             slow = nums[slow];
             fast = nums[nums[fast]];
-            if(slow == fast)
+            if (slow == fast)
                 break;
         }
 
         int slow2 = 0;
-        while (true){
+        while (true) {
             slow2 = nums[slow2];
             slow = nums[slow];
-            if(slow == slow2){
+            if (slow == slow2) {
                 return slow2;
             }
         }

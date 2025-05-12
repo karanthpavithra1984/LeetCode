@@ -10,9 +10,9 @@ public class StringSwapTest {
 
     @Test
     public void testSwap() {
-        assertFalse(swap.areAlmostEqual("aa","bb"));
+        assertFalse(swap.areAlmostEqual("aa", "bb"));
         assertFalse(swap.areAlmostEqual("aa", "ac"));
-        assertFalse(swap.areAlmostEqual("appla","lppal"));
+        assertFalse(swap.areAlmostEqual("appla", "lppal"));
         assertTrue(swap.areAlmostEqual("kanb", "bank"));
         assertFalse(swap.areAlmostEqual("asserted", "defended"));
     }

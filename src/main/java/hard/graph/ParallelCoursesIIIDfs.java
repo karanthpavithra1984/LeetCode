@@ -29,7 +29,7 @@ public class ParallelCoursesIIIDfs {
 
     }
 
-    private int dfs(Map<Integer,List<Integer>> graph, int[] totalTime, int node, int[] time) {
+    private int dfs(Map<Integer, List<Integer>> graph, int[] totalTime, int node, int[] time) {
         if (totalTime[node] != 0) {
             return totalTime[node];
         }
@@ -40,7 +40,7 @@ public class ParallelCoursesIIIDfs {
 
         int ans = 0;
         for (int neighbor : graph.get(node)) {
-            ans = Math.max(ans, dfs(graph , totalTime, neighbor, time));
+            ans = Math.max(ans, dfs(graph, totalTime, neighbor, time));
         }
 
         return totalTime[node] = ans + time[node - 1];

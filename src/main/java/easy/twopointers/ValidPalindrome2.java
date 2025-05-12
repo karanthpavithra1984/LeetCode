@@ -7,7 +7,7 @@ package easy.twopointers;
 
 public class ValidPalindrome2 {
 
-    private  boolean isValidPalindrome(String str, int leftIndex, int rightIndex) {
+    private boolean isValidPalindrome(String str, int leftIndex, int rightIndex) {
         while (leftIndex < rightIndex) {
             if (str.charAt(leftIndex) != str.charAt(rightIndex)) {
                 return false;
@@ -24,9 +24,9 @@ public class ValidPalindrome2 {
     public boolean validPalindrome(String str) {
         int leftIndex = 0, rightIndex = str.length() - 1;
 
-        while(leftIndex < rightIndex) {
-            if(str.charAt(leftIndex) != str.charAt(rightIndex)) {
-                return isValidPalindrome(str, leftIndex, rightIndex-1) || isValidPalindrome(str, leftIndex+1, rightIndex);
+        while (leftIndex < rightIndex) {
+            if (str.charAt(leftIndex) != str.charAt(rightIndex)) {
+                return isValidPalindrome(str, leftIndex, rightIndex - 1) || isValidPalindrome(str, leftIndex + 1, rightIndex);
             }
 
             leftIndex++;

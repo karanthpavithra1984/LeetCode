@@ -16,10 +16,10 @@ public class LengthOfIncreasingSubSequence {
         List<Integer> numList = new ArrayList<Integer>();
         numList.add(nums[0]); //Add first element
 
-        for(int i =1 ; i < nums.length; i++){
-            if(nums[i] > numList.get(numList.size()-1)){
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > numList.get(numList.size() - 1)) {
                 numList.add(nums[i]); //If the number is greater add it.
-            }else{
+            } else {
                 //Find the index of the first number which is greater than the currentNumber
                 int j = binarySearch(numList, nums[i]);
                 numList.set(j, nums[i]);
@@ -29,22 +29,22 @@ public class LengthOfIncreasingSubSequence {
         return numList.size();
     }
 
-    private int binarySearch(List<Integer> nums, int target){
+    private int binarySearch(List<Integer> nums, int target) {
         int left = 0;
         int right = nums.size() - 1;
 
 
-        while(left < right){
+        while (left < right) {
             int mid = left + (right - left) / 2;
             int midValue = nums.get(mid);
 
-            if(midValue == target){
+            if (midValue == target) {
                 return mid;
             }
 
-            if(target > midValue){
+            if (target > midValue) {
                 left = mid + 1;
-            }else{
+            } else {
                 right = mid;
             }
         }

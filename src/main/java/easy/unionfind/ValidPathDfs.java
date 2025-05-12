@@ -44,7 +44,7 @@ public class ValidPathDfs {
         for (int neighbor : adjList.get(source)) {
             //Remember to return if its boolean.
             //You dont want to be DFSing till end
-            if(dfs(adjList, visited, neighbor, destination)){
+            if (dfs(adjList, visited, neighbor, destination)) {
                 return true;
             }
         }

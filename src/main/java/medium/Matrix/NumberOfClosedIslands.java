@@ -32,32 +32,32 @@ public class NumberOfClosedIslands {
         boolean isBoundary = false;
 
         while (!queue.isEmpty()) {
-                int[] curr = queue.poll();
-                int r = curr[0];
-                int c = curr[1];
+            int[] curr = queue.poll();
+            int r = curr[0];
+            int c = curr[1];
 
-                int[][] neighbors = new int[][]{{r, c + 1}, {r + 1, c}, {r - 1, c}, {r, c - 1}};
+            int[][] neighbors = new int[][]{{r, c + 1}, {r + 1, c}, {r - 1, c}, {r, c - 1}};
 
-                for (int i = 0; i < neighbors.length; i++) {
-                    int newRow = neighbors[i][0];
-                    int newCol = neighbors[i][1];
+            for (int i = 0; i < neighbors.length; i++) {
+                int newRow = neighbors[i][0];
+                int newCol = neighbors[i][1];
 
-                    if (newRow < 0 || newRow >= ROWS || newCol < 0 || newCol >= COLS) {
-                        isBoundary = true;
-                        continue;
-                    }
-
-                    if (visited[newRow][newCol]) {
-                        continue;
-                    }
-
-                    if(grid[newRow][newCol] == 0){
-                        queue.add(new int[]{newRow, newCol});
-                        visited[newRow][newCol] = true;
-                    }
-
+                if (newRow < 0 || newRow >= ROWS || newCol < 0 || newCol >= COLS) {
+                    isBoundary = true;
+                    continue;
                 }
+
+                if (visited[newRow][newCol]) {
+                    continue;
+                }
+
+                if (grid[newRow][newCol] == 0) {
+                    queue.add(new int[]{newRow, newCol});
+                    visited[newRow][newCol] = true;
+                }
+
             }
+        }
         return isBoundary;
     }
 }

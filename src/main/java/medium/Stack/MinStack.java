@@ -5,25 +5,26 @@ import java.util.Stack;
 public class MinStack {
     private Stack<Integer> stack;
     private Stack<Integer> minStack;
+
     public MinStack() {
         stack = new Stack<>();
         minStack = new Stack<>();
     }
 
     public void push(int val) {
-        if(minStack.isEmpty()){
+        if (minStack.isEmpty()) {
             minStack.push(val);
-        }else if(val <= minStack.peek()){
+        } else if (val <= minStack.peek()) {
             minStack.push(val);
         }
         stack.push(val);
     }
 
     public void pop() {
-        if(minStack.peek().intValue() == stack.peek().intValue()){
+        if (minStack.peek().intValue() == stack.peek().intValue()) {
             minStack.pop();
             stack.pop();
-        }else{
+        } else {
             stack.pop();
         }
     }

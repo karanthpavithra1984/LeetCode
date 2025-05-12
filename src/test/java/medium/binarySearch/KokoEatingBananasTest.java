@@ -8,6 +8,6 @@ public class KokoEatingBananasTest {
 
     @Test
     public void testKokoEatingBananas() {
-        assert kokoEatingBanana.minEatingSpeed(new int[]{3,6,7,11}, 8) == 4;
+        assert kokoEatingBanana.minEatingSpeed(new int[]{3, 6, 7, 11}, 8) == 4;
     }
 }

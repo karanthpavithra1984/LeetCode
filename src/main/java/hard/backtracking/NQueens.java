@@ -20,7 +20,7 @@ public class NQueens {
         char[][] board = new char[n][];
 
         //Fill up each row with '.'
-        for(char[] row: board){
+        for (char[] row : board) {
             Arrays.fill(row, '.');
         }
 
@@ -28,11 +28,11 @@ public class NQueens {
         return result;
     }
 
-    private void backtrack(char[][] board, int r){
-        if(r == N){
+    private void backtrack(char[][] board, int r) {
+        if (r == N) {
             //Create a copy of the board , since we are backtracking
             List<String> copy = new ArrayList<>();
-            for(char[] row: board){
+            for (char[] row : board) {
                 //Convert each row to a string by concatenating characters
                 copy.add(new String(row));
             }
@@ -41,22 +41,22 @@ public class NQueens {
         }
 
         //now put the queen in each column and find all possible
-        for(int c= 0 ;c < N; c++){
-            if(cols.contains(c) || posDiag.contains(r+c) || negDiag.contains(r-c)){
+        for (int c = 0; c < N; c++) {
+            if (cols.contains(c) || posDiag.contains(r + c) || negDiag.contains(r - c)) {
                 continue;
             }
 
             board[r][c] = 'Q';
             cols.add(c);
-            posDiag.add(r+c);
-            negDiag.add(r-c);
+            posDiag.add(r + c);
+            negDiag.add(r - c);
 
-            backtrack(board, r+1);
+            backtrack(board, r + 1);
 
-            board[r][c]='.';
+            board[r][c] = '.';
             cols.remove(c);
-            posDiag.remove(r+c);
-            negDiag.remove(r-c);
+            posDiag.remove(r + c);
+            negDiag.remove(r - c);
         }
     }
 }

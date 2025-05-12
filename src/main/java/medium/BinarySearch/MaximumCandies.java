@@ -18,7 +18,7 @@ public class MaximumCandies {
 
             for (int candy : candies) {
                 numOfChildren += candy / midCandy;
-                if(numOfChildren > k){
+                if (numOfChildren > k) {
                     break;
                 }
             }
@@ -26,7 +26,7 @@ public class MaximumCandies {
 
             if (numOfChildren < k) {
                 //We can choose a more lesser value
-                maxCandy = midCandy-1;
+                maxCandy = midCandy - 1;
             } else {
                 //we need more candies from the pile
                 minCandy = midCandy + 1;

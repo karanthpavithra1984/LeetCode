@@ -28,8 +28,8 @@ public class FloodFill {
         image[rowNumber][columnNumber] = COLOR;
 
         dfs(image, rowNumber + 1, columnNumber);
-        dfs(image, rowNumber -1, columnNumber);
-        dfs(image, rowNumber, columnNumber-1);
-        dfs(image, rowNumber, columnNumber+1);
+        dfs(image, rowNumber - 1, columnNumber);
+        dfs(image, rowNumber, columnNumber - 1);
+        dfs(image, rowNumber, columnNumber + 1);
     }
 }

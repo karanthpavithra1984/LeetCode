@@ -8,7 +8,7 @@ public class GetDecimalValueTest {
     GetDecimalValue getDecimalValue = new GetDecimalValue();
 
     @Test
-    public void testGetDecimalValue(){
+    public void testGetDecimalValue() {
         ListNode listNode = new ListNode(1);
         listNode.next = new ListNode(0);
         listNode.next.next = new ListNode(1);

@@ -18,14 +18,14 @@ public class AmountOfTimeToGetInfected {
 
         int total = 0;
 
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int size = queue.size();
 
-            for(int i = 0 ; i < size; i++){
+            for (int i = 0; i < size; i++) {
                 int value = queue.poll();
 
-                for(Integer neighbor :adjList.get(value)){
-                    if(!visited.contains(neighbor)){
+                for (Integer neighbor : adjList.get(value)) {
+                    if (!visited.contains(neighbor)) {
                         visited.add(neighbor);
                         queue.offer(neighbor);
                     }
@@ -35,28 +35,28 @@ public class AmountOfTimeToGetInfected {
             total++;
         }
 
-        return total-1;
+        return total - 1;
     }
 
     private void convertToGraph(Map<Integer, Set<Integer>> adjList, int parent, TreeNode current) {
-        if(current == null){
+        if (current == null) {
             return;
         }
 
-        if(!adjList.containsKey(current.val)){
+        if (!adjList.containsKey(current.val)) {
             adjList.put(current.val, new HashSet<>());
         }
 
-        if(parent > 0){
+        if (parent > 0) {
             adjList.get(current.val).add(parent);
         }
 
         //Add left and right to the current
-        if(current.left != null){
+        if (current.left != null) {
             adjList.get(current.val).add(current.left.val);
         }
 
-        if(current.right != null){
+        if (current.right != null) {
             adjList.get(current.val).add(current.right.val);
         }
 

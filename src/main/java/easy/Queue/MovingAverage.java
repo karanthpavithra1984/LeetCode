@@ -10,7 +10,8 @@ import java.util.Queue;
 public class MovingAverage {
     Queue<Integer> queue;
     int size;
-    int windowSum = 0 ;
+    int windowSum = 0;
+
     public MovingAverage(int size) {
         this.queue = new ArrayDeque<>(size);
         this.size = size;
@@ -22,6 +23,6 @@ public class MovingAverage {
         int tail = this.queue.size() > this.size ? this.queue.poll() : 0;
 
         windowSum += val - tail;
-        return (windowSum * 1.0)/ this.queue.size();
+        return (windowSum * 1.0) / this.queue.size();
     }
 }

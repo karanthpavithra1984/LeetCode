@@ -8,6 +8,6 @@ public class ThreeSumSmallerTest {
 
     @Test
     public void threeSumSmaller() {
-        assert t.threeSumSmaller(new int[]{-2,0,1,3}, 2) == 2;
+        assert t.threeSumSmaller(new int[]{-2, 0, 1, 3}, 2) == 2;
     }
 }

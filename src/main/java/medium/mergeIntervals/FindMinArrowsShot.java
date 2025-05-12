@@ -15,8 +15,8 @@ public class FindMinArrowsShot {
 
         int count = 1;
         int xEnd = points[0][1];
-        for(int[] point : points){
-            if(xEnd < point[0]){
+        for (int[] point : points) {
+            if (xEnd < point[0]) {
                 count++;
                 xEnd = point[1];
             }
