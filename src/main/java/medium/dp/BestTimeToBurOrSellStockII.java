@@ -2,15 +2,19 @@ package medium.dp;
 
 public class BestTimeToBurOrSellStockII {
     public int maxProfit(int[] prices) {
-        int buy = -prices[0];
-        int sell = 0;
+        int minPrice = prices[0];
+        int profit = 0;
 
-        for (int i = 1; i < prices.length; i++) {
-            int tempBuy = buy;
-            buy = Math.max(buy, sell - prices[i]);
-            sell = Math.max(sell, tempBuy + prices[i]);
+        for(int i=1; i < prices.length; i++){
+            if(prices[i] > minPrice){
+                profit += prices[i] - minPrice;
+                minPrice = prices[i];
+            }else {
+
+                minPrice = Math.min(minPrice, prices[i]);
+            }
         }
 
-        return sell;
+        return profit;
     }
 }
