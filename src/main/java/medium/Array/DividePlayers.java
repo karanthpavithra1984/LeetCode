@@ -29,7 +29,7 @@ public class DividePlayers {
                 return -1;
             }
 
-            totalSkillValue += partnerSkill * sk;
+            totalSkillValue += (long) partnerSkill * sk;
             skillMap[partnerSkill]--;
         }
 

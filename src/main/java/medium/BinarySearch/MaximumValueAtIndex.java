@@ -26,7 +26,7 @@ public class MaximumValueAtIndex {
                 rightSum = (nextNum * (nextNum + 1)) / 2 - ((nextNum - right) * (nextNum - right + 1)) / 2;
             } else {
                 //if we have more right numbers than nextNum, then we need to fill up remaining with 1.
-                rightSum = (nextNum * (nextNum + 1)) / 2 + (1 * (right - nextNum));
+                rightSum = (nextNum * (nextNum + 1)) / 2 + ((right - nextNum));
             }
 
             //Do the same thing for left
@@ -36,7 +36,7 @@ public class MaximumValueAtIndex {
                 leftSum = (nextNum * (nextNum + 1)) / 2 - ((nextNum - left) * (nextNum - left + 1)) / 2;
             } else {
                 //if we have more right numbers than nextNum, then we need to fill up remaining with 1.
-                leftSum = (nextNum * (nextNum + 1)) / 2 + (1 * (left - nextNum));
+                leftSum = (nextNum * (nextNum + 1)) / 2 + ((left - nextNum));
             }
 
             sum += leftSum + rightSum;

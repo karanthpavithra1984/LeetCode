@@ -12,7 +12,7 @@ I am basically releiving the currentRow , sot hat
 public class PascalsTriangle2 {
     public List<Integer> getRow(int numRows) {
         if (numRows == 0) {
-            return Arrays.asList(1);
+            return List.of(1);
         }
         List<Integer> previousRow = new ArrayList<>();
         List<Integer> currentRow;

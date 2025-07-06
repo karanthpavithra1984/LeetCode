@@ -6,7 +6,7 @@ import java.util.List;
 public class CombinationsLeetCode {
     private int n;
     private int k;
-    private int counter = 0;
+    private final int counter = 0;
 
     public List<List<Integer>> combine(int n, int k) {
         this.n = n;

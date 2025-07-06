@@ -20,11 +20,7 @@ public class isSubTree {
             return true;
         }
 
-        if (isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot)) {
-            return true;
-        }
-
-        return false;
+        return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
     }
 
     private boolean isSameTree(TreeNode tree1, TreeNode tree2) {

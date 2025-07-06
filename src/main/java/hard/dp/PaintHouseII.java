@@ -6,9 +6,7 @@ public class PaintHouseII {
         int n = costs.length;
         int[] dp = new int[k];
         //Fill up with first row with the first cost
-        for (int i = 0; i < k; i++) {
-            dp[i] = costs[0][i];
-        }
+        System.arraycopy(costs[0], 0, dp, 0, k);
 
         for (int i = 1; i < n; i++) {
             int minColor = Integer.MAX_VALUE, secondMinColor = Integer.MAX_VALUE;

@@ -17,7 +17,7 @@ public class WordsWithInTwoEditsOfDictionary {
     public List<String> twoEditWords(String[] queries, String[] dictionary) {
 
         //Time Complexity o(1)
-        List<String> dictionaryList = Arrays.asList(dictionary);
+        String[] dictionaryList = dictionary;
         List<String> result = new ArrayList<>();
 
         /**

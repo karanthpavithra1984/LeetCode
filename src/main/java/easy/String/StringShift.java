@@ -24,11 +24,11 @@ public class StringShift {
         }
         if (numberofShifts > 0) {
             int numOfShifts = s.length() - numberofShifts;
-            return s.substring(numOfShifts, s.length()) + s.substring(0, numOfShifts);
+            return s.substring(numOfShifts) + s.substring(0, numOfShifts);
         }
 
         return
-                s.substring(Math.abs(numberofShifts), s.length()) + s.substring(0, Math.abs(numberofShifts));
+                s.substring(Math.abs(numberofShifts)) + s.substring(0, Math.abs(numberofShifts));
 
     }
 }

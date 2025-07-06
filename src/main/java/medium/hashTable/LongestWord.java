@@ -1,5 +1,6 @@
 package medium.hashTable;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -7,9 +8,7 @@ public class LongestWord {
     public String longestWord(String[] words) {
         Set<String> wordSet = new HashSet<>();
 
-        for (String word : words) {
-            wordSet.add(word);
-        }
+        Collections.addAll(wordSet, words);
 
         String ans = "";
 

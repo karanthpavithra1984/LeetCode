@@ -1,7 +1,7 @@
 package medium.prefixsum;
 
 public class RandomPickWithWeight {
-    private int[] prefixSum;
+    private final int[] prefixSum;
     private int totalSum;
 
     public RandomPickWithWeight(int[] w) {

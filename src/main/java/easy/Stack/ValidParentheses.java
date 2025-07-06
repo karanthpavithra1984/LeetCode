@@ -30,10 +30,6 @@ public class ValidParentheses {
             }
         }
 
-        if (characterStack.isEmpty()) {
-            return true;
-        }
-
-        return false;
+        return characterStack.isEmpty();
     }
 }

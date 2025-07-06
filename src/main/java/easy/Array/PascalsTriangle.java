@@ -12,7 +12,7 @@ import java.util.List;
 public class PascalsTriangle {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> pascalsTriangle = new ArrayList<>();
-        pascalsTriangle.add(Arrays.asList(1));
+        pascalsTriangle.add(List.of(1));
 
         for (int i = 1; i < numRows; i++) {
             List<Integer> currentRow = new ArrayList<>();

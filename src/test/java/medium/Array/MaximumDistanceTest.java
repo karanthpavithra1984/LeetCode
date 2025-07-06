@@ -34,7 +34,7 @@ public class MaximumDistanceTest {
         values.add(list);
 
         list = new ArrayList<>();
-        list.addAll(Arrays.asList(-2));
+        list.addAll(List.of(-2));
         values.add(list);
 
         list = new ArrayList<>();
@@ -42,7 +42,7 @@ public class MaximumDistanceTest {
         values.add(list);
 
         list = new ArrayList<>();
-        list.addAll(Arrays.asList(2));
+        list.addAll(List.of(2));
         values.add(list);
 
         assert ma.maxDistance(values) == 14;

@@ -11,7 +11,7 @@ public class TaskSchedularII {
         for (int task : tasks) {
             //Now if the day is less than the whats in the taskMap,
             //Move the days so that we can execute the task
-            if (day < taskMap.getOrDefault(task, 0l)) {
+            if (day < taskMap.getOrDefault(task, 0L)) {
                 day = taskMap.get(task);
             }
             day++;

@@ -1,7 +1,7 @@
 package medium.Matrix;
 
 public class IslandPerimeter {
-    private int PERIMETER_OF_SQUARE = 4;
+    private final int PERIMETER_OF_SQUARE = 4;
     private int ROW;
     private int COL;
     private int currPerimeter;

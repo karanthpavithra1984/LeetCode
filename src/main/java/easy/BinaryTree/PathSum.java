@@ -20,10 +20,6 @@ public class PathSum {
         if (calculatePathSum(root.left, targetSum, sum)) {
             return true;
         }
-        if (calculatePathSum(root.right, targetSum, sum)) {
-            return true;
-        }
-
-        return false;
+        return calculatePathSum(root.right, targetSum, sum);
     }
 }

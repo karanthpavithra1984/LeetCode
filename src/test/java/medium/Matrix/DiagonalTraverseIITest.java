@@ -23,7 +23,7 @@ public class DiagonalTraverseIITest {
         List<List<Integer>> values = new ArrayList<>();
         values.add(Arrays.asList(1, 2, 3, 4, 5));
         values.add(Arrays.asList(6, 7));
-        values.add(Arrays.asList(8));
+        values.add(List.of(8));
         values.add(Arrays.asList(9, 10, 11));
         values.add(Arrays.asList(12, 13, 14, 15, 16));
 
@@ -42,7 +42,7 @@ public class DiagonalTraverseIITest {
         List<List<Integer>> values = new ArrayList<>();
         values.add(Arrays.asList(1, 2, 3, 4, 5));
         values.add(Arrays.asList(6, 7));
-        values.add(Arrays.asList(8));
+        values.add(List.of(8));
         values.add(Arrays.asList(9, 10, 11));
         values.add(Arrays.asList(12, 13, 14, 15, 16));
 

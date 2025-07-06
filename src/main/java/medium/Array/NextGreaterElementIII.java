@@ -3,7 +3,7 @@ package medium.Array;
 public class NextGreaterElementIII {
     public int nextGreaterElement(int n) {
         //This is tricky, Start from left and find the next dip
-        char[] array = new String("" + n).toCharArray();
+        char[] array = ("" + n).toCharArray();
 
         int index = array.length - 2;
 

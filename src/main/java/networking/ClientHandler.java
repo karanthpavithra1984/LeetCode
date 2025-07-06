@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class ClientHandler extends Thread{
-    private Socket socket;
+    private final Socket socket;
     public ClientHandler(Socket socket) {
         this.socket = socket;
     }

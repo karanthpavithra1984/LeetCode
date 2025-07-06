@@ -9,10 +9,10 @@ https://leetcode.com/problems/n-queens/editorial/
  */
 
 public class NQueens {
-    private Set<Integer> cols = new HashSet<>();
-    private Set<Integer> posDiag = new HashSet<>();
-    private Set<Integer> negDiag = new HashSet<>();
-    private List<List<String>> result = new ArrayList<>();
+    private final Set<Integer> cols = new HashSet<>();
+    private final Set<Integer> posDiag = new HashSet<>();
+    private final Set<Integer> negDiag = new HashSet<>();
+    private final List<List<String>> result = new ArrayList<>();
     private int N;
 
     public List<List<String>> solveNQueens(int n) {

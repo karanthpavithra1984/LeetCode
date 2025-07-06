@@ -13,7 +13,7 @@ public class PasCalsTriangleTest {
     @Test
     public void testPascalstriangle() {
         List<List<Integer>> expectedValues = new ArrayList<>();
-        expectedValues.add(Arrays.asList(1));
+        expectedValues.add(List.of(1));
         GeneralUtils.compareListOfList(pascalsTriangle.generate(1), expectedValues);
 
         expectedValues.add(Arrays.asList(1, 1));

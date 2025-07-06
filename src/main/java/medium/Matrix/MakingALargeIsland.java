@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class MakingALargeIsland {
-    private static int[][] directions = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+    private static final int[][] directions = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
     private int ROW;
     private int COL;
 

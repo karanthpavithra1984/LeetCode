@@ -12,11 +12,11 @@ import utils.UnionFind;
 public class CountTheCompleteComponents {
     public int countCompleteComponents(int n, int[][] edges) {
         UnionFind uf = new UnionFind(n);
-        int connection[] = new int[n];
+        int[] connection = new int[n];
         int count = 0;
-        int nodes[] = new int[n];
+        int[] nodes = new int[n];
 
-        for (int edge[] : edges) {
+        for (int[] edge : edges) {
             uf.union(edge[0], edge[1]);
             nodes[edge[0]]++;
             nodes[edge[1]]++;
@@ -27,7 +27,7 @@ public class CountTheCompleteComponents {
             if (nodes[i] == 0) count++;
         }
 
-        for (int edge[] : edges) {
+        for (int[] edge : edges) {
             //could be anything as both will have same parent
             int ult = uf.findParent(edge[1]);
             //get the edges

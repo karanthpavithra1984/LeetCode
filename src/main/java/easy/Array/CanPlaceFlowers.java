@@ -15,8 +15,8 @@ public class CanPlaceFlowers {
         int flowerBedLen = flowerbed.length;
         while (i < flowerBedLen) {
             if (flowerbed[i] == 0) {
-                boolean nextPlotEmpty = i + 1 < flowerBedLen ? flowerbed[i + 1] != 1 : true;
-                boolean previousPlotEmpty = i > 0 ? flowerbed[i - 1] != 1 : true;
+                boolean nextPlotEmpty = i + 1 >= flowerBedLen || flowerbed[i + 1] != 1;
+                boolean previousPlotEmpty = i <= 0 || flowerbed[i - 1] != 1;
                 if (nextPlotEmpty && previousPlotEmpty) {
                     flowerbed[i] = 1;
                     n--; //can  plant here;

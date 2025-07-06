@@ -4,17 +4,17 @@ import org.junit.Test;
 import utils.TreeNode;
 
 public class DiameterOfBinaryTreeTest {
-    DiameterOfBinaryTree d = new DiameterOfBinaryTree();
+    DiameterOfBinaryTree diameterOfBinaryTree = new DiameterOfBinaryTree();
 
     @Test
-    public void diameterOfBinaryTree() {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
+    public void testDiameterBinaryTree(){
+        TreeNode treeNode = new TreeNode(1);
+        treeNode.left = new TreeNode(2);
+        treeNode.left.left = new TreeNode(4);
+        treeNode.left.right = new TreeNode(5);
 
-        assert d.diameterOfBinaryTree(root) == 3;
+        treeNode.right = new TreeNode(3);
+
+        assert diameterOfBinaryTree.diameterOfBinaryTree(treeNode) == 3;
     }
 }
-

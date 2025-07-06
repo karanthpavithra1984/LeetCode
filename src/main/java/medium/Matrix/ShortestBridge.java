@@ -81,9 +81,6 @@ public class ShortestBridge {
     }
 
     private boolean isInvalid(int row, int col, int length) {
-        if (row < 0 || col < 0 || row >= length || col >= length) {
-            return true;
-        }
-        return false;
+        return row < 0 || col < 0 || row >= length || col >= length;
     }
 }

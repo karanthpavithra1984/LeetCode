@@ -6,9 +6,7 @@ public class BurstBalloons {
         newNums[0] = 1;
         newNums[newNums.length - 1] = 1;
 
-        for(int i=1;i < newNums.length - 1; i++){
-            newNums[i] = nums[i-1];
-        }
+        System.arraycopy(nums, 0, newNums, 1, newNums.length - 1 - 1);
 
         Integer[][] dp = new Integer[newNums.length][newNums.length];
 

@@ -108,7 +108,7 @@ public class GeneralUtils {
             case Double i:
                 return "" + i;
             case String i:
-                return "" + i;
+                return i;
             default:
                 throw new IllegalStateException("Unexpected value: " + y);
         }
@@ -133,10 +133,7 @@ public class GeneralUtils {
             listNode = listNode.next;
         }
 
-        if (listNode != null)
-            return false;
-
-        return true;
+        return listNode == null;
     }
 
     public static void validateTreeNode(TreeNode treeNode, String values) {

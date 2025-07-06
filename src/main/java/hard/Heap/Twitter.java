@@ -4,8 +4,8 @@ import java.util.*;
 
 public class Twitter {
     private int count;
-    private Map<Integer, List<int[]>> tweetMap;
-    private Map<Integer, Set<Integer>> followerMap;
+    private final Map<Integer, List<int[]>> tweetMap;
+    private final Map<Integer, Set<Integer>> followerMap;
 
     public Twitter() {
         count = 0;
