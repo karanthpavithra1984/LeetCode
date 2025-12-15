@@ -1,6 +1,6 @@
 package medium.Array;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class TaskScheduler1Count {
     public int leastInterval(char[] tasks, int n) {

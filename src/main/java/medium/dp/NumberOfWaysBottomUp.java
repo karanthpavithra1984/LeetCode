@@ -1,7 +1,5 @@
 package medium.dp;
 
-import java.util.Arrays;
-
 public class NumberOfWaysBottomUp {
     final int MOD = (int) (Math.pow(10, 9) + 7);
     Integer[][] dp;

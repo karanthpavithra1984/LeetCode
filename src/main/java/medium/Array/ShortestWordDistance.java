@@ -1,6 +1,9 @@
 package medium.Array;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ShortestWordDistance {
     public int shortestWordDistance(String[] wordsDict, String word1, String word2) {

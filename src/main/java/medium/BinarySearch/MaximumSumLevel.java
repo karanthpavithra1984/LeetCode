@@ -1,6 +1,5 @@
 package medium.BinarySearch;
 
-import com.sun.source.tree.Tree;
 import utils.TreeNode;
 
 import java.util.LinkedList;

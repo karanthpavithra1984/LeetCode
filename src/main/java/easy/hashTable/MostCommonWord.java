@@ -1,6 +1,9 @@
 package easy.hashTable;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class MostCommonWord {
     public String mostCommonWord(String paragraph, String[] banned) {
