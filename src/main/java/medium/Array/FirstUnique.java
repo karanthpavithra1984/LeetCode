@@ -7,8 +7,8 @@ import java.util.Set;
 
 public class FirstUnique {
 
-    private Set<Integer> set = new LinkedHashSet<>();
-    private Map<Integer, Boolean> uniqueMap = new HashMap<>();
+    private final Set<Integer> set = new LinkedHashSet<>();
+    private final Map<Integer, Boolean> uniqueMap = new HashMap<>();
 
     public FirstUnique(int[] nums) {
         for (int i = 0; i < nums.length; i++) {

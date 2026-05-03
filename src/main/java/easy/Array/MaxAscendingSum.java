@@ -8,7 +8,6 @@ public class MaxAscendingSum {
             if (nums[i] <= nums[i - 1]) {
                 maxSum = Math.max(currentSum, maxSum);
                 currentSum = 0;
-                ;
             }
             currentSum += nums[i];
         }
